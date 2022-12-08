@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Gets information about a specific deployed certificate, as specified the certificate ID.">
+<meta name="keywords" content="/config/certificates/end_certificates/{id}, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>GET /config/certificates/end_certificates/{id}</title>
+</head>
+<body id="api-19.0--config-certificates-end_certificates-id-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--config-certificates-end_certificates-id-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--config-certificates-end_certificates-id-GET__title__1">GET /config/certificates/end_certificates/{id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-certificates-end_certificates-id-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-certificates-end_certificates-id-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Gets information about a specific deployed certificate, as specified the certificate ID.</p>
+
+<div class="section refsyn">
+<p>Gets information about a specific deployed certificate, which is identified by its ID.</p>
+
+ <p>You must have System Administrator, Security Administrator, Manage Log Sources, or WinCollect permissions to use this endpoint.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/certificates/end_certificates/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /config/certificates/end_certificates/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-certificates-end_certificates-id-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/certificates/end_certificates/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /config/certificates/end_certificates/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-certificates-end_certificates-id-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-certificates-end_certificates-id-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--config-certificates-end_certificates-id-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--config-certificates-end_certificates-id-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-certificates-end_certificates-id-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-certificates-end_certificates-id-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__3 "><p>id</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__8 "><p>Required. The ID of the certificate to get.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/certificates/end_certificates/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /config/certificates/end_certificates/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-certificates-end_certificates-id-GET__entry__21" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-certificates-end_certificates-id-GET__entry__22" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-certificates-end_certificates-id-GET__entry__23" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__21 "><p>404</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__22 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__23 "><p>No certificate exists with this ID.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__21 "><p>500</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__22 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__23 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__21 "><p>500</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__22 "><p>2035</p>
+</td>
+
+<td headers="api-19.0--config-certificates-end_certificates-id-GET__entry__23 "><p>null</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-certificates-end_certificates-id-GET__title__5"><h2 class="sectiontitle" id="api-19.0--config-certificates-end_certificates-id-GET__title__5">Response Description</h2>
+
+<p>The Certificate resource that was uploaded and deployed.</p>
+
+  <p>Non-administrative users see only the certificate name and ID. All other fields appear as 'null'.</p>
+
+
+  The Certificate resource is returned with the following fields:
+	<ul>
+      <li><strong>id</strong> - The certificate resource ID.</li>
+
+      <li><strong>name</strong> - A unique name that identifies the certificate.</li>
+
+      <li><strong>purpose</strong> - The intended use of the certificate.</li>
+
+      <li><strong>subject</strong> - Returns the Subject of the certificate.</li>
+
+      <li><strong>issuer</strong> - Returns the Issuer of the certificate.</li>
+
+     <li><strong>not_before</strong> - Returns the "Validity Not Before" value of the certificate, represented as the number of milliseconds since UNIX Epoch.</li>
+
+      <li><strong>expiry</strong> - Returns the "Validity Not After" field of the certificate, represented as the number of milliseconds since UNIX epoch.</li>
+
+      <li><strong>serial_number</strong> - Returns the "Serial Number" field of the certificate.</li>
+
+ 	 <li><strong>key_usage</strong> - Returns the "Key Usage" field of the certificate. The values are one or more of the enum X509Certificate.KeyUsage
+ 		 <ul>
+ 	 	    <li>CRL_SIGN</li>
+
+ 	 	    <li>DATA_ENCIPHERMENT</li>
+
+ 		     <li>DECIPHER_ONLY</li>
+
+ 	 	    <li>DIGITAL_SIGNATURE</li>
+
+ 	 	    <li>ENCIPHER_ONLY</li>
+
+ 		     <li>KEY_AGREEMENT</li>
+
+ 		     <li>KEY_CERT_SIGN</li>
+
+ 	 	    <li>KEY_ENCIPHERMENT</li>
+
+ 	 	    <li>NON_REPUDIATION</li>
+
+ 	 	 </ul>
+
+ 	 </li>
+
+ 	     <li><strong>extended_key_usage</strong> - Returns the "Extended Key Usage" field of the certificate. The values are one or more of:
+ 	        <ul>
+ 	            <li>TLS_Web_server_authentication</li>
+
+ 	    	    <li>TLS_Web_client_authentication</li>
+
+ 	    	    <li>Email_protection</li>
+
+ 	    </ul>
+</li>
+
+ 	     <li><strong>certificate_revocation_list_distribution_point</strong> - Returns the "CRL Distribution Points" field of the certificate</li>
+
+      <li><strong>password</strong> - Returns the password that is used to encrypt the private key. This value is always null in the response.</li>
+
+      <li><strong>component_id</strong> - Returns the assigned component ID of the certificate.</li>
+
+      <li><strong>validation</strong> -Returns the code to indicate whether the certificate is valid. If not, it returns the reason that the certificate is not valid.
+                <ul>
+                <li>-1 - The certificate has not been validated.</li>
+
+                <li>0 - The certificate is valid or has not been checked .</li>
+
+                <li>2001 - Error parsing a certificate.</li>
+
+                <li>2002 - Error decoding a certificate.</li>
+
+                <li>2003 - The certificate is expired.</li>
+
+                <li>2004 - The certificate is not yet valid.</li>
+
+                <li>2005 - The certificate is revoked.</li>
+
+                <li>2010 - An unexpected error occurred when processing a certificate.</li>
+
+                <li>2011 - Error finding the issuer certificates.</li>
+
+                <li>2012 - The certificate's key usage or extended key usage does not match its purpose.</li>
+
+                <li>2013 - Error validating the full chain of the certificate.</li>
+
+                <li>2014 - The certificate is an invalid self-signed certificate.</li>
+
+                <li>2020 - The CRL is invalid.</li>
+
+                <li>2030 - Unexpected error when processing the CRL.</li>
+
+                <li>2031 - Error finding the issuer certificates for the CRL.</li>
+
+                <li>2032 - The issuer does not have the <em>CRL sign</em> usage.</li>
+
+                <li>2033 - Error validating the CRL.</li>
+
+                <li>2034 - The CRL is expired.</li>
+
+	          </ul>
+</li>
+
+  </ul>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-certificates-end_certificates-id-GET__title__6"><h2 class="sectiontitle" id="api-19.0--config-certificates-end_certificates-id-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "ca_chain_file": "String",
+    "cert_file": "String",
+    "certificate_revocation_list_distribution_point": "String",
+    "component_id": 42,
+    "component_name": "String",
+    "csr_id": 42,
+    "expiry": 42,
+    "extended_key_usage": [
+        "String &lt;one of: TLS_Web_server_authentication, TLS_Web_client_authentication, Email_protection&gt;"
+    ],
+    "id": 42,
+    "issuer": [
+        {
+            "field_name": "String",
+            "value": "String"
+        }
+    ],
+    "key_file": "String",
+    "key_password": "String",
+    "key_usage": [
+        "String &lt;one of: CRL_SIGN, DATA_ENCIPHERMENT, DECIPHER_ONLY, DIGITAL_SIGNATURE, ENCIPHER_ONLY, KEY_AGREEMENT, KEY_CERT_SIGN, KEY_ENCIPHERMENT, NON_REPUDIATION&gt;"
+    ],
+    "name": "String",
+    "not_before": 42,
+    "purpose": "String",
+    "serial_number": "String",
+    "status": "String",
+    "subject": [
+        {
+            "field_name": "String",
+            "value": "String"
+        }
+    ],
+    "validation": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-certificates-end_certificates-id-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

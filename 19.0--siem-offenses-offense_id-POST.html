@@ -1,0 +1,498 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Update an offense.">
+<meta name="keywords" content="/siem/offenses/{offense_id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_siem_intro.html">
+<title>POST /siem/offenses/{offense_id}</title>
+</head>
+<body id="api-19.0--siem-offenses-offense_id-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--siem-offenses-offense_id-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--siem-offenses-offense_id-POST__title__1">POST /siem/offenses/{offense_id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--siem-offenses-offense_id-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--siem-offenses-offense_id-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Update an offense.</p>
+
+<div class="section refsyn">
+<p>Update an offense.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /siem/offenses/{offense_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /siem/offenses/{offense_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--siem-offenses-offense_id-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /siem/offenses/{offense_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /siem/offenses/{offense_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--siem-offenses-offense_id-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--siem-offenses-offense_id-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--siem-offenses-offense_id-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--siem-offenses-offense_id-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--siem-offenses-offense_id-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--siem-offenses-offense_id-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__3 "><p>offense_id</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__8 "><p>Required - The ID of the offense to update.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__3 "><p>protected</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__6 "><p>Boolean</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__8 "><p>Optional - Set to true to protect the offense.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__3 "><p>follow_up</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__6 "><p>Boolean</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__8 "><p>Optional - Set to true to set the follow up flag on the offense.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__3 "><p>status</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__8 "><p>Optional - The new status for the offense. Set to one of: OPEN, HIDDEN, CLOSED. When the status of an offense is being set to CLOSED, a valid closing_reason_id must be provided. To hide an offense, use the HIDDEN status. To show a previously hidden offense, use the OPEN status.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__3 "><p>closing_reason_id</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__8 "><p>Optional - The ID of a closing reason. You must provide a valid closing_reason_id when you close an offense.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__3 "><p>assigned_to</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__8 "><p>Optional - A user to assign the offense to.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /siem/offenses/{offense_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /siem/offenses/{offense_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--siem-offenses-offense_id-POST__entry__51" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--siem-offenses-offense_id-POST__entry__52" class="thbot">Unique Code</th>
+
+<th id="api-19.0--siem-offenses-offense_id-POST__entry__53" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__51 "><p>200</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__52 "><p></p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__53 "><p>The offense was updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__51 "><p>403</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__52 "><p>1009</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__53 "><p>User does not have the required capability to perform the action.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__51 "><p>404</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__52 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__53 "><p>No offense was found for the provided offense_id.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__51 "><p>409</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__52 "><p>1008</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__53 "><p>Request cannot be completed due to the state of the offense.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__51 "><p>422</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__52 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__53 "><p>A request parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__51 "><p>500</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__52 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--siem-offenses-offense_id-POST__entry__53 "><p>An error occurred while the offense was being updated.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--siem-offenses-offense_id-POST__title__5"><h2 class="sectiontitle" id="api-19.0--siem-offenses-offense_id-POST__title__5">Response Description</h2>
+
+<div class="p">An updated Offense object.  An Offense object contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Number - The ID of the offense.</li>
+
+ <li><strong>description</strong> - String - The description of the offense.</li>
+
+ <li><strong>assigned_to</strong> - String - The user the offense is assigned to.</li>
+
+ <li><strong>categories</strong> - Array of strings - Event categories that are associated with the offense.</li>
+
+ <li><strong>category_count</strong> - Number - The number of event categories that are associated with the offense.</li>
+
+ <li><strong>policy_category_count</strong> - Number - The number of policy event categories that are associated with the offense.</li>
+
+ <li><strong>security_category_count</strong> - Number - The number of security event categories that are associated with the offense.</li>
+
+ <li><strong>close_time</strong> - Number - The number of milliseconds since epoch when the offense was closed.</li>
+
+ <li><strong>closing_user</strong> - String - The user that closed the offense.</li>
+
+ <li><strong>closing_reason_id</strong> - Number - The ID of the offense closing reason.  The reason the offense was closed.</li>
+
+ <li><strong>credibility</strong> - Number - The credibility of the offense.</li>
+
+ <li><strong>relevance</strong> - Number - The relevance of the offense.</li>
+
+ <li><strong>severity</strong> - Number - The severity of the offense.</li>
+
+ <li><strong>magnitude</strong> - Number - The magnitude of the offense.</li>
+
+ <li><strong>destination_networks</strong> - Array of strings - The destination networks that are associated with the offense.</li>
+
+ <li><strong>source_network</strong> - String - The source network that is associated with the offense.</li>
+
+ <li><strong>device_count</strong> - Number - The number of devices that are associated with the offense.</li>
+
+ <li><strong>event_count</strong> - Number - The number of events that are associated with the offense.</li>
+
+ <li><strong>flow_count</strong> - Number - The number of flows that are associated with the offense.</li>
+
+ <li><strong>inactive</strong> - Boolean - True if the offense is inactive.</li>
+
+ <li><strong>last_updated_time</strong> - Number - The number of milliseconds since epoch when the last event contributing to the offense was seen.</li>
+
+ <li><strong>local_destination_count</strong> - Number - The number of local destinations that are associated with the offense.</li>
+
+ <li><strong>offense_source</strong> - String - The source of the offense.</li>
+
+ <li><strong>offense_type</strong> - Number - A number that represents the offense type. Use GET /siem/offense_types to retrieve the list.</li>
+
+ <li><strong>protected</strong> - Boolean - True if the offense is protected.</li>
+
+ <li><strong>follow_up</strong> - Boolean - True if the offense is marked for follow up.</li>
+
+ <li><strong>remote_destination_count</strong> - Number - The number of remote destinations that are associated wit the offense.</li>
+
+ <li><strong>source_count</strong> - Number - The number of sources that are associated with the offense.</li>
+
+ <li><strong>start_time</strong> - Number - The number of milliseconds since epoch when the offense was started.</li>
+
+ <li><strong>status</strong> - String - The status of the offense.  One of "OPEN", "HIDDEN", or "CLOSED".</li>
+
+ <li><strong>username_count</strong> - The number of usernames that are associated with the offense.</li>
+
+ <li><strong>source_address_ids</strong> - Array of numbers -The source address IDs that are associated with the offense.</li>
+
+ <li><strong>local_destination_address_ids</strong> - Array of numbers - The local destination address IDs that are associated with the offense.</li>
+
+ <li><strong>domain_id</strong> - Number - Optional. ID of associated domain if the offense is associated with a single domain.</li>
+
+ <li><strong>last_persisted_time</strong> - Number - The number of milliseconds since epoch when an offense field was last updated.</li>
+
+ <li><strong>first_persisted_time</strong> - Number - The number of milliseconds since epoch at the time when the offense was created.</li>
+
+ <li><strong>rules</strong> - Array - An array of rules that contributed to the offense:
+ 		<ul>
+ 		<li><strong>id</strong> - Long - The id of the rule.</li>
+
+ 		<li><strong>type</strong> - String - The type of rule. One of "ADE_RULE", "BUILDING_BLOCK_RULE", or "CRE_RULE".</li>
+
+      </ul>
+
+ </li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--siem-offenses-offense_id-POST__title__6"><h2 class="sectiontitle" id="api-19.0--siem-offenses-offense_id-POST__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "assigned_to": "String",
+    "categories": [
+        "String"
+    ],
+    "category_count": 42,
+    "close_time": 42,
+    "closing_reason_id": 42,
+    "closing_user": "String",
+    "credibility": 42,
+    "description": "String",
+    "destination_networks": [
+        "String"
+    ],
+    "device_count": 42,
+    "domain_id": 42,
+    "event_count": 42,
+    "first_persisted_time": 42,
+    "flow_count": 42,
+    "follow_up": true,
+    "id": 42,
+    "inactive": true,
+    "last_persisted_time": 42,
+    "last_updated_time": 42,
+    "local_destination_address_ids": [
+        42
+    ],
+    "local_destination_count": 42,
+    "log_sources": [
+        {
+            "id": 42,
+            "name": "String",
+            "type_id": 42,
+            "type_name": "String"
+        }
+    ],
+    "magnitude": 42,
+    "offense_source": "String",
+    "offense_type": 42,
+    "policy_category_count": 42,
+    "protected": true,
+    "relevance": 42,
+    "remote_destination_count": 42,
+    "rules": [
+        {
+            "id": 42,
+            "type": "String &lt;one of: ADE_RULE, BUILDING_BLOCK_RULE, CRE_RULE&gt;"
+        }
+    ],
+    "security_category_count": 42,
+    "severity": 42,
+    "source_address_ids": [
+        42
+    ],
+    "source_count": 42,
+    "source_network": "String",
+    "start_time": 42,
+    "status": "String &lt;one of: OPEN, HIDDEN, CLOSED&gt;",
+    "username_count": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--siem-offenses-offense_id-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_siem_intro.html" title="Use the references for REST API 19.0 siem endpoints.">siem endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

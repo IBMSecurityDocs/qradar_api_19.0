@@ -1,0 +1,670 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Use this endpoint to create a new certificate resource on the Console. This endpoint creates a keystore file that contains the supplied security objects. You must have System Administrator or Security Administrator permissions to use this endpoint. An administrator must deploy the configuration change.">
+<meta name="keywords" content="/staged_config/certificates/end_certificates, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_staged_config_intro.html">
+<title>POST /staged_config/certificates/end_certificates</title>
+</head>
+<body id="api-19.0--staged_config-certificates-end_certificates-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--staged_config-certificates-end_certificates-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--staged_config-certificates-end_certificates-POST__title__1">POST /staged_config/certificates/end_certificates</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--staged_config-certificates-end_certificates-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--staged_config-certificates-end_certificates-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Use this endpoint to create a new certificate resource on the Console.
+ This endpoint creates a keystore file that contains the supplied security objects.
+ You must have System Administrator or Security Administrator permissions to use this endpoint. An administrator must deploy the configuration change.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/certificates/end_certificates resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /staged_config/certificates/end_certificates resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/certificates/end_certificates request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /staged_config/certificates/end_certificates request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/certificates/end_certificates request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /staged_config/certificates/end_certificates request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__15" class="thbot">Parameter</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__16" class="thbot">Data Type</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__17" class="thbot">MIME Type</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__18" class="thbot">Description</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__19" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__15 "><p>EndCertificateDTO</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__16 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__17 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__18 "><div class="p">The new certificate resource object. This JSON object contains the following parameters:
+	          <ul><li><strong>name</strong> - A unique name to associate to this certificate.</li>
+
+            <li><strong>purpose</strong> - Indicates the intended use of the certificate.</li>
+
+            <li><strong>component_id</strong> - (Optional) Associates the certificate to a pre-registered component ID.
+ 	          <p>When a component is assigned, the certificate can be used only with that component.</p>
+
+ 	          <p>To view the list of registered components, use the <em>GET /api/config/certificates/components</em> endpoint.</p>
+
+            <p>If you do not want to associate the certificate to a component, set the <em>component_id</em> to 0 or leave it empty. Only System Administrators or Security Administrators can view certificates that do not have a component ID.</p>
+
+            <p>To assign a component ID later, use the <em>POST /api/staged_config/certificates/end_certificates/{id}</em> endpoint.</p>
+</li>
+
+            <li><strong>key_file</strong> - The contents of the private key.
+	                <p>This file is PEM-encoded and in the PKCS#8 format. </p>
+
+	                <p>This parameter can not be used in combination with the csr_id parameter. The csr_id must not be defined if the key_file parameter is used.</p>
+
+            <p>Note: Only RSA generated private keys are supported.</p>
+</li>
+
+            <li><strong>key_password</strong> - (Optional) The password that is used to decrypt the private key (key_file).</li>
+
+            <li><strong>csr_id</strong> - (Optional) Use <em>csr_id</em> for an existing CSR Resource when the certificate chain is being supplied by a Certificate Signing Request(CSR) that is initiated in Console.
+                  <p>This parameter can not be used in combination with key_file. If csr_id is used, the key_file parameter must not be defined.</p>
+
+                  <p>If both key_file and csr_id are undefined, a lookup into the CSR's pending private keys is performed to find a matching private key.</p>
+</li>
+
+            <li><strong>ca_chain_file</strong> - (Optional) The intermediate certificate file. This file must be PEM-encoded.
+                  <p>Note: To use multiple intermediate certificates, consolidate all intermediate chain certificates into one string, and separate the certificates with a new line (carriage return).</p>
+
+                  <p>The order of the certificate hierarchy is important. Each intermediate certificate must be listed in the child certificate authority first, and the issuer must come after it.</p>
+</li>
+
+            <li><strong>cert_file</strong> - The end certificate file. This file must be PEM-encoded.</li>
+</ul>
+</div>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__19 "><p>{
+    "ca_chain_file": "String",
+    "cert_file": "String",
+    "certificate_revocation_list_distribution_point": "String",
+    "component_id": 42,
+    "component_name": "String",
+    "csr_id": 42,
+    "expiry": 42,
+    "extended_key_usage": [
+        "String &lt;one of: TLS_Web_server_authentication, TLS_Web_client_authentication, Email_protection&gt;"
+    ],
+    "id": 42,
+    "issuer": [
+        {
+            "field_name": "String",
+            "value": "String"
+        }
+    ],
+    "key_file": "String",
+    "key_password": "String",
+    "key_usage": [
+        "String &lt;one of: CRL_SIGN, DATA_ENCIPHERMENT, DECIPHER_ONLY, DIGITAL_SIGNATURE, ENCIPHER_ONLY, KEY_AGREEMENT, KEY_CERT_SIGN, KEY_ENCIPHERMENT, NON_REPUDIATION&gt;"
+    ],
+    "name": "String",
+    "not_before": 42,
+    "purpose": "String",
+    "serial_number": "String",
+    "status": "String",
+    "subject": [
+        {
+            "field_name": "String",
+            "value": "String"
+        }
+    ],
+    "validation": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/certificates/end_certificates response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /staged_config/certificates/end_certificates response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__25" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__26" class="thbot">Unique Code</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-POST__entry__27" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>201</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p></p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>The certificate was created successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>409</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>1102</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>1006</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>1007</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>1008</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2001</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>Error parsing a certificate</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2002</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>Error parsing a certificate</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2003</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>The certificate is expired</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2004</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>The certificate is not yet valid</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2005</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>The certificate is revoked</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2010</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>Unexpected error occurred when processing a certificate</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2011</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>Error finding issuer certificates</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2012</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>The certificate's key usage or extended key usage does not match to its purpose</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2013</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>Error validating the full chain of the certificate</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2014</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>The certificate is an invalid self-signed certificate</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2020</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>The CRL is invalid</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2030</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>Unexpected error when processing CRL</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2031</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>Error finding the issuer certificates for the CRL</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2032</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>The issuer does not has CRL sign usage</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2033</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>Error validating the CRL</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2034</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>The CRL is expired</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__26 "><p>2035</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-POST__entry__27 "><p>null</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--staged_config-certificates-end_certificates-POST__title__6"><h2 class="sectiontitle" id="api-19.0--staged_config-certificates-end_certificates-POST__title__6">Response Description</h2>
+
+<div class="p">The location header of the newly created resource. The certificate resource contains the following fields:
+            <ul>
+                <li><strong>id</strong> - Uniquely identifies the certificate.</li>
+
+                <li><strong>csr_id</strong> - Returns a null value to ensure that the data is hidden.</li>
+
+                <li><strong>name</strong> - A unique name that identifies the certificate.</li>
+
+                <li><strong>purpose</strong> - The intended use of the certificate.</li>
+
+                <li><strong>component_id</strong> Returns the assigned component ID of the certificate.</li>
+
+                <li><strong>component_name</strong> Returns the assigned component name of the certificate.</li>
+
+                <li><strong>subject</strong> - Returns the Subject of the certificate.</li>
+
+                <li><strong>issuer</strong> - Returns the Issuer of the certificate.</li>
+
+                <li><strong>expiry</strong> - Returns the "Validity Not After" field of the certificate, represented as the number of milliseconds since UNIX epoch.</li>
+
+                <li><strong>serial_number</strong> - returns the "Serial Number" field of the certificate.</li>
+
+ 	              <li><strong>key_usage</strong> - returns the "Key Usage" field of the certificate.</li>
+
+ 	              <li><strong>certificate_revocation_list_distribution_point</strong> - returns the "CRL Distribution Points" field of the certificate</li>
+
+                <li><strong>key_file</strong> - Returns a null value to ensure that the data is hidden.</li>
+
+                <li><strong>key_password</strong> - Returns a null value to ensure that the data is hidden.</li>
+
+                <li><strong>ca_chain_file</strong> - Returns a null value to ensure that the data is hidden.</li>
+
+                <li><strong>cert_file</strong> - Returns a null value to ensure that the data is hidden.</li>
+
+                <li><strong>validation</strong> - Returns the code to indicate whether the certificate is valid. If not, it returns the reason that the certificate is not valid.
+                <ul>
+                    <li>-1 - The certificate has not been validated.</li>
+
+                    <li>0 - The certificate is valid or has not been checked.</li>
+
+                    <li>2001 - Error parsing a certificate.</li>
+
+                    <li>2002 - Error decoding a certificate.</li>
+
+                    <li>2003 - The certificate is expired.</li>
+
+                    <li>2004 - The certificate is not yet valid.</li>
+
+                    <li>2005 - The certificate is revoked.</li>
+
+                    <li>2010 - An unexpected error occurred when processing a certificate.</li>
+
+                    <li>2011 - Error finding the issuer certificates.</li>
+
+                    <li>2012 - The certificate's key usage or extended key usage does not match its purpose.</li>
+
+                    <li>2013 - Error validating the full chain of the certificate.</li>
+
+                    <li>2014 - The certificate is an invalid self-signed certificate.</li>
+
+                    <li>2020 - The CRL is invalid.</li>
+
+                    <li>2030 - Unexpected error when processing the CRL.</li>
+
+                    <li>2031 - Error finding the issuer certificates for the CRL.</li>
+
+                    <li>2032 - The issuer does not have the <em>CRL sign</em> usage.</li>
+
+                    <li>2033 - Error validating the CRL.</li>
+
+                    <li>2034 - The CRL is expired.</li>
+
+               </ul>
+</li>
+
+            </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--staged_config-certificates-end_certificates-POST__title__7"><h2 class="sectiontitle" id="api-19.0--staged_config-certificates-end_certificates-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "ca_chain_file": "String",
+    "cert_file": "String",
+    "certificate_revocation_list_distribution_point": "String",
+    "component_id": 42,
+    "component_name": "String",
+    "csr_id": 42,
+    "expiry": 42,
+    "extended_key_usage": [
+        "String &lt;one of: TLS_Web_server_authentication, TLS_Web_client_authentication, Email_protection&gt;"
+    ],
+    "id": 42,
+    "issuer": [
+        {
+            "field_name": "String",
+            "value": "String"
+        }
+    ],
+    "key_file": "String",
+    "key_password": "String",
+    "key_usage": [
+        "String &lt;one of: CRL_SIGN, DATA_ENCIPHERMENT, DECIPHER_ONLY, DIGITAL_SIGNATURE, ENCIPHER_ONLY, KEY_AGREEMENT, KEY_CERT_SIGN, KEY_ENCIPHERMENT, NON_REPUDIATION&gt;"
+    ],
+    "name": "String",
+    "not_before": 42,
+    "purpose": "String",
+    "serial_number": "String",
+    "status": "String",
+    "subject": [
+        {
+            "field_name": "String",
+            "value": "String"
+        }
+    ],
+    "validation": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--staged_config-certificates-end_certificates-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_staged_config_intro.html" title="Use the references for REST API 19.0 staged_config endpoints.">staged_config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="This lists all assets found in the model. This endpoint supports sorting on id, domain_id, vulnerability_count and risk_score_sum, and filtering on all fields. EXCEPTION: LIKE, ILIKE, and BETWEEN do not work on the interfaces(ip_addresses(value)) field. It is possible to use the inequality operators to work around this in most cases. Use of the fields header to request only the necessary fields will improve API performance.">
+<meta name="keywords" content="/asset_model/assets, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_asset_model_intro.html">
+<title>GET /asset_model/assets</title>
+</head>
+<body id="api-19.0--asset_model-assets-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--asset_model-assets-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--asset_model-assets-GET__title__1">GET /asset_model/assets</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--asset_model-assets-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--asset_model-assets-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">This lists all assets found in the model.  This endpoint supports sorting on id, domain_id, vulnerability_count and risk_score_sum, and filtering on all fields.  EXCEPTION:  LIKE, ILIKE, and BETWEEN do not work on the interfaces(ip_addresses(value)) field.  It is possible to use the inequality operators to work around this in most cases.  Use of the fields header to request only the necessary fields will improve API performance.</p>
+
+<div class="section refsyn">
+<p>List all assets found in the model.  This endpoint supports sorting on id, domain_id, vulnerability_count and risk_score_sum, and filtering on all fields.  EXCEPTION:  LIKE, ILIKE, and BETWEEN do not work on the interfaces(ip_addresses(value)) field.  It is possible to use the inequality operators to work around this in most cases. Use of the fields header to request only the necessary fields will improve API performance.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /asset_model/assets resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /asset_model/assets resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--asset_model-assets-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--asset_model-assets-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /asset_model/assets request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /asset_model/assets request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--asset_model-assets-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--asset_model-assets-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--asset_model-assets-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--asset_model-assets-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--asset_model-assets-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--asset_model-assets-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--asset_model-assets-GET__entry__3 "><p>filter</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__8 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-assets-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-assets-GET__entry__3 "><p>sort</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__8 "><p>Optional - This parameter is used to sort the elements in a list.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-assets-GET__entry__3 "><p>Range</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__8 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /asset_model/assets response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /asset_model/assets response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--asset_model-assets-GET__entry__33" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--asset_model-assets-GET__entry__34" class="thbot">Unique Code</th>
+
+<th id="api-19.0--asset_model-assets-GET__entry__35" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--asset_model-assets-GET__entry__33 "><p>200</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__34 "><p></p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__35 "><p>The request to retrieve assets completed
+                         successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-assets-GET__entry__33 "><p>500</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__34 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__35 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-assets-GET__entry__33 "><p>500</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__34 "><p>1021</p>
+</td>
+
+<td headers="api-19.0--asset_model-assets-GET__entry__35 "><p>null</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--asset_model-assets-GET__title__5"><h2 class="sectiontitle" id="api-19.0--asset_model-assets-GET__title__5">Response Description</h2>
+
+<div class="p">List of Asset objects with the following fields:
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the asset.</li>
+
+ <li><strong>domain_id</strong> - Long - The ID of the domain this asset belongs to.</li>
+
+ <li><strong>vulnerability_count</strong> - Long - The total number of vulnerabilities associated with this asset</li>
+
+ <li><strong>risk_score_sum</strong> - Double - The sum of the CVSS scores of the vulnerabilities on this asset</li>
+
+ <li><strong>hostnames</strong> - Array - The hostnames on this asset
+      <ul>
+      <li><strong>id</strong> - Long - The ID of this hostname</li>
+
+      <li><strong>type</strong> - Enum - The type of hostname. One of "DNS", "NETBIOS", or "NETBIOSGROUP"</li>
+
+      <li><strong>name</strong> - String - The hostname</li>
+
+      <li><strong>last_scanned_for</strong> - Long - The time this hostname was created.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>first_seen_scanner</strong> - Long - The time this hostname was first seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>first_seen_profiler</strong> - Long - The time this hostname was first seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>last_seen_scanner</strong> - Long - The time this hostname was most recently seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>last_seen_profiler</strong> - Long -  The time this hostname was most recently seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+
+      </ul>
+
+ </li>
+
+ <li><strong>interfaces</strong> - Array - The interfaces on this asset
+      <ul>
+      <li><strong>id</strong> - Long - The ID of this interface</li>
+
+      <li><strong>mac_address</strong> - String -  The mac address of this interface.  Null if Unknown.</li>
+
+      <li><strong>ip_addresses</strong> - Array - The IP addresses on this interface
+          <ul>
+          <li><strong>id</strong> - Long - The ID of this interface</li>
+
+          <li><strong>network_id</strong> - Long - The ID of the network this IP address belongs to in QRadar's network hierarchy</li>
+
+          <li><strong>value</strong> - String -  The IP address</li>
+
+          <li><strong>type</strong> - Enum -  The type of this IP address. One of "IPV4" or "IPV6"</li>
+
+          <li><strong>ip_addresses</strong> - Array - The IP addresses on this interface</li>
+
+          <li><strong>created</strong> - Long - The time this IP address was created.  This time is in milliseconds since epoch.</li>
+
+          <li><strong>first_seen_scanner</strong> - Long - The time this IP address was first seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+
+          <li><strong>first_seen_profiler</strong> - Long - The time this IP address was first seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+
+          <li><strong>last_seen_scanner</strong> - Long - The time this IP address was most recently seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+
+          <li><strong>last_seen_profiler</strong> - Long -  The time this IP address was most recently seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+
+      </ul>
+
+ </li>
+
+      <li><strong>created</strong> - Long - The time this interface was created.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>first_seen_scanner</strong> - Long - The time this interface was first seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>first_seen_profiler</strong> - Long - The time this interface was first seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>last_seen_scanner</strong> - Long - The time this interface was most recently seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>last_seen_profiler</strong> - Long -  The time this interface was most recently seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+
+      </ul>
+
+ </li>
+
+ <li><strong>products</strong> - Array - The software products detected on this asset
+      <ul>
+      <li><strong>id</strong> - Long - The ID of this software product instance in QRadar's asset model</li>
+
+      <li><strong>product_variant_id</strong> - Long - The ID of this software product variant in QRadar's catalog of products.</li>
+
+      <li><strong>created</strong> - Long - The time this product was most recently scanned for.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>first_seen_scanner</strong> - Long - The time this product was first seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>first_seen_profiler</strong> - Long - The time this product was first seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>last_seen_scanner</strong> - Long - The time this product was most recently seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>last_seen_profiler</strong> - Long -  The time this product was most recently seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+
+      </ul>
+
+ </li>
+
+ <li><strong>properties</strong> - Array - Various system and custom properties on this asset
+      <ul>
+      <li><strong>id</strong> - Long - The ID of this property.</li>
+
+      <li><strong>type_id</strong> - Long - The ID of the type of this property</li>
+
+      <li><strong>name</strong> - String - The name of the type of this property</li>
+
+      <li><strong>value</strong> - String - The value of this property</li>
+
+      <li><strong>last_reported_by</strong> - String - The source of the most recent update to this property</li>
+
+      <li><strong>last_reported</strong> - Long - The time this property was last updated.  This time is in milliseconds since epoch.</li>
+
+      </ul>
+
+ </li>
+
+ <li><strong>users</strong> - Array - The users associated with this asset
+      <ul>
+      <li><strong>id</strong> - Long - The ID of this username.</li>
+
+      <li><strong>username</strong> - String - The username.</li>
+
+      <li><strong>first_seen_scanner</strong> - Long - The time this username was first seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>first_seen_profiler</strong> - Long - The time this username was first seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>last_seen_scanner</strong> - Long - The time this username was most recently seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+
+      <li><strong>last_seen_profiler</strong> - Long -  The time this username was most recently seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+
+      </ul>
+
+ </li>
+</ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--asset_model-assets-GET__title__6"><h2 class="sectiontitle" id="api-19.0--asset_model-assets-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "domain_id": 42,
+        "hostnames": [
+            {
+                "created": 42,
+                "first_seen_profiler": 42,
+                "first_seen_scanner": 42,
+                "id": 42,
+                "last_seen_profiler": 42,
+                "last_seen_scanner": 42,
+                "name": "String",
+                "type": "String &lt;one of: DNS, NETBIOS, NETBIOSGROUP&gt;"
+            }
+        ],
+        "id": 42,
+        "interfaces": [
+            {
+                "created": 42,
+                "first_seen_profiler": 42,
+                "first_seen_scanner": 42,
+                "id": 42,
+                "ip_addresses": [
+                    {
+                        "created": 42,
+                        "first_seen_profiler": 42,
+                        "first_seen_scanner": 42,
+                        "id": 42,
+                        "last_seen_profiler": 42,
+                        "last_seen_scanner": 42,
+                        "network_id": 42,
+                        "type": "String",
+                        "value": "String"
+                    }
+                ],
+                "last_seen_profiler": 42,
+                "last_seen_scanner": 42,
+                "mac_address": "String"
+            }
+        ],
+        "products": [
+            {
+                "first_seen_profiler": 42,
+                "first_seen_scanner": 42,
+                "id": 42,
+                "last_scanned_for": 42,
+                "last_seen_profiler": 42,
+                "last_seen_scanner": 42,
+                "product_variant_id": 42
+            }
+        ],
+        "properties": [
+            {
+                "id": 42,
+                "last_reported": 42,
+                "last_reported_by": "String",
+                "name": "String",
+                "type_id": 42,
+                "value": "String"
+            }
+        ],
+        "risk_score_sum": 42.5,
+        "users": [
+            {
+                "first_seen_profiler": 42,
+                "first_seen_scanner": 42,
+                "id": 42,
+                "last_seen_profiler": 42,
+                "last_seen_scanner": 42,
+                "username": "String"
+            }
+        ],
+        "vulnerability_count": 42
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--asset_model-assets-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_asset_model_intro.html" title="Use the references for REST API 19.0 asset_model endpoints.">asset_model endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

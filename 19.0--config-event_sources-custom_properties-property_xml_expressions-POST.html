@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a new XML expression.">
+<meta name="keywords" content="/config/event_sources/custom_properties/property_xml_expressions, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>POST /config/event_sources/custom_properties/property_xml_expressions</title>
+</head>
+<body id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__title__1">POST /config/event_sources/custom_properties/property_xml_expressions</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-event_sources-custom_properties-property_xml_expressions-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-event_sources-custom_properties-property_xml_expressions-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a new XML expression.</p>
+
+<div class="section refsyn">
+<p>Creates a new XML expression.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/custom_properties/property_xml_expressions resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/event_sources/custom_properties/property_xml_expressions resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/custom_properties/property_xml_expressions request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/event_sources/custom_properties/property_xml_expressions request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/custom_properties/property_xml_expressions request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/event_sources/custom_properties/property_xml_expressions request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__15" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__16" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__17" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__18" class="thbot">Description</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__19" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__15 "><p>data</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__16 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__17 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__18 "><div class="p">Required - A JSON representation of the XML expression object
+         <ul>
+         <li><strong>regex_property_identifier</strong> - Required - String - The identifier of the event regex property to which this expression belongs.</li>
+
+         <li><strong>enabled</strong> - Optional - Boolean - Flag that indicates whether this expression is enabled. It defaults to true if not provided.</li>
+
+         <li><strong>expression</strong> - Required - String - The XML expression path to find the property value from the XML payload. </li>
+
+         <li><strong>payload</strong> - Optional - String - Test payload. This parameter is only used in the UI so that you can verify that your expression matches the expected payload.</li>
+
+         <li><strong>log_source_type_id</strong> - Required - Integer - The expression is only applied to events for this log source type.</li>
+
+         <li><strong>log_source_id</strong> - Optional - Integer - The expression is only applied to events for this log source (more specific than type alone). </li>
+
+         <li><strong>qid</strong> - Optional - Integer - The expression is only applied to events associated with this QID record. </li>
+
+         <li><strong>low_level_category_id</strong> - Optional - Integer - The expression is only applied to events with this low level category. </li>
+
+         </ul>
+</div>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__19 "><p>{
+    "creation_date": 42,
+    "enabled": true,
+    "expression": "String",
+    "id": 42,
+    "identifier": "String",
+    "log_source_id": 42,
+    "log_source_type_id": 42,
+    "low_level_category_id": 42,
+    "modification_date": 42,
+    "payload": "String",
+    "qid": 42,
+    "regex_property_identifier": "String",
+    "username": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/custom_properties/property_xml_expressions response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/event_sources/custom_properties/property_xml_expressions response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__25" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__26" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__27" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__25 "><p>201</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__26 "><p></p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__27 "><p>A new XML expression was created.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__26 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__27 "><p>One or more request parameter are invalid in request.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__26 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__entry__27 "><p>An error occurred during the attempt to create a new XML expression.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__title__6"><h2 class="sectiontitle" id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__title__6">Response Description</h2>
+
+<div class="p">The newly created XML expression that contains the following fields:
+        <ul>
+         <li><strong>id</strong> - Integer - The sequence ID of the XML expression.</li>
+
+         <li><strong>identifier</strong> - String - The unique ID of the XML expression. This value is in the form of a UUID.</li>
+
+         <li><strong>regex_property_identifier</strong> - String - The identifier of the event regex property to which this expression belongs.</li>
+
+         <li><strong>enabled</strong> - Boolean - Flag that indicates whether this expression is enabled.</li>
+
+         <li><strong>expression</strong> - String - The XML expression path to find the property value from the XML payload. </li>
+
+         <li><strong>payload</strong> - String - Test payload. This parameter is only used in the UI so that you can verify that your expression matches the expected payload.</li>
+
+         <li><strong>log_source_type_id</strong> - Integer - The expression is only applied to events for this log source type.</li>
+
+         <li><strong>log_source_id</strong> - Integer - The expression is only applied to events for this log source (more specific than type alone). </li>
+
+         <li><strong>qid</strong> - Integer - The expression is only applied to events associated with this QID record. </li>
+
+         <li><strong>low_level_category_id</strong> - Integer - The expression is only applied to events with this low level category. </li>
+
+         <li><strong>username</strong> - String - The owner of the XML expression.</li>
+
+         </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__title__7"><h2 class="sectiontitle" id="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "creation_date": 42,
+    "enabled": true,
+    "expression": "String",
+    "id": 42,
+    "identifier": "String",
+    "log_source_id": 42,
+    "log_source_type_id": 42,
+    "low_level_category_id": 42,
+    "modification_date": 42,
+    "payload": "String",
+    "qid": 42,
+    "regex_property_identifier": "String",
+    "username": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-event_sources-custom_properties-property_xml_expressions-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

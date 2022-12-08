@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Use the references for REST API 19.0 analytics endpoints.">
+
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>analytics endpoints</title>
+</head>
+<body id="c_rest_api_version190_analytics_intro"><main role="main"><article role="article" aria-labelledby="c_rest_api_version190_analytics_intro__title__1">
+<h1 class="topictitle1" id="c_rest_api_version190_analytics_intro__title__1">analytics endpoints</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/c_rest_api_version190_analytics_intro.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2Fc_rest_api_version190_analytics_intro.dita">Edit online</a></span></div>
+
+
+<div class="body conbody"><p class="shortdesc">Use the references for REST API 19.0 analytics endpoints.</p>
+<p></p>
+</div>
+
+<aside role="complementary" aria-labelledby="c_rest_api_version190_analytics_intro__title__1"><nav role="navigation">
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="19.0--analytics-ade_rules-GET.html">GET /analytics/ade_rules</a></strong><br>
+Retrieves a list of ADE rules.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-ade_rules-ade_rule_delete_tasks-task_id-GET.html">GET /analytics/ade_rules/ade_rule_delete_tasks/{task_id}</a></strong><br>
+Retrieves the delete the ADE rule task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-ade_rules-ade_rule_dependent_tasks-task_id-GET.html">GET /analytics/ade_rules/ade_rule_dependent_tasks/{task_id}</a></strong><br>
+Retrieves the dependent the ADE rule task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-ade_rules-ade_rule_dependent_tasks-task_id-POST.html">POST /analytics/ade_rules/ade_rule_dependent_tasks/{task_id}</a></strong><br>
+Cancels a dependent the ADE rule task.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-ade_rules-ade_rule_dependent_tasks-task_id-results-GET.html">GET /analytics/ade_rules/ade_rule_dependent_tasks/{task_id}/results</a></strong><br>
+Retrieves the ADE rule dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-ade_rules-id-DELETE.html">DELETE /analytics/ade_rules/{id}</a></strong><br>
+Deletes an ADE rule. To ensure safe deletion, a dependency check is carried out. The check might take some time. An asynchronous task is started to do this check.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-ade_rules-id-GET.html">GET /analytics/ade_rules/{id}</a></strong><br>
+Retrieves an ADE rule.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-ade_rules-id-POST.html">POST /analytics/ade_rules/{id}</a></strong><br>
+Updates the ADE rule owner or enabled/disabled only.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-ade_rules-id-dependents-GET.html">GET /analytics/ade_rules/{id}/dependents</a></strong><br>
+Retrieves the objects that depend on the ADE rule.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-building_blocks-GET.html">GET /analytics/building_blocks</a></strong><br>
+Retrieves a list of building block rules.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-building_blocks-building_block_delete_tasks-task_id-GET.html">GET /analytics/building_blocks/building_block_delete_tasks/{task_id}</a></strong><br>
+Retrieves the delete the building block rule task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-building_blocks-building_block_dependent_tasks-task_id-GET.html">GET /analytics/building_blocks/building_block_dependent_tasks/{task_id}</a></strong><br>
+Retrieves the dependent the building block rule task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-building_blocks-building_block_dependent_tasks-task_id-POST.html">POST /analytics/building_blocks/building_block_dependent_tasks/{task_id}</a></strong><br>
+Cancels the dependent the building block rule task.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-building_blocks-building_block_dependent_tasks-task_id-results-GET.html">GET /analytics/building_blocks/building_block_dependent_tasks/{task_id}/results</a></strong><br>
+Retrieves the building block rule dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-building_blocks-id-DELETE.html">DELETE /analytics/building_blocks/{id}</a></strong><br>
+Deletes the building block rule. To ensure safe deletion, a dependency check is carried out. This check might take some time. An asynchronous task to do is started for this check.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-building_blocks-id-GET.html">GET /analytics/building_blocks/{id}</a></strong><br>
+Retrieves a building block rule.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-building_blocks-id-POST.html">POST /analytics/building_blocks/{id}</a></strong><br>
+Updates the building block rule owner or enabled/disabled only.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-building_blocks-id-dependents-GET.html">GET /analytics/building_blocks/{id}/dependents</a></strong><br>
+Retrieves the objects that depend on the building block rule.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-custom_actions-actions-GET.html">GET /analytics/custom_actions/actions</a></strong><br>
+Retrieves a list of available custom actions.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-custom_actions-actions-POST.html">POST /analytics/custom_actions/actions</a></strong><br>
+Creates a new custom action with the supplied fields.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-custom_actions-actions-action_id-DELETE.html">DELETE /analytics/custom_actions/actions/{action_id}</a></strong><br>
+Deletes an existing custom action.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-custom_actions-actions-action_id-GET.html">GET /analytics/custom_actions/actions/{action_id}</a></strong><br>
+Retrieves a custom action based on the supplied action_id.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-custom_actions-actions-action_id-POST.html">POST /analytics/custom_actions/actions/{action_id}</a></strong><br>
+Updates an existing custom action.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-custom_actions-interpreters-GET.html">GET /analytics/custom_actions/interpreters</a></strong><br>
+Retrieves a list of available custom action interpreters.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-custom_actions-interpreters-interpreter_id-GET.html">GET /analytics/custom_actions/interpreters/{interpreter_id}</a></strong><br>
+Retrieves a custom action interpreter based on supplied interpreter_id.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-custom_actions-scripts-GET.html">GET /analytics/custom_actions/scripts</a></strong><br>
+Retrieves a list of meta-data for available custom action script files.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-custom_actions-scripts-POST.html">POST /analytics/custom_actions/scripts</a></strong><br>
+Creates a new custom action script file. Newly created custom action script files require a deployment before using.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-custom_actions-scripts-script_id-DELETE.html">DELETE /analytics/custom_actions/scripts/{script_id}</a></strong><br>
+Deletes an existing custom action script file.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-custom_actions-scripts-script_id-GET.html">GET /analytics/custom_actions/scripts/{script_id}</a></strong><br>
+Retrieves meta-data of a custom action script file based on supplied script_id.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-custom_actions-scripts-script_id-POST.html">POST /analytics/custom_actions/scripts/{script_id}</a></strong><br>
+Updates an existing custom action script file. Updated custom action script files require a deployment before using.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rule_groups-GET.html">GET /analytics/rule_groups</a></strong><br>
+Retrieves a list of the rule groups.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rule_groups-group_id-DELETE.html">DELETE /analytics/rule_groups/{group_id}</a></strong><br>
+Deletes a rule. To ensure safe deletion, a dependency check is carried out. This check might take some time. An asynchronous task to do is started for this check.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rule_groups-group_id-GET.html">GET /analytics/rule_groups/{group_id}</a></strong><br>
+Retrieves a rule group.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rule_groups-group_id-POST.html">POST /analytics/rule_groups/{group_id}</a></strong><br>
+Updates the owner of a rule group.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rules-GET.html">GET /analytics/rules</a></strong><br>
+Retrieves a list of rules.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rules-id-DELETE.html">DELETE /analytics/rules/{id}</a></strong><br>
+Delete the rule. To ensure safe deletion, a dependency check is carried out. This check might take some time. An asynchronous task to do is started for this check.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rules-id-GET.html">GET /analytics/rules/{id}</a></strong><br>
+Retrieves a rule.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rules-id-POST.html">POST /analytics/rules/{id}</a></strong><br>
+Updates the rule owner or enabled/disabled only.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rules-id-dependents-GET.html">GET /analytics/rules/{id}/dependents</a></strong><br>
+Retrieves the objects that depend on the rule.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rules-rule_delete_tasks-task_id-GET.html">GET /analytics/rules/rule_delete_tasks/{task_id}</a></strong><br>
+Retrieves the delete the rule task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rules-rule_dependent_tasks-task_id-GET.html">GET /analytics/rules/rule_dependent_tasks/{task_id}</a></strong><br>
+Retrieves the dependent rule task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rules-rule_dependent_tasks-task_id-POST.html">POST /analytics/rules/rule_dependent_tasks/{task_id}</a></strong><br>
+Cancels the dependent the rule task.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rules-rule_dependent_tasks-task_id-results-GET.html">GET /analytics/rules/rule_dependent_tasks/{task_id}/results</a></strong><br>
+Retrieves the rule dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--analytics-rules_offense_contributions-GET.html">GET /analytics/rules_offense_contributions</a></strong><br>
+Retrieves Rule Offense contributions     Retieves Rule and Offense references in the system.</li>
+</ul>
+</nav></aside></article></main></body></html>

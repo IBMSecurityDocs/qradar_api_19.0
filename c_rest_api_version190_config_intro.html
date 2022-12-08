@@ -1,0 +1,575 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Use the references for REST API 19.0 config endpoints.">
+
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>config endpoints</title>
+</head>
+<body id="c_rest_api_version190_config_intro"><main role="main"><article role="article" aria-labelledby="c_rest_api_version190_config_intro__title__1">
+<h1 class="topictitle1" id="c_rest_api_version190_config_intro__title__1">config endpoints</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/c_rest_api_version190_config_intro.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2Fc_rest_api_version190_config_intro.dita">Edit online</a></span></div>
+
+
+<div class="body conbody"><p class="shortdesc">Use the references for REST API 19.0 config endpoints.</p>
+<p></p>
+</div>
+
+<aside role="complementary" aria-labelledby="c_rest_api_version190_config_intro__title__1"><nav role="navigation">
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="19.0--config-access-authorized_services-GET.html">GET /config/access/authorized_services</a></strong><br>
+Retrieves a list of authorized services. For security reasons, the token field will never be populated in this endpoint.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-authorized_services-POST.html">POST /config/access/authorized_services</a></strong><br>
+Creates an authorized service. The response to this API invocation will contain the API token. This will be the only time the token value is available.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-authorized_services-id-DELETE.html">DELETE /config/access/authorized_services/{id}</a></strong><br>
+Deletes an authorized service.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-authorized_services-id-GET.html">GET /config/access/authorized_services/{id}</a></strong><br>
+Retrieves an authorized service.  For security reasons, the token field will never be populated in this endpoint.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-authorized_services-id-POST.html">POST /config/access/authorized_services/{id}</a></strong><br>
+Updates an authorized service. Only the label, tenant_id, security_profile_id, user_role_id, and expiration_date fields can be updated.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-security_profiles-GET.html">GET /config/access/security_profiles</a></strong><br>
+Get the list of deployed security profiles available in the system.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-security_profiles-id-GET.html">GET /config/access/security_profiles/{id}</a></strong><br>
+Get a deployed security profile by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-tenant_management-tenants-GET.html">GET /config/access/tenant_management/tenants</a></strong><br>
+Retrieve the list of all tenants ordered by tenant id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-tenant_management-tenants-POST.html">POST /config/access/tenant_management/tenants</a></strong><br>
+Create a new tenant.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-tenant_management-tenants-tenant_id-DELETE.html">DELETE /config/access/tenant_management/tenants/{tenant_id}</a></strong><br>
+Delete a tenant.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-tenant_management-tenants-tenant_id-GET.html">GET /config/access/tenant_management/tenants/{tenant_id}</a></strong><br>
+Retrieve a tenant by tenant id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-tenant_management-tenants-tenant_id-POST.html">POST /config/access/tenant_management/tenants/{tenant_id}</a></strong><br>
+Update a tenant</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-user_dependent_tasks-task_id-GET.html">GET /config/access/user_dependent_tasks/{task_id}</a></strong><br>
+Retrieves the dependent user task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-user_dependent_tasks-task_id-POST.html">POST /config/access/user_dependent_tasks/{task_id}</a></strong><br>
+Cancels a dependent user task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-user_dependent_tasks-task_id-results-GET.html">GET /config/access/user_dependent_tasks/{task_id}/results</a></strong><br>
+Retrieves the user dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-user_roles-GET.html">GET /config/access/user_roles</a></strong><br>
+Get the list of deployed user roles available in the system.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-user_roles-id-GET.html">GET /config/access/user_roles/{id}</a></strong><br>
+Get a deployed user role by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-users-GET.html">GET /config/access/users</a></strong><br>
+Retrieve Deployed Users.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-users-id-GET.html">GET /config/access/users/{id}</a></strong><br>
+Retrieves a deployed user.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-users-id-POST.html">POST /config/access/users/{id}</a></strong><br>
+Update a deployed user.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-access-users-id-dependents-GET.html">GET /config/access/users/{id}/dependents</a></strong><br>
+Retrieves the objects that depend on the user.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-backup_and_restore-scheduled_backup_configurations-GET.html">GET /config/backup_and_restore/scheduled_backup_configurations</a></strong><br>
+Retrieves a list of Backup Configurations.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-backup_and_restore-scheduled_backup_configurations-id-GET.html">GET /config/backup_and_restore/scheduled_backup_configurations/{id}</a></strong><br>
+Retrieves a Backup Configuration by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-certificates-components-GET.html">GET /config/certificates/components</a></strong><br>
+Gets the list of registered components.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-certificates-end_certificates-GET.html">GET /config/certificates/end_certificates</a></strong><br>
+Gets the list of deployed certificates.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-certificates-end_certificates-id-GET.html">GET /config/certificates/end_certificates/{id}</a></strong><br>
+Gets information about a specific deployed certificate, as specified the certificate ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-certificates-end_certificates-id-full_chain-GET.html">GET /config/certificates/end_certificates/{id}/full_chain</a></strong><br>
+Gets the full chain of the certificate. The chain hierarchy includes the content of the end certificate, and the content of the issuer chain certificates, up to and including the root certificate.   This endpoint might not return the root certificate if it was uploaded in the last 24 hours.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-certificates-root_certificates-GET.html">GET /config/certificates/root_certificates</a></strong><br>
+Gets the list of all root certificates that have been uploaded and deployed.  You must have System Administrator or Security Administrator permissions to use this endpoint.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-certificates-root_certificates-id-GET.html">GET /config/certificates/root_certificates/{id}</a></strong><br>
+Gets details of a deployed root certificate, as specified by the ID.  You must have System Administrator or Security Administrator permissions to use this endpoint.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-certificates-root_certificates-id-get_dependant_ids-GET.html">GET /config/certificates/root_certificates/{id}/get_dependant_ids</a></strong><br>
+Gets a list of end certificate IDs that depend on the root certificate. This endpoint might not return the dependent IDs of the certificates that were uploaded in the last 24 hours. You must have System Administrator or Security Administrator permissions to use this endpoint.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-deployment-hosts-GET.html">GET /config/deployment/hosts</a></strong><br>
+Retrieves a list of all deployed hosts.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-deployment-hosts-id-GET.html">GET /config/deployment/hosts/{id}</a></strong><br>
+Retrieves a deployed host by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-deployment-hosts-id-POST.html">POST /config/deployment/hosts/{id}</a></strong><br>
+Updates a host by ID and sends a JMS message to update the pipeline.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-deployment-hosts-id-tunnels-GET.html">GET /config/deployment/hosts/{id}/tunnels</a></strong><br>
+Gets the list of tunnels for the host.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-deployment-license_pool-GET.html">GET /config/deployment/license_pool</a></strong><br>
+Retrieves the deployed license pool information.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-domain_management-domains-GET.html">GET /config/domain_management/domains</a></strong><br>
+Gets the list of domains.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-domain_management-domains-POST.html">POST /config/domain_management/domains</a></strong><br>
+Creates a new domain.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-domain_management-domains-domain_id-DELETE.html">DELETE /config/domain_management/domains/{domain_id}</a></strong><br>
+Deletes a domain by domain id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-domain_management-domains-domain_id-GET.html">GET /config/domain_management/domains/{domain_id}</a></strong><br>
+Gets an individual domain by ID</li>
+<li class="ulchildlink"><strong><a href="19.0--config-domain_management-domains-domain_id-POST.html">POST /config/domain_management/domains/{domain_id}</a></strong><br>
+Updates an existing domain.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_retention_buckets-GET.html">GET /config/event_retention_buckets</a></strong><br>
+Retrieves a list of event retention buckets.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_retention_buckets-id-DELETE.html">DELETE /config/event_retention_buckets/{id}</a></strong><br>
+Deletes an event retention bucket.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_retention_buckets-id-GET.html">GET /config/event_retention_buckets/{id}</a></strong><br>
+Retrieves an event retention bucket.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_retention_buckets-id-POST.html">POST /config/event_retention_buckets/{id}</a></strong><br>
+Updates the event retention bucket owner or enabled/disabled only.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_properties-GET.html">GET /config/event_sources/custom_properties/calculated_properties</a></strong><br>
+Retrieves a list of calculated event properties.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_properties-POST.html">POST /config/event_sources/custom_properties/calculated_properties</a></strong><br>
+Creates a new calculated event property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_properties-calculated_property_id-DELETE.html">DELETE /config/event_sources/custom_properties/calculated_properties/{calculated_property_id}</a></strong><br>
+Deletes the event calculated property. To ensure safe deletion, a dependency check is carried out. This check might take some time. An asynchronous task to do is started for this check.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_properties-calculated_property_id-GET.html">GET /config/event_sources/custom_properties/calculated_properties/{calculated_property_id}</a></strong><br>
+Retrieves a calculated event property based on the supplied calculated property identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_properties-calculated_property_id-POST.html">POST /config/event_sources/custom_properties/calculated_properties/{calculated_property_id}</a></strong><br>
+Updates an existing calculated event property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_properties-calculated_property_id-dependents-GET.html">GET /config/event_sources/custom_properties/calculated_properties/{calculated_property_id}/dependents</a></strong><br>
+Retrieves the objects that depend on the event calculated property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_properties-calculated_property_id-dependents-disable-GET.html">GET /config/event_sources/custom_properties/calculated_properties/{calculated_property_id}/dependents/disable</a></strong><br>
+Retrieves the objects that depend on the event calculated property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_properties-dep-calculated_property_id-GET.html">GET /config/event_sources/custom_properties/calculated_properties/dep/{calculated_property_id}</a></strong><br>
+Retrieves a calculated event property based on the supplied calculated property ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_property-calculated_property_name-GET.html">GET /config/event_sources/custom_properties/calculated_property/{calculated_property_name}</a></strong><br>
+Retrieves a list of event calculated properties.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_property_delete_tasks-task_id-GET.html">GET /config/event_sources/custom_properties/calculated_property_delete_tasks/{task_id}</a></strong><br>
+Retrieves the status of the event calculated property delete task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_property_dependent_tasks-disable-task_id-GET.html">GET /config/event_sources/custom_properties/calculated_property_dependent_tasks/disable/{task_id}</a></strong><br>
+Retrieves the event calculated property dependent task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_property_dependent_tasks-disable-task_id-POST.html">POST /config/event_sources/custom_properties/calculated_property_dependent_tasks/disable/{task_id}</a></strong><br>
+Cancels the calculated property dependent task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_property_dependent_tasks-disable-task_id-results-GET.html">GET /config/event_sources/custom_properties/calculated_property_dependent_tasks/disable/{task_id}/results</a></strong><br>
+Retrieves the calculated property dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_property_dependent_tasks-task_id-GET.html">GET /config/event_sources/custom_properties/calculated_property_dependent_tasks/{task_id}</a></strong><br>
+Retrieves the status of the event calculated property dependents task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_property_dependent_tasks-task_id-POST.html">POST /config/event_sources/custom_properties/calculated_property_dependent_tasks/{task_id}</a></strong><br>
+Cancels the event calculated property dependent task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_property_dependent_tasks-task_id-results-GET.html">GET /config/event_sources/custom_properties/calculated_property_dependent_tasks/{task_id}/results</a></strong><br>
+Retrieves the calculated property dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-calculated_property_operands-GET.html">GET /config/event_sources/custom_properties/calculated_property_operands</a></strong><br>
+Retrieves the list of available options for calculated event property operand.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_aql_expressions-GET.html">GET /config/event_sources/custom_properties/property_aql_expressions</a></strong><br>
+Gets the list of Custom Property AQL Expressions. Requires the System Administrator, Security Admin or User Defined Event Properties permission.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_aql_expressions-POST.html">POST /config/event_sources/custom_properties/property_aql_expressions</a></strong><br>
+Creates a new Custom Property AQL expression. Requires the System Administrator, Security Admin or User Defined Event Properties permission.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_aql_expressions-expression_id-DELETE.html">DELETE /config/event_sources/custom_properties/property_aql_expressions/{expression_id}</a></strong><br>
+Deletes a Custom Property AQL expression based on the supplied expression ID. Requires the System Administrator, Security Admin or User Defined Event Properties permission.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_aql_expressions-expression_id-GET.html">GET /config/event_sources/custom_properties/property_aql_expressions/{expression_id}</a></strong><br>
+Gets a Custom Property AQL Expression by ID. Requires the System Administrator, Security Admin or User Defined Event Properties permission.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_aql_expressions-expression_id-POST.html">POST /config/event_sources/custom_properties/property_aql_expressions/{expression_id}</a></strong><br>
+Updates a Custom Property AQL expression. Requires the System Administrator, Security Admin or User Defined Event Properties permission.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_calculated_expressions-GET.html">GET /config/event_sources/custom_properties/property_calculated_expressions</a></strong><br>
+Gets the list of Custom Property Calculated Expressions. Requires the System Administrator, Security Admin or User Defined Event Properties permission.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_calculated_expressions-POST.html">POST /config/event_sources/custom_properties/property_calculated_expressions</a></strong><br>
+Creates a new Custom Property Calculated Expression. Requires the System Administrator, Security Admin or User Defined Event Properties permission.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-DELETE.html">DELETE /config/event_sources/custom_properties/property_calculated_expressions/{expression_id}</a></strong><br>
+Deletes a Custom Property Calculated Expression based on the supplied expression ID. Requires the System Administrator, Security Admin or User Defined Event Properties permission.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-GET.html">GET /config/event_sources/custom_properties/property_calculated_expressions/{expression_id}</a></strong><br>
+Gets a Custom Property Calculated Expression by ID. Requires the System Administrator, Security Admin or User Defined Event Properties permission.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST.html">POST /config/event_sources/custom_properties/property_calculated_expressions/{expression_id}</a></strong><br>
+Updates a Custom Property Calculated Expression. Requires the System Administrator, Security Admin or User Defined Event Properties permission.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_cef_expressions-GET.html">GET /config/event_sources/custom_properties/property_cef_expressions</a></strong><br>
+Retrieves a list of CEF expressions.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_cef_expressions-POST.html">POST /config/event_sources/custom_properties/property_cef_expressions</a></strong><br>
+Creates a new CEF expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_cef_expressions-expression_id-DELETE.html">DELETE /config/event_sources/custom_properties/property_cef_expressions/{expression_id}</a></strong><br>
+Deletes a CEF expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_cef_expressions-expression_id-GET.html">GET /config/event_sources/custom_properties/property_cef_expressions/{expression_id}</a></strong><br>
+Retrieves a CEF expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_cef_expressions-expression_id-POST.html">POST /config/event_sources/custom_properties/property_cef_expressions/{expression_id}</a></strong><br>
+Updates an existing CEF expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_expressions-GET.html">GET /config/event_sources/custom_properties/property_expressions</a></strong><br>
+Retrieves a list of event regex property expressions.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_expressions-POST.html">POST /config/event_sources/custom_properties/property_expressions</a></strong><br>
+Creates a new event regex property expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_expressions-expression_id-DELETE.html">DELETE /config/event_sources/custom_properties/property_expressions/{expression_id}</a></strong><br>
+Deletes an event regex property expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_expressions-expression_id-GET.html">GET /config/event_sources/custom_properties/property_expressions/{expression_id}</a></strong><br>
+Retrieves a event regex property expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_expressions-expression_id-POST.html">POST /config/event_sources/custom_properties/property_expressions/{expression_id}</a></strong><br>
+Updates an existing event regex property expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_genericlist_expressions-GET.html">GET /config/event_sources/custom_properties/property_genericlist_expressions</a></strong><br>
+Retrieves a list of Generic List expressions.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_genericlist_expressions-POST.html">POST /config/event_sources/custom_properties/property_genericlist_expressions</a></strong><br>
+Creates a new Generic List expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_genericlist_expressions-expression_id-DELETE.html">DELETE /config/event_sources/custom_properties/property_genericlist_expressions/{expression_id}</a></strong><br>
+Deletes a Generic List expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_genericlist_expressions-expression_id-GET.html">GET /config/event_sources/custom_properties/property_genericlist_expressions/{expression_id}</a></strong><br>
+Retrieves a Generic List expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_genericlist_expressions-expression_id-POST.html">POST /config/event_sources/custom_properties/property_genericlist_expressions/{expression_id}</a></strong><br>
+Updates an existing Generic List expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_json_expressions-GET.html">GET /config/event_sources/custom_properties/property_json_expressions</a></strong><br>
+Retrieves a list of JSON expressions.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_json_expressions-POST.html">POST /config/event_sources/custom_properties/property_json_expressions</a></strong><br>
+Creates a new JSON expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_json_expressions-expression_id-DELETE.html">DELETE /config/event_sources/custom_properties/property_json_expressions/{expression_id}</a></strong><br>
+Deletes a JSON expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_json_expressions-expression_id-GET.html">GET /config/event_sources/custom_properties/property_json_expressions/{expression_id}</a></strong><br>
+Retrieves a JSON expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_json_expressions-expression_id-POST.html">POST /config/event_sources/custom_properties/property_json_expressions/{expression_id}</a></strong><br>
+Updates an existing JSON expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_leef_expressions-GET.html">GET /config/event_sources/custom_properties/property_leef_expressions</a></strong><br>
+Retrieves the list of LEEF Expressions.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_leef_expressions-POST.html">POST /config/event_sources/custom_properties/property_leef_expressions</a></strong><br>
+Creates a new LEEF Expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_leef_expressions-expression_id-DELETE.html">DELETE /config/event_sources/custom_properties/property_leef_expressions/{expression_id}</a></strong><br>
+Deletes a LEEF Expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_leef_expressions-expression_id-GET.html">GET /config/event_sources/custom_properties/property_leef_expressions/{expression_id}</a></strong><br>
+Retrieves a LEEF Expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_leef_expressions-expression_id-POST.html">POST /config/event_sources/custom_properties/property_leef_expressions/{expression_id}</a></strong><br>
+Updates an existing LEEF Expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_nvp_expressions-GET.html">GET /config/event_sources/custom_properties/property_nvp_expressions</a></strong><br>
+Retrieves a list of Name Value Pair expressions.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_nvp_expressions-POST.html">POST /config/event_sources/custom_properties/property_nvp_expressions</a></strong><br>
+Creates a new Name Value Pair expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_nvp_expressions-expression_id-DELETE.html">DELETE /config/event_sources/custom_properties/property_nvp_expressions/{expression_id}</a></strong><br>
+Deletes a Name Value Pair expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_nvp_expressions-expression_id-GET.html">GET /config/event_sources/custom_properties/property_nvp_expressions/{expression_id}</a></strong><br>
+Retrieves a Name Value Pair expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_nvp_expressions-expression_id-POST.html">POST /config/event_sources/custom_properties/property_nvp_expressions/{expression_id}</a></strong><br>
+Updates an existing Name Value Pair expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_xml_expressions-GET.html">GET /config/event_sources/custom_properties/property_xml_expressions</a></strong><br>
+Retrieves a list of XML expressions.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_xml_expressions-POST.html">POST /config/event_sources/custom_properties/property_xml_expressions</a></strong><br>
+Creates a new XML expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_xml_expressions-expression_id-DELETE.html">DELETE /config/event_sources/custom_properties/property_xml_expressions/{expression_id}</a></strong><br>
+Deletes an XML expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_xml_expressions-expression_id-GET.html">GET /config/event_sources/custom_properties/property_xml_expressions/{expression_id}</a></strong><br>
+Retrieves a XML expression based on the supplied identifier.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-property_xml_expressions-expression_id-POST.html">POST /config/event_sources/custom_properties/property_xml_expressions/{expression_id}</a></strong><br>
+Updates an existing XML expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_properties-GET.html">GET /config/event_sources/custom_properties/regex_properties</a></strong><br>
+Retrieves a list of event regex properties.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_properties-POST.html">POST /config/event_sources/custom_properties/regex_properties</a></strong><br>
+Creates a new event regex property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_properties-regex_property_id-DELETE.html">DELETE /config/event_sources/custom_properties/regex_properties/{regex_property_id}</a></strong><br>
+Deletes an event regex property. To ensure safe deletion, a dependency check is carried out. This check might take some time. An asynchronous task is started to do this check.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_properties-regex_property_id-GET.html">GET /config/event_sources/custom_properties/regex_properties/{regex_property_id}</a></strong><br>
+Retrieves a event regex property based on the supplied regex property ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_properties-regex_property_id-POST.html">POST /config/event_sources/custom_properties/regex_properties/{regex_property_id}</a></strong><br>
+Updates an existing event regex property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_properties-regex_property_id-dependents-GET.html">GET /config/event_sources/custom_properties/regex_properties/{regex_property_id}/dependents</a></strong><br>
+Retrieves the objects that depend on the event regex property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_properties-regex_property_id-dependents-change_field_type-GET.html">GET /config/event_sources/custom_properties/regex_properties/{regex_property_id}/dependents/change_field_type</a></strong><br>
+Retrieves the objects that depend on the event regex property for changing type of field for it.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_properties-regex_property_id-dependents-disable-GET.html">GET /config/event_sources/custom_properties/regex_properties/{regex_property_id}/dependents/disable</a></strong><br>
+Retrieves the objects that depend on the event regex property for disabling it.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_property_delete_tasks-task_id-GET.html">GET /config/event_sources/custom_properties/regex_property_delete_tasks/{task_id}</a></strong><br>
+Retrieves the event regex property delete task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_property_dependent_tasks-change_field_type-task_id-GET.html">GET /config/event_sources/custom_properties/regex_property_dependent_tasks/change_field_type/{task_id}</a></strong><br>
+Retrieves the event regex property dependent task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_property_dependent_tasks-change_field_type-task_id-POST.html">POST /config/event_sources/custom_properties/regex_property_dependent_tasks/change_field_type/{task_id}</a></strong><br>
+Cancels the regex property dependent task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_property_dependent_tasks-change_field_type-task_id-results-GET.html">GET /config/event_sources/custom_properties/regex_property_dependent_tasks/change_field_type/{task_id}/results</a></strong><br>
+Retrieves the regex property dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_property_dependent_tasks-disable-task_id-GET.html">GET /config/event_sources/custom_properties/regex_property_dependent_tasks/disable/{task_id}</a></strong><br>
+Retrieves the event regex property dependent task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_property_dependent_tasks-disable-task_id-POST.html">POST /config/event_sources/custom_properties/regex_property_dependent_tasks/disable/{task_id}</a></strong><br>
+Cancels the regex property dependent task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_property_dependent_tasks-disable-task_id-results-GET.html">GET /config/event_sources/custom_properties/regex_property_dependent_tasks/disable/{task_id}/results</a></strong><br>
+Retrieves the regex property dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_property_dependent_tasks-task_id-GET.html">GET /config/event_sources/custom_properties/regex_property_dependent_tasks/{task_id}</a></strong><br>
+Retrieves the event regex property dependent task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_property_dependent_tasks-task_id-POST.html">POST /config/event_sources/custom_properties/regex_property_dependent_tasks/{task_id}</a></strong><br>
+Cancels the regex property dependent task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-custom_properties-regex_property_dependent_tasks-task_id-results-GET.html">GET /config/event_sources/custom_properties/regex_property_dependent_tasks/{task_id}/results</a></strong><br>
+Retrieves the regex property dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-disconnected_log_collectors-GET.html">GET /config/event_sources/disconnected_log_collectors</a></strong><br>
+Retrieves a list of disconnected log collectors.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-disconnected_log_collectors-POST.html">POST /config/event_sources/disconnected_log_collectors</a></strong><br>
+Creates a new disconnected log collector. A disconnected log collector contains the following fields: </li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-disconnected_log_collectors-id-DELETE.html">DELETE /config/event_sources/disconnected_log_collectors/{id}</a></strong><br>
+Deletes a Disconnected Log Collector by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-disconnected_log_collectors-id-GET.html">GET /config/event_sources/disconnected_log_collectors/{id}</a></strong><br>
+Retrieves an disconnected log collector by ID..</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-disconnected_log_collectors-id-POST.html">POST /config/event_sources/disconnected_log_collectors/{id}</a></strong><br>
+Updates a disconnected log collector by ID. A disconnected log collector contains the following fields: </li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-event_collectors-GET.html">GET /config/event_sources/event_collectors</a></strong><br>
+Retrieves a list of event collectors..</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-event_collectors-id-GET.html">GET /config/event_sources/event_collectors/{id}</a></strong><br>
+Retrieves an event collector by ID..</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-generated_regexes-POST.html">POST /config/event_sources/generated_regexes</a></strong><br>
+Retrieves a regex pattern</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-autodetection-config_records-GET.html">GET /config/event_sources/log_source_management/autodetection/config_records</a></strong><br>
+Retrieves the list of Autodetection Config Records.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-autodetection-config_records-POST.html">POST /config/event_sources/log_source_management/autodetection/config_records</a></strong><br>
+Creates an Autodetection Config Record.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-autodetection-config_records-config_id-GET.html">GET /config/event_sources/log_source_management/autodetection/config_records/{config_id}</a></strong><br>
+Gets an individual Autodetection Config Record by id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-autodetection-config_records-config_id-POST.html">POST /config/event_sources/log_source_management/autodetection/config_records/{config_id}</a></strong><br>
+Updates an Autodetection Config Record.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_bulk_tasks-id-GET.html">GET /config/event_sources/log_source_management/log_source_bulk_tasks/{id}</a></strong><br>
+Retrieves a log source bulk task by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_bulk_tasks-id-POST.html">POST /config/event_sources/log_source_management/log_source_bulk_tasks/{id}</a></strong><br>
+Updates a log source bulk task.    The only field that can be updated is the 'status' field, and the only allowed value is 'CANCELLED'.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_extensions-GET.html">GET /config/event_sources/log_source_management/log_source_extensions</a></strong><br>
+Retrieves the list of log source extensions.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_extensions-id-GET.html">GET /config/event_sources/log_source_management/log_source_extensions/{id}</a></strong><br>
+Retrieves a log source extension by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_groups-GET.html">GET /config/event_sources/log_source_management/log_source_groups</a></strong><br>
+Retrieves the list of log source groups.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_groups-POST.html">POST /config/event_sources/log_source_management/log_source_groups</a></strong><br>
+Creates a new log source group. A log source group contains the following fields: </li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_groups-id-GET.html">GET /config/event_sources/log_source_management/log_source_groups/{id}</a></strong><br>
+Retrieves a log source group by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_languages-GET.html">GET /config/event_sources/log_source_management/log_source_languages</a></strong><br>
+Retrieves the list of log source languages.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_languages-id-GET.html">GET /config/event_sources/log_source_management/log_source_languages/{id}</a></strong><br>
+Retrieves a log source language by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_statistics-POST.html">POST /config/event_sources/log_source_management/log_source_statistics</a></strong><br>
+Creates log source statistics    </li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-GET.html">GET /config/event_sources/log_source_management/log_source_types</a></strong><br>
+Retrieves a list of log source types. If called by a user/authorized service with System Administrator, Security Admin, or Manage Log Source Types permissions, then all fields will be returned in each log source type. If called by a less privileged client, only name and ID are returned in each log source type.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-POST.html">POST /config/event_sources/log_source_management/log_source_types</a></strong><br>
+Create a new custom log source type. Log source types do not need to be deployed. The following fields can be provided in the body of this request, all other log source type fields will be ignored: </li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameter_allowed_values-GET.html">GET /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameter_allowed_values</a></strong><br>
+Retrieve dsm parameter allowed values.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameter_allowed_values-PATCH.html">PATCH /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameter_allowed_values</a></strong><br>
+Create new dsm parameter allowed values or Update available dsm parameter allowed values.   </li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameter_allowed_values-id-DELETE.html">DELETE /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameter_allowed_values/{id}</a></strong><br>
+Deletes a dsm paramater allowed value by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameter_allowed_values-id-GET.html">GET /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameter_allowed_values/{id}</a></strong><br>
+Retrieve a dsm parameter allowed value by id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameter_allowed_values-id-POST.html">POST /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameter_allowed_values/{id}</a></strong><br>
+Update a dsm parameter allowed value by id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameter_definition-GET.html">GET /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameter_definition</a></strong><br>
+Retrieve dsm parameter definitions.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameters-GET.html">GET /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters</a></strong><br>
+Retrieve dsm parameters.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameters-PATCH.html">PATCH /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters</a></strong><br>
+Create new dsm parameters or Update available dsm parameters.   </li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameters-id-DELETE.html">DELETE /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id}</a></strong><br>
+Deletes a dsm paramater by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameters-id-GET.html">GET /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id}</a></strong><br>
+Retrieve a dsm parameter by id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameters-id-POST.html">POST /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id}</a></strong><br>
+Update a dsm parameter by id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-id-DELETE.html">DELETE /config/event_sources/log_source_management/log_source_types/{id}</a></strong><br>
+Deletes a custom log source type by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-id-GET.html">GET /config/event_sources/log_source_management/log_source_types/{id}</a></strong><br>
+Retrieves a log source type by ID. If called by a user/authorized service with System Administrator, Security Admin, or Manage Log Source Types permissions, then all fields will be returned for the log source type. If called by a less privileged client, only name and ID are returned for the log source type.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_source_types-id-POST.html">POST /config/event_sources/log_source_management/log_source_types/{id}</a></strong><br>
+Updates a log source type by ID. The following fields can be provided in the body of this request, all other log source type fields will be ignored: </li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_sources-GET.html">GET /config/event_sources/log_source_management/log_sources</a></strong><br>
+Retrieves a list of log sources.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_sources-PATCH.html">PATCH /config/event_sources/log_source_management/log_sources</a></strong><br>
+Patches an array of log sources. Capable of creating, updating and deleting multiple log sources in the same transaction.  </li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_sources-POST.html">POST /config/event_sources/log_source_management/log_sources</a></strong><br>
+Creates a new log source.   </li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_sources-id-DELETE.html">DELETE /config/event_sources/log_source_management/log_sources/{id}</a></strong><br>
+Deletes a log source by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_sources-id-GET.html">GET /config/event_sources/log_source_management/log_sources/{id}</a></strong><br>
+Retrieves a log source by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-log_sources-id-POST.html">POST /config/event_sources/log_source_management/log_sources/{id}</a></strong><br>
+Updates a log source by ID.  </li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-protocol_types-GET.html">GET /config/event_sources/log_source_management/protocol_types</a></strong><br>
+Retrieves the list of protocol types. Requires the System Administrator, Security Admin, or Manage Log Sources permission.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-log_source_management-protocol_types-id-GET.html">GET /config/event_sources/log_source_management/protocol_types/{id}</a></strong><br>
+Retrieves a protocol type by ID. Requires the System Administrator, Security Admin, or Manage Log Sources permission.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-property_discovery_profiles-GET.html">GET /config/event_sources/property_discovery_profiles</a></strong><br>
+Gets all PropertyDiscoveryProfiles currently in the system.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-property_discovery_profiles-POST.html">POST /config/event_sources/property_discovery_profiles</a></strong><br>
+Creates a PropertyDiscoveryProfile based on the information supplied by the property_discovery_profile JSON object.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-property_discovery_profiles-id-DELETE.html">DELETE /config/event_sources/property_discovery_profiles/{id}</a></strong><br>
+Deletes the specified PropertyDiscoveryProfile.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-property_discovery_profiles-id-GET.html">GET /config/event_sources/property_discovery_profiles/{id}</a></strong><br>
+Gets a PropertyDiscoveryProfile based on the information supplied by the property_discovery_profile corresponding to the supplied ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-property_discovery_profiles-id-POST.html">POST /config/event_sources/property_discovery_profiles/{id}</a></strong><br>
+Updates a PropertyDiscoveryProfile based on the information supplied via the property_discovery_profile JSON object.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-wincollect-wincollect_agents-GET.html">GET /config/event_sources/wincollect/wincollect_agents</a></strong><br>
+Retrieves a list of WinCollect agents.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-wincollect-wincollect_agents-id-GET.html">GET /config/event_sources/wincollect/wincollect_agents/{id}</a></strong><br>
+Retrieves a WinCollect agent by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-wincollect-wincollect_destinations-GET.html">GET /config/event_sources/wincollect/wincollect_destinations</a></strong><br>
+Retrieves a list of WinCollect destinations.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-event_sources-wincollect-wincollect_destinations-id-GET.html">GET /config/event_sources/wincollect/wincollect_destinations/{id}</a></strong><br>
+Retrieves a WinCollect destination by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-extension_management-extension_export_tasks-POST.html">POST /config/extension_management/extension_export_tasks</a></strong><br>
+Exports an extension.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-extension_management-extension_export_tasks-task_id-GET.html">GET /config/extension_management/extension_export_tasks/{task_id}</a></strong><br>
+Retrieves the tasks status based on the task_id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-extension_management-extension_export_tasks-task_id-extension_export-GET.html">GET /config/extension_management/extension_export_tasks/{task_id}/extension_export</a></strong><br>
+Retrieves the exported extension based on the task_id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-extension_management-extension_export_tasks-task_id-results-GET.html">GET /config/extension_management/extension_export_tasks/{task_id}/results</a></strong><br>
+Retrieves the tasks status results based on the task_id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-extension_management-extensions-GET.html">GET /config/extension_management/extensions</a></strong><br>
+Retrieve a list of extensions.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-extension_management-extensions-POST.html">POST /config/extension_management/extensions</a></strong><br>
+Uploads the supplied extension file to the QRadar system.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-extension_management-extensions-extension_id-DELETE.html">DELETE /config/extension_management/extensions/{extension_id}</a></strong><br>
+Uninstall an extension based on the supplied extension_id. This is an asynchronous action.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-extension_management-extensions-extension_id-GET.html">GET /config/extension_management/extensions/{extension_id}</a></strong><br>
+Retrieves an extension based on the supplied extension_id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-extension_management-extensions-extension_id-POST.html">POST /config/extension_management/extensions/{extension_id}</a></strong><br>
+Install an extension based on the supplied extension_id. This is an asynchronous action.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-extension_management-extensions-extension_id-metadata-POST.html">POST /config/extension_management/extensions/{extension_id}/metadata</a></strong><br>
+Adds metadata to the Extension corresponding to the supplied extension_id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-extension_management-extensions_task_status-status_id-GET.html">GET /config/extension_management/extensions_task_status/{status_id}</a></strong><br>
+Retrieves the tasks status based on the status_id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-extension_management-extensions_task_status-status_id-results-GET.html">GET /config/extension_management/extensions_task_status/{status_id}/results</a></strong><br>
+Retrieves the tasks status results based on the status_id.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow-applications-active_applications-GET.html">GET /config/flow/applications/active_applications</a></strong><br>
+Gets the list of active flow applications.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow-applications-active_applications-id-GET.html">GET /config/flow/applications/active_applications/{id}</a></strong><br>
+Gets an individual active flow application that is currently deployed in the system, as specified by the application ID.    Active applications are flow applications that are currently in-use by the system.  Changes or modifications to a flow application should always be made to the active applications list. Do not update the default applications.    You must have System Administrator or Security Administrator permissions to use this endpoint.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow-applications-default_applications-GET.html">GET /config/flow/applications/default_applications</a></strong><br>
+Gets the list of default flow applications.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow-applications-default_applications-id-GET.html">GET /config/flow/applications/default_applications/{id}</a></strong><br>
+Gets an individual default flow application, as specified by an ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow-common_destination_ports-active_configurations-GET.html">GET /config/flow/common_destination_ports/active_configurations</a></strong><br>
+Gets the list of active configurations for common destination ports.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow-common_destination_ports-active_configurations-POST.html">POST /config/flow/common_destination_ports/active_configurations</a></strong><br>
+Creates a new active configuration.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow-common_destination_ports-active_configurations-id-DELETE.html">DELETE /config/flow/common_destination_ports/active_configurations/{id}</a></strong><br>
+Removes the active configuration for the specified ID from the system.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow-common_destination_ports-active_configurations-id-GET.html">GET /config/flow/common_destination_ports/active_configurations/{id}</a></strong><br>
+Gets the active configuration for a common destination port, as specified by an ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow-common_destination_ports-active_configurations-id-POST.html">POST /config/flow/common_destination_ports/active_configurations/{id}</a></strong><br>
+Updates the active configuration for a common destination port, as specified by the ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow-common_destination_ports-default_configurations-GET.html">GET /config/flow/common_destination_ports/default_configurations</a></strong><br>
+Gets the list of default configurations for common destination ports.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow-common_destination_ports-default_configurations-id-GET.html">GET /config/flow/common_destination_ports/default_configurations/{id}</a></strong><br>
+Gets the default configuration for a common destination port, as specified by an ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_retention_buckets-GET.html">GET /config/flow_retention_buckets</a></strong><br>
+Retrieves a list of flow retention buckets.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_retention_buckets-id-DELETE.html">DELETE /config/flow_retention_buckets/{id}</a></strong><br>
+Deletes a flow retention bucket.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_retention_buckets-id-GET.html">GET /config/flow_retention_buckets/{id}</a></strong><br>
+Retrieves a flow retention bucket.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_retention_buckets-id-POST.html">POST /config/flow_retention_buckets/{id}</a></strong><br>
+Updates the flow retention bucket owner, or enabled/disabled only.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_properties-GET.html">GET /config/flow_sources/custom_properties/calculated_properties</a></strong><br>
+Retrieves a list of calculated flow properties.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_properties-POST.html">POST /config/flow_sources/custom_properties/calculated_properties</a></strong><br>
+Creates a new calculated flow property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_properties-calculated_property_id-DELETE.html">DELETE /config/flow_sources/custom_properties/calculated_properties/{calculated_property_id}</a></strong><br>
+Deletes the flow calculated property. To ensure safe deletion, a dependency check is carried out. This check might take some time. An asynchronous task to do is started for this check.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_properties-calculated_property_id-GET.html">GET /config/flow_sources/custom_properties/calculated_properties/{calculated_property_id}</a></strong><br>
+Retrieves a calculated flow property based on the supplied calculated property ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_properties-calculated_property_id-POST.html">POST /config/flow_sources/custom_properties/calculated_properties/{calculated_property_id}</a></strong><br>
+Updates an existing calculated flow property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_properties-calculated_property_id-dependents-GET.html">GET /config/flow_sources/custom_properties/calculated_properties/{calculated_property_id}/dependents</a></strong><br>
+Retrieves the objects that depend on the flow calculated property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_properties-calculated_property_id-dependents-disable-GET.html">GET /config/flow_sources/custom_properties/calculated_properties/{calculated_property_id}/dependents/disable</a></strong><br>
+Retrieves the objects that depend on the flow calculated property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_properties-dep-calculated_property_id-GET.html">GET /config/flow_sources/custom_properties/calculated_properties/dep/{calculated_property_id}</a></strong><br>
+Retrieves a calculated flow property based on the supplied calculated property ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_property-calculated_property_name-GET.html">GET /config/flow_sources/custom_properties/calculated_property/{calculated_property_name}</a></strong><br>
+Retrieves a list of flow calculated properties.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_property_delete_tasks-task_id-GET.html">GET /config/flow_sources/custom_properties/calculated_property_delete_tasks/{task_id}</a></strong><br>
+Retrieves the status of the flow calculated property delete task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_property_dependent_tasks-disable-task_id-GET.html">GET /config/flow_sources/custom_properties/calculated_property_dependent_tasks/disable/{task_id}</a></strong><br>
+Retrieves the flow calculated property dependent task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_property_dependent_tasks-disable-task_id-POST.html">POST /config/flow_sources/custom_properties/calculated_property_dependent_tasks/disable/{task_id}</a></strong><br>
+Cancels the calculated property dependent task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_property_dependent_tasks-disable-task_id-results-GET.html">GET /config/flow_sources/custom_properties/calculated_property_dependent_tasks/disable/{task_id}/results</a></strong><br>
+Retrieves the calculated property dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_property_dependent_tasks-task_id-GET.html">GET /config/flow_sources/custom_properties/calculated_property_dependent_tasks/{task_id}</a></strong><br>
+Retrieves the status of the flow calculated property dependents task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_property_dependent_tasks-task_id-POST.html">POST /config/flow_sources/custom_properties/calculated_property_dependent_tasks/{task_id}</a></strong><br>
+Cancels the flow calculated property dependent task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_property_dependent_tasks-task_id-results-GET.html">GET /config/flow_sources/custom_properties/calculated_property_dependent_tasks/{task_id}/results</a></strong><br>
+Retrieves the calculated property dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-calculated_property_operands-GET.html">GET /config/flow_sources/custom_properties/calculated_property_operands</a></strong><br>
+Retrieves the list of available options for calculated flow property operand.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-property_expressions-GET.html">GET /config/flow_sources/custom_properties/property_expressions</a></strong><br>
+Retrieve a list of flow regex property expressions.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-property_expressions-POST.html">POST /config/flow_sources/custom_properties/property_expressions</a></strong><br>
+Creates a new flow regex property expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-property_expressions-expression_id-DELETE.html">DELETE /config/flow_sources/custom_properties/property_expressions/{expression_id}</a></strong><br>
+Deletes a flow regex property expression based on the supplied expression ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-property_expressions-expression_id-GET.html">GET /config/flow_sources/custom_properties/property_expressions/{expression_id}</a></strong><br>
+Retrieves a flow regex property expression based on the supplied expression ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-property_expressions-expression_id-POST.html">POST /config/flow_sources/custom_properties/property_expressions/{expression_id}</a></strong><br>
+Updates an existing flow regex property expression.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_properties-GET.html">GET /config/flow_sources/custom_properties/regex_properties</a></strong><br>
+Retrieves a list of flow regex properties.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_properties-POST.html">POST /config/flow_sources/custom_properties/regex_properties</a></strong><br>
+Creates a new flow regex property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_properties-regex_property_id-DELETE.html">DELETE /config/flow_sources/custom_properties/regex_properties/{regex_property_id}</a></strong><br>
+Deletes a flow regex property. To ensure safe deletion, a dependency check is carried out. This check might take some time. An asynchronous task is started to do this check.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_properties-regex_property_id-GET.html">GET /config/flow_sources/custom_properties/regex_properties/{regex_property_id}</a></strong><br>
+Retrieves a flow regex property based on the supplied regex property ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_properties-regex_property_id-POST.html">POST /config/flow_sources/custom_properties/regex_properties/{regex_property_id}</a></strong><br>
+Updates an existing flow regex property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_properties-regex_property_id-dependents-GET.html">GET /config/flow_sources/custom_properties/regex_properties/{regex_property_id}/dependents</a></strong><br>
+Retrieves the objects that depend on the flow regex property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_properties-regex_property_id-dependents-change_field_type-GET.html">GET /config/flow_sources/custom_properties/regex_properties/{regex_property_id}/dependents/change_field_type</a></strong><br>
+Retrieves the objects that depend on the flow regex property for changing type of field for it.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_properties-regex_property_id-disabling_dependents-GET.html">GET /config/flow_sources/custom_properties/regex_properties/{regex_property_id}/disabling_dependents</a></strong><br>
+Retrieves the objects that depend on the flow regex property.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_property_delete_tasks-task_id-GET.html">GET /config/flow_sources/custom_properties/regex_property_delete_tasks/{task_id}</a></strong><br>
+Retrieves the flow regex property delete task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_property_dependent_tasks-change_field_type-task_id-GET.html">GET /config/flow_sources/custom_properties/regex_property_dependent_tasks/change_field_type/{task_id}</a></strong><br>
+Retrieves the flow regex property dependent task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_property_dependent_tasks-change_field_type-task_id-POST.html">POST /config/flow_sources/custom_properties/regex_property_dependent_tasks/change_field_type/{task_id}</a></strong><br>
+Cancels the regex property dependent task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_property_dependent_tasks-change_field_type-task_id-results-GET.html">GET /config/flow_sources/custom_properties/regex_property_dependent_tasks/change_field_type/{task_id}/results</a></strong><br>
+Retrieves the regex property dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_property_dependent_tasks-disable-task_id-GET.html">GET /config/flow_sources/custom_properties/regex_property_dependent_tasks/disable/{task_id}</a></strong><br>
+Retrieves the flow regex property dependent task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_property_dependent_tasks-disable-task_id-POST.html">POST /config/flow_sources/custom_properties/regex_property_dependent_tasks/disable/{task_id}</a></strong><br>
+Cancels the regex property dependent task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_property_dependent_tasks-disable-task_id-results-GET.html">GET /config/flow_sources/custom_properties/regex_property_dependent_tasks/disable/{task_id}/results</a></strong><br>
+Retrieves the regex property dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_property_dependent_tasks-task_id-GET.html">GET /config/flow_sources/custom_properties/regex_property_dependent_tasks/{task_id}</a></strong><br>
+Retrieves the flow regex property dependent task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_property_dependent_tasks-task_id-POST.html">POST /config/flow_sources/custom_properties/regex_property_dependent_tasks/{task_id}</a></strong><br>
+Cancels the flow regex property dependent task.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-flow_sources-custom_properties-regex_property_dependent_tasks-task_id-results-GET.html">GET /config/flow_sources/custom_properties/regex_property_dependent_tasks/{task_id}/results</a></strong><br>
+Retrieves the regex property dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-network_hierarchy-networks-GET.html">GET /config/network_hierarchy/networks</a></strong><br>
+Retrieves the deployed network hierarchy.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-network_hierarchy-staged_networks-GET.html">GET /config/network_hierarchy/staged_networks</a></strong><br>
+Retrieves the staged network hierarchy.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-network_hierarchy-staged_networks-PUT.html">PUT /config/network_hierarchy/staged_networks</a></strong><br>
+Replaces the current network hierarchy with the input that is provided.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-remote_networks-GET.html">GET /config/remote_networks</a></strong><br>
+Retrieves a list of deployed remote networks.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-remote_networks-network_id-GET.html">GET /config/remote_networks/{network_id}</a></strong><br>
+Retrieves a deployed remote network by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-remote_services-GET.html">GET /config/remote_services</a></strong><br>
+Retrieves a list of deployed remote services.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-remote_services-service_id-GET.html">GET /config/remote_services/{service_id}</a></strong><br>
+Retrieves a deployed remote service by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-resilient-test-POST.html">POST /config/resilient/test</a></strong><br>
+Perform asynchronous test Resilient connection</li>
+<li class="ulchildlink"><strong><a href="19.0--config-resilient-test-id-POST.html">POST /config/resilient/test/{id}</a></strong><br>
+Test the Resilient connection by using the connection ID.  You must have the System Administrator or Security Admin permission (ADMIN | SAASADMIN capability) to use this endpoint.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-resilient-test-task_id-GET.html">GET /config/resilient/test/{task_id}</a></strong><br>
+Get the test Resilient connection task status  You must have the System Administrator or Security Admin permission (ADMIN | SAASADMIN capability) to use this endpoint.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-resource_restrictions-GET.html">GET /config/resource_restrictions</a></strong><br>
+Retrieves a list of all resource restrictions.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-resource_restrictions-POST.html">POST /config/resource_restrictions</a></strong><br>
+Creates a new resource restriction.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-resource_restrictions-resource_restriction_id-DELETE.html">DELETE /config/resource_restrictions/{resource_restriction_id}</a></strong><br>
+Deletes a resource restriction consumer by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-resource_restrictions-resource_restriction_id-GET.html">GET /config/resource_restrictions/{resource_restriction_id}</a></strong><br>
+Retrieves a resource restriction consumer by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-resource_restrictions-resource_restriction_id-PUT.html">PUT /config/resource_restrictions/{resource_restriction_id}</a></strong><br>
+Updates a resource restriction consumer by ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-store_and_forward-policies-GET.html">GET /config/store_and_forward/policies</a></strong><br>
+Retrieves a list of store and forward policies.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-store_and_forward-policies-id-DELETE.html">DELETE /config/store_and_forward/policies/{id}</a></strong><br>
+Deletes a store and forward policy.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-store_and_forward-policies-id-GET.html">GET /config/store_and_forward/policies/{id}</a></strong><br>
+Retrieves a store and forward policy.</li>
+<li class="ulchildlink"><strong><a href="19.0--config-store_and_forward-policies-id-POST.html">POST /config/store_and_forward/policies/{id}</a></strong><br>
+Updates the store and forward policy owner only.</li>
+</ul>
+</nav></aside></article></main></body></html>

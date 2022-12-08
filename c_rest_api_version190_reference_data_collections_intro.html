@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Use the references for REST API 19.0 reference_data_collections endpoints.">
+
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>reference_data_collections endpoints</title>
+</head>
+<body id="c_rest_api_version190_reference_data_collections_intro"><main role="main"><article role="article" aria-labelledby="c_rest_api_version190_reference_data_collections_intro__title__1">
+<h1 class="topictitle1" id="c_rest_api_version190_reference_data_collections_intro__title__1">reference_data_collections endpoints</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/c_rest_api_version190_reference_data_collections_intro.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2Fc_rest_api_version190_reference_data_collections_intro.dita">Edit online</a></span></div>
+
+
+<div class="body conbody"><p class="shortdesc">Use the references for REST API 19.0 reference_data_collections endpoints.</p>
+<p></p>
+</div>
+
+<aside role="complementary" aria-labelledby="c_rest_api_version190_reference_data_collections_intro__title__1"><nav role="navigation">
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-set_bulk_update_tasks-task_status_id-GET.html">GET /reference_data_collections/set_bulk_update_tasks/{task_status_id}</a></strong><br>
+Get the Bulk Update status</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-set_bulk_update_tasks-task_status_id-results-GET.html">GET /reference_data_collections/set_bulk_update_tasks/{task_status_id}/results</a></strong><br>
+Get the results of the Bulk Update task</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-set_delete_tasks-task_status_id-GET.html">GET /reference_data_collections/set_delete_tasks/{task_status_id}</a></strong><br>
+Get results of the asynchronous delete Set task</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-set_dependents_tasks-task_status_id-GET.html">GET /reference_data_collections/set_dependents_tasks/{task_status_id}</a></strong><br>
+Get the status of the Get Dependents task</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-set_dependents_tasks-task_status_id-POST.html">POST /reference_data_collections/set_dependents_tasks/{task_status_id}</a></strong><br>
+Cancel the Get Dependents request</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-set_dependents_tasks-task_status_id-results-GET.html">GET /reference_data_collections/set_dependents_tasks/{task_status_id}/results</a></strong><br>
+Get the results of the Get Dependents task</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-set_entries-GET.html">GET /reference_data_collections/set_entries</a></strong><br>
+Get a list of set entries which match a search criteria.</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-set_entries-PATCH.html">PATCH /reference_data_collections/set_entries</a></strong><br>
+Perform asynchronous bulk update - series of add and updates</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-set_entries-POST.html">POST /reference_data_collections/set_entries</a></strong><br>
+Create an entry within a set</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-set_entries-id-DELETE.html">DELETE /reference_data_collections/set_entries/{id}</a></strong><br>
+Delete a set entry</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-set_entries-id-GET.html">GET /reference_data_collections/set_entries/{id}</a></strong><br>
+Get a set entry</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-set_entries-id-POST.html">POST /reference_data_collections/set_entries/{id}</a></strong><br>
+Update a Set Entry given the properties based in the body DTO. Only the notes field  can be modified in an existing entry. The source and last_seen timestamp will be updated  automatically.</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-sets-GET.html">GET /reference_data_collections/sets</a></strong><br>
+Get a list of set meta data information based on search criteria</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-sets-POST.html">POST /reference_data_collections/sets</a></strong><br>
+Create a set given the properties based in the body DTO</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-sets-id-DELETE.html">DELETE /reference_data_collections/sets/{id}</a></strong><br>
+Delete a set by starting an asynchronous task</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-sets-id-GET.html">GET /reference_data_collections/sets/{id}</a></strong><br>
+Get the meta data information for a specific set</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-sets-id-POST.html">POST /reference_data_collections/sets/{id}</a></strong><br>
+Update a Set given the properties based in the body DTO</li>
+<li class="ulchildlink"><strong><a href="19.0--reference_data_collections-sets-id-dependents-GET.html">GET /reference_data_collections/sets/{id}/dependents</a></strong><br>
+Create an asynchronous task to get the dependents of a Set</li>
+</ul>
+</nav></aside></article></main></body></html>

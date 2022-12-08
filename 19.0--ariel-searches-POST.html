@@ -1,0 +1,329 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Create a new asynchronous Ariel search.">
+<meta name="keywords" content="/ariel/searches, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_ariel_intro.html">
+<title>POST /ariel/searches</title>
+</head>
+<body id="api-19.0--ariel-searches-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--ariel-searches-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--ariel-searches-POST__title__1">POST /ariel/searches</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--ariel-searches-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--ariel-searches-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Create a new asynchronous Ariel search.</p>
+
+<div class="section refsyn">
+<p>Creates a new Ariel search as specified by the Ariel Query Language (AQL)
+ query expression. Searches are executed asynchronously. A
+ reference to the search ID is returned and should be used in subsequent API calls to determine
+ the status of the search and retrieve the results once it is complete.</p>
+
+  
+ <p>This endpoint only accepts SELECT query expressions.</p>
+
+
+ <p>Queries are applied to the range of data in a certain time interval. By default this time interval is the last 60 seconds. An alternative time interval can be specified
+  by specifying them as part of the query expression. For further information, see the AQL reference guide.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/searches resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /ariel/searches resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-searches-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-searches-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/searches request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /ariel/searches request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-searches-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--ariel-searches-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--ariel-searches-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--ariel-searches-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--ariel-searches-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--ariel-searches-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-searches-POST__entry__3 "><p>query_expression</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__8 "><p>Optional - The AQL query to execute. Mutually exclusive with saved_search_id</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-searches-POST__entry__3 "><p>saved_search_id</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__8 "><p>Optional - Saved search ID to execute. Mutually exclusive with queryExpression</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/searches response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /ariel/searches response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-searches-POST__entry__21" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--ariel-searches-POST__entry__22" class="thbot">Unique Code</th>
+
+<th id="api-19.0--ariel-searches-POST__entry__23" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-searches-POST__entry__21 "><p>201</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__22 "><p></p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__23 "><p>A new Ariel search was successfully created.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-searches-POST__entry__21 "><p>404</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__22 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__23 "><p>The Ariel saved search does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-searches-POST__entry__21 "><p>409</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__22 "><p>1004</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__23 "><p>The search cannot be created. The requested search ID that was provided in the query expression is already in use. Please use a unique search ID (or allow one to be generated).</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-searches-POST__entry__21 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__22 "><p>2000</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__23 "><p>The query_expression contains invalid AQL syntax.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-searches-POST__entry__21 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__22 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__23 "><p>A request parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-searches-POST__entry__21 "><p>500</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__22 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__23 "><p>An error occurred during the attempt to create a new search.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-searches-POST__entry__21 "><p>503</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__22 "><p>1010</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-POST__entry__23 "><p>The Ariel server might be temporarily unavailable or offline. Please try again later.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--ariel-searches-POST__title__5"><h2 class="sectiontitle" id="api-19.0--ariel-searches-POST__title__5">Response Description</h2>
+
+<p>Information about the specified search, including the search ID. Use the search ID to access or manipulate the search with the other API endpoints. If the exact search being created was already recently created, the response message will return a reference to the original search ID rather than creating a new search.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--ariel-searches-POST__title__6"><h2 class="sectiontitle" id="api-19.0--ariel-searches-POST__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+  "cursor_id": "s16",
+  "compressed_data_file_count": 0,
+  "compressed_data_total_size": 0,
+  "data_file_count": 5470,
+  "data_total_size": 67183115,
+  "index_file_count": 0,
+  "index_total_size": 0,
+  "processed_record_count": 1256462,
+  "error_messages": [
+    {
+      "code": "String",
+      "contexts": [
+        "String"
+      ],
+      "message": "String",
+      "severity": "String &lt;one of: INFO, WARN, ERROR&gt;"
+    }
+  ],
+  "desired_retention_time_msec": 86400000,
+  "progress": 46,
+  "progress_details": [
+    0,
+    0,
+    0,
+    0,
+    66957,
+    652657,
+    76594,
+    89809,
+    86032,
+    107729
+  ],
+  "query_execution_time": 1480,
+  "query_string": "SELECT sourceip, starttime, qid, sourceport  from events into s16 where sourceip in (select destinationip from events) parameters snapshotsize=2, PROGRESSDETAILSRESOLUTION=10",
+  "record_count": 1240923,
+  "save_results": false,
+  "status": "String &lt;one of: WAIT, EXECUTE, SORTING, COMPLETED, CANCELED, ERROR&gt;",
+  "snapshot": {
+    "events": [
+      {
+        "sourceip": "10.100.65.20",
+        "starttime": 1467049610018,
+        "qid": 10034,
+        "sourceport": 13675
+      },
+      {
+        "sourceip": "10.100.100.121",
+        "starttime": 1467049610019,
+        "qid": 20034,
+        "sourceport": 80
+      }
+    ]
+  },
+  "subsearch_ids": [
+     "sub_id_1"
+   ],
+  "search_id": "s16"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--ariel-searches-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_ariel_intro.html" title="Use the references for REST API 19.0 ariel endpoints.">ariel endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

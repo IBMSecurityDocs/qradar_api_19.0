@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates an existing custom action.">
+<meta name="keywords" content="/analytics/custom_actions/actions/{action_id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_analytics_intro.html">
+<title>POST /analytics/custom_actions/actions/{action_id}</title>
+</head>
+<body id="api-19.0--analytics-custom_actions-actions-action_id-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--analytics-custom_actions-actions-action_id-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--analytics-custom_actions-actions-action_id-POST__title__1">POST /analytics/custom_actions/actions/{action_id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--analytics-custom_actions-actions-action_id-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--analytics-custom_actions-actions-action_id-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates an existing custom action.</p>
+
+<div class="section refsyn">
+<div class="p">Updates an existing custom action. The custom action should contain the following fields:
+ <ul>
+ 		<li><strong>id</strong> - <em>Required</em> - Number - Unique ID of the custom action within the QRadar deployment.</li>
+
+ 		<li><strong>name</strong> - <em>Optional</em> - String - Unique name of the custom action within the QRadar deployment.</li>
+
+ 		<li><strong>description</strong> - <em>Optional</em> - String - Description of the custom action.</li>
+
+ 		<li><strong>interpreter</strong> - <em>Required</em> - Number - Unique ID of the custom action interpreter used by the custom action.</li>
+
+ 		<li><strong>script</strong> - <em>Required</em> - Number - Unique ID of the custom action script used by the custom action.</li>
+
+ 		<li><strong>parameters</strong> - <em>Required</em> - Array - Array of custom action parameters contained within the custom action. Each Custom action parameter must have the following fields:
+ 			<ul>
+ 				<li><strong>name</strong> - <em>Required</em> - String - Name of the custom action parameter. Unique in the context of the parent custom action.</li>
+
+ 				<li><strong>parameter_type</strong> - <em>Optional</em> - String - Custom action parameter type. Can be either <em>fixed</em> or <em>dynamic</em>.</li>
+
+ 				<li><strong>encrypted</strong> - <em>Optional</em> - Boolean - Designates whether the custom action parameter value field is stored in an encrypted state.<em>True</em> if encrypted, <em>false</em> otherwise.</li>
+
+ 				<li><strong>value</strong> - <em>Optional</em> - String - Value of the custom action parameter. Custom action parameters with parameter_type <em>fixed</em> can have any value. 
+ 								   Custom action parameters with parameter_type <em>dynamic</em> must have values corresponding to column names in an Ariel database, for example <em>sourceip</em>. 
+ 								   Ariel database column names are available through the <em>/api/ariel/databases/{database_name}</em> endpoint.</li>
+
+ 			</ul>
+
+ 		</li>
+
+ </ul>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /analytics/custom_actions/actions/{action_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /analytics/custom_actions/actions/{action_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /analytics/custom_actions/actions/{action_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /analytics/custom_actions/actions/{action_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__3 "><p>action_id</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__8 "><p>Number id of the custom action to be updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /analytics/custom_actions/actions/{action_id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /analytics/custom_actions/actions/{action_id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__21" class="thbot">Parameter</th>
+
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__22" class="thbot">Data Type</th>
+
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__23" class="thbot">MIME Type</th>
+
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__24" class="thbot">Description</th>
+
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__25" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__21 "><p>custom_action</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__22 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__23 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__24 "><p>Custom action JSON object which can contain the supplied fields (see above for more details).</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__25 "><p>{
+    "description": "String",
+    "id": 42,
+    "interpreter": 42,
+    "name": "String",
+    "parameters": [
+        {
+            "encrypted": true,
+            "name": "String",
+            "parameter_type": "String",
+            "value": "String"
+        }
+    ],
+    "script": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /analytics/custom_actions/actions/{action_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /analytics/custom_actions/actions/{action_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__31" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__32" class="thbot">Unique Code</th>
+
+<th id="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__33" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__31 "><p>200</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__32 "><p></p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__33 "><p>The custom action has been updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__31 "><p>404</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__32 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__33 "><p>The requested custom action could not be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__32 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__33 "><p>One or more parameters are invalid in request.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__31 "><p>500</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__32 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--analytics-custom_actions-actions-action_id-POST__entry__33 "><p>An internal server error occurred while updating custom action with supplied action_id.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--analytics-custom_actions-actions-action_id-POST__title__6"><h2 class="sectiontitle" id="api-19.0--analytics-custom_actions-actions-action_id-POST__title__6">Response Description</h2>
+
+<div class="p">The updated custom action with the following fields:
+ <ul>
+ 		<li><strong>id</strong> - Number - Unique ID of the custom action within the QRadar deployment.</li>
+
+ 		<li><strong>name</strong> - String - Unique name of the custom action within the QRadar deployment.</li>
+
+ 		<li><strong>description</strong> - String - Optional description attached to the custom action.</li>
+
+ 		<li><strong>interpreter</strong> - Number - Unique ID of the custom action interpreter used by the custom action.</li>
+
+ 		<li><strong>script</strong> - Number - Unique ID of the custom action script used by the custom action.</li>
+
+ 		<li><strong>parameters</strong> - Array - Array of custom action parameters contained within the custom action. Each Custom action parameter has the following fields:
+ 			<ul>
+ 				<li><strong>name</strong> - String - Name of the custom action parameter. Unique in the context of the parent custom action.</li>
+
+ 				<li><strong>parameter_type</strong> - String - Custom action parameter type. Can be either <em>fixed</em> or <em>dynamic</em>.</li>
+
+ 				<li><strong>encrypted</strong> - Boolean - Designates whether the custom action parameter value field is stored in an encrypted state.<em>True</em> if encrypted, <em>false</em> otherwise.</li>
+
+ 				<li><strong>value</strong> - String - Value of the custom action parameter.</li>
+
+ 			</ul>
+
+ 		</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--analytics-custom_actions-actions-action_id-POST__title__7"><h2 class="sectiontitle" id="api-19.0--analytics-custom_actions-actions-action_id-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "description": "String",
+    "id": 42,
+    "interpreter": 42,
+    "name": "String",
+    "parameters": [
+        {
+            "encrypted": true,
+            "name": "String",
+            "parameter_type": "String",
+            "value": "String"
+        }
+    ],
+    "script": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--analytics-custom_actions-actions-action_id-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_analytics_intro.html" title="Use the references for REST API 19.0 analytics endpoints.">analytics endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

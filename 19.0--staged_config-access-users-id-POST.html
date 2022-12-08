@@ -1,0 +1,592 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Update a staged user.">
+<meta name="keywords" content="/staged_config/access/users/{id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_staged_config_intro.html">
+<title>POST /staged_config/access/users/{id}</title>
+</head>
+<body id="api-19.0--staged_config-access-users-id-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--staged_config-access-users-id-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--staged_config-access-users-id-POST__title__1">POST /staged_config/access/users/{id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--staged_config-access-users-id-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--staged_config-access-users-id-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Update a staged user.</p>
+
+<div class="section refsyn">
+<p>Update a staged user. Parts of the staged configuration is not active until a deploy is performed.
+ 
+ Must have ADMIN or ADMINMANAGER capability to call this endpoint. Users or authorized services without the ADMINMANAGER capability can only update staged users with a user role that does not contain the ADMIN capability. Users or authorized services with the ADMINMANAGER capability can update staged users with any user role. No user can update user_role_id, security_profile_ID, tenant_id, allow_system_authentication_fallback or local_only_account for their own staged user.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/access/users/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /staged_config/access/users/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-access-users-id-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/access/users/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /staged_config/access/users/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-access-users-id-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--staged_config-access-users-id-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--staged_config-access-users-id-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--staged_config-access-users-id-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--staged_config-access-users-id-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--staged_config-access-users-id-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__3 "><p>id</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__8 "><p>The ID of the staged user to update.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/access/users/{id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /staged_config/access/users/{id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-access-users-id-POST__entry__21" class="thbot">Parameter</th>
+
+<th id="api-19.0--staged_config-access-users-id-POST__entry__22" class="thbot">Data Type</th>
+
+<th id="api-19.0--staged_config-access-users-id-POST__entry__23" class="thbot">MIME Type</th>
+
+<th id="api-19.0--staged_config-access-users-id-POST__entry__24" class="thbot">Description</th>
+
+<th id="api-19.0--staged_config-access-users-id-POST__entry__25" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__21 "><p>body</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__22 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__23 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__24 "><div class="p">Only user_role_id, security_profile_id, tenant_id, description, email, locale_id, enable_popup_notifications, allow_system_authentication_fallback, local_only_account, inactivity_timeout, old_password and password fields on the staged user are modifiable. All other fields in the body are ignored.
+ 
+ The user_role_id, security_profile_id, tenant_id and description fields are staged fields. They are only updated on the staged user and are not active until a deploy is performed. All other fields take effect immediately and a deploy is not required.
+ <ul>
+ <li><strong>description</strong> - String - The description of the staged user. Cannot contain more than 2048 characters.</li>
+
+ <li><strong>user_role_id</strong> - Long - The ID of the staged user role assigned to this staged user. User roles are accessible through the /api/staged_config/access/user_roles APIs.</li>
+
+ <li><strong>security_profile_id</strong> - Long - The ID of the security profile assigned to this staged user. Security profiles are accessible through the /api/staged_config/access/security_profiles APIs.</li>
+
+ <li><strong>tenant_id</strong> - Long - The ID of the tenant assigned to this staged user. Tenants are accessible through the /config/access/tenant_management/tenants APIs.</li>
+
+ <li><strong>email</strong> - String - The email address of the user.</li>
+
+ <li><strong>locale_id</strong> - String - The locale of the user. If this locale is set, this locale is always used for requests as the user. If this locale is not set, the locale provided in each HTTP request is used for requests as the user. If this locale is not set and no locale is in the request, QRadar falls back to the en_US locale for requests as the user. The list of valid locales are accessible through the /system/information/locales API.</li>
+
+ <li><strong>enable_popup_notifications</strong> - Boolean - Indicates if popup system notifications are enabled for this user.</li>
+
+ <li><strong>old_password</strong> - String - The current password for the user. Required when a user is changing the password for their own user. Must not be set when changing the password of a user that is not the caller's own user.</li>
+
+ <li><strong>password</strong> - String - The new password for the user. If set, it must pass the password policy. Can only be set if QRadar is configured using system authentication or the user has the ADMIN capability.</li>
+
+ <li><strong>allow_system_authentication_fallback</strong> - Boolean - Allow system authentication fallback for this user when external authentication is configured. Has no effect if system authentication is configured.</li>
+
+ <li><strong>local_only_account</strong> - Boolean - Forces local authentication for this user when external authentication is configured. Has no effect if system authentication is configured.</li>
+
+ <li><strong>inactivity_timeout</strong> - Long - The inactivity timeout (in milliseconds), truncated to minutes. Set to 0 if a user should not be logged out after being inactive.</li>
+
+ </ul>
+</div>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__25 "><p>{
+    "allow_system_authentication_fallback": true,
+    "description": "String",
+    "email": "String",
+    "enable_popup_notifications": true,
+    "id": 42,
+    "inactivity_timeout": 42,
+    "local_only_account": true,
+    "locale_id": "String",
+    "old_password": "String",
+    "password": "String",
+    "password_creation_time": 42,
+    "security_profile_id": 42,
+    "tenant_id": 42,
+    "user_role_id": 42,
+    "username": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/access/users/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /staged_config/access/users/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-access-users-id-POST__entry__31" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--staged_config-access-users-id-POST__entry__32" class="thbot">Unique Code</th>
+
+<th id="api-19.0--staged_config-access-users-id-POST__entry__33" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>200</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p></p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>The staged user was updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303002</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>Users are forbidden to update their own user_role_id, security_profile_id, tenant_id, inactivity_timeout or allow_system_authentication_fallback.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303004</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>ADMINMANAGER capability required to update a staged user with a user role that contains the ADMIN capability.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303005</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>ADMINMANAGER capability required to assign a user role that contains the ADMIN capability to a staged user.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303022</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>Account does not have sufficient permissions to update Local Only Authorization related settings.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>383030223</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>Authorized services can only set local_only_account to false.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>404</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303001</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>The staged user does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>409</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303021</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>Cannot set allow_system_authentication_fallback to true when system authentication fallback is globally disabled.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303013</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>old_password must be set when changing the caller's password.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303014</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>old_password must not be set when changing a user password that is not the caller's user.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303015</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>old_password does not match the user's password.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303016</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>email field cannot contain more than 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303017</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>email field must contain exactly one @ symbol, with at least one character before and after the @ symbol, and no whitespace characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303018</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>locale_id is not a valid locale.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303003</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>No user role found for the provided user_role_id.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303006</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>No tenant found for the provided tenant_id.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303007</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>tenant_id must be null when updating a staged user with a user role that contains the ADMIN capability.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303008</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>No security profile found for the provided security_profile_id.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303012</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>security_profile_id must be set to the "Admin" security profile when updating a staged user with the ADMIN capability.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303010</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>Security profile must only contain domains with the same tenant_id as the tenant_id assigned the staged user when staged user is assigned a tenant_id.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303011</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>Description must contain no more than 2048 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303019</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>password field cannot be set when allow_system_authentication_fallback and local_only_account are false and system authentication is not configured.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__32 "><p>38303020</p>
+</td>
+
+<td headers="api-19.0--staged_config-access-users-id-POST__entry__33 "><p>password does not adhere to the password policy.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--staged_config-access-users-id-POST__title__6"><h2 class="sectiontitle" id="api-19.0--staged_config-access-users-id-POST__title__6">Response Description</h2>
+
+<div class="p">The updated staged user structure.
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the user. The ID of the staged user and the ID of the same deployed user are the same. This field is read only.</li>
+
+ <li><strong>username</strong> - String - The username of the user. This field is read only.</li>
+
+ <li><strong>email</strong> - String - The email of the user.</li>
+
+ <li><strong>description</strong> - String - The description of the user. This field is only modifiable in the staged configuration.</li>
+
+ <li><strong>user_role_id</strong> - Long - The user_role_id of the user. This field is only modifiable in the staged configuration. Access staged user roles using /api/staged_config/user_roles API, and deployed user roles under /api/confg/user_roles API.</li>
+
+ <li><strong>security_profile_id</strong> - Long - The security_profile_id of the user. This field is only modifiable in the staged configuration. Access staged security profiles using /api/staged_config/security_profiles API, and deployed user roles under /api/config/security_profiles API.</li>
+
+ <li><strong>locale_id</strong> - String - The locale_id of the user. Access locales using /system/information/locales API.</li>
+
+ <li><strong>enable_popup_notifications</strong> - Boolean - Indicates if popup system notifications are enabled for this user.</li>
+
+ <li><strong>old_password</strong> - String - This field will always be null when returned in a response. Required to be set to the current password when a user is changing their own system password. This field is not required to be set when the user currently does not have a system password and they are setting it for the first time.</li>
+
+ <li><strong>password</strong> - String - This field will always be null when returned in a response. Set to the new password when a user is changing their own system password.</li>
+
+ <li><strong>password_creation_time</strong> - Long - The time in milliseconds since epoch when the current password was created. Combined with the password_expiry_interval from the /system/authorization/password_policies API to calculate when the password expires.</li>
+
+ <li><strong>tenant_id</strong> - Long - The tenant_id of the current user. This field is only modifiable in the staged configuration. Access tenants using /config/access/tenant_management/tenants API.</li>
+
+ <li><strong>allow_system_authentication_fallback</strong> - Boolean - Allow system authentication fallback for this user when external authentication is configured. Has no effect if system authentication is configured.</li>
+
+ <li><strong>local_only_account</strong> - Boolean - Forces local authentication for this user when external authentication is configured. Has no effect if system authentication is configured.</li>
+
+ <li><strong>inactivity_timeout</strong> - Long - The inactivity timeout (in milliseconds), truncated to minutes. Set to 0 if a user should not be logged out after being inactive.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--staged_config-access-users-id-POST__title__7"><h2 class="sectiontitle" id="api-19.0--staged_config-access-users-id-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "allow_system_authentication_fallback": true,
+    "description": "String",
+    "email": "String",
+    "enable_popup_notifications": true,
+    "id": 42,
+    "inactivity_timeout": 42,
+    "local_only_account": true,
+    "locale_id": "String",
+    "notification_flag": "String &lt;one of: LDAP_SYNC_USER_NOT_FOUND, LDAP_SYNC_REPO_NOT_FOUND, LDAP_SYNC_SP_NOT_FOUND&gt;",
+    "old_password": "String",
+    "password": "String",
+    "password_creation_time": 42,
+    "security_profile_id": 42,
+    "tenant_id": 42,
+    "user_role_id": 42,
+    "username": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--staged_config-access-users-id-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_staged_config_intro.html" title="Use the references for REST API 19.0 staged_config endpoints.">staged_config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

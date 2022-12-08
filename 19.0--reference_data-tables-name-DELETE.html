@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Remove a reference table or purge its contents.">
+<meta name="keywords" content="/reference_data/tables/{name}, DELETE, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_reference_data_intro.html">
+<title>DELETE /reference_data/tables/{name}</title>
+</head>
+<body id="api-19.0--reference_data-tables-name-DELETE"><main role="main"><article role="article" aria-labelledby="api-19.0--reference_data-tables-name-DELETE__title__1">
+<h1 class="topictitle1" id="api-19.0--reference_data-tables-name-DELETE__title__1">DELETE /reference_data/tables/{name}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--reference_data-tables-name-DELETE.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--reference_data-tables-name-DELETE.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Remove a reference table or purge its contents.</p>
+
+<div class="section refsyn">
+<p>Remove a reference table or purge its contents.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /reference_data/tables/{name} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. DELETE /reference_data/tables/{name} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--reference_data-tables-name-DELETE__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /reference_data/tables/{name} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. DELETE /reference_data/tables/{name} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--reference_data-tables-name-DELETE__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--reference_data-tables-name-DELETE__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--reference_data-tables-name-DELETE__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--reference_data-tables-name-DELETE__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--reference_data-tables-name-DELETE__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--reference_data-tables-name-DELETE__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__3 "><p>name</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__8 "><p>Required - The name of the reference table to remove or purge.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__3 "><p>namespace</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__8 "><p>- Default is SHARED for admin users and TENANT for tenant users. If purge_only is "true", the default is SHARED for all users.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__3 "><p>purge_only</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__8 "><p>Optional - The allowed values are "false" or "true". The default value is false. This indicates if the reference table should have its contents purged (true), keeping the reference table structure. If the value is "false", or not specified the reference table is removed completely.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /reference_data/tables/{name} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. DELETE /reference_data/tables/{name} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--reference_data-tables-name-DELETE__entry__33" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--reference_data-tables-name-DELETE__entry__34" class="thbot">Unique Code</th>
+
+<th id="api-19.0--reference_data-tables-name-DELETE__entry__35" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__33 "><p>202</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__34 "><p></p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__35 "><p>The reference data tables deletion or purge request was accepted and is in progress.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__33 "><p>404</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__34 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__35 "><p>The reference table does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__33 "><p>422</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__34 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__35 "><p>A request parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__33 "><p>422</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__34 "><p>1012</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__35 "><p>The namespace value of SHARED was expected.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__33 "><p>422</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__34 "><p>1015</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__35 "><p>The collection could not be deleted.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__33 "><p>500</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__34 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-DELETE__entry__35 "><p>An error occurred during the attempt to remove or purge values from the reference table.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--reference_data-tables-name-DELETE__title__5"><h2 class="sectiontitle" id="api-19.0--reference_data-tables-name-DELETE__title__5">Response Description</h2>
+
+<p>A status ID to retrieve the reference data tables deletion or purge status with at /api/system/task_management/tasks/{status_id}. You can also find the URL in the Location header.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--reference_data-tables-name-DELETE__title__6"><h2 class="sectiontitle" id="api-19.0--reference_data-tables-name-DELETE__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "completed": 42,
+    "created": 42,
+    "created_by": "String",
+    "id": 42,
+    "message": "String",
+    "modified": 42,
+    "name": "String",
+    "started": 42,
+    "status": "String &lt;one of: CANCELLED, CANCELING, CANCEL_REQUESTED, COMPLETED, CONFLICT, EXCEPTION, INITIALIZING, INTERRUPTED, PAUSED, PROCESSING, QUEUED, RESUMING&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--reference_data-tables-name-DELETE__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_reference_data_intro.html" title="Use the references for REST API 19.0 reference_data endpoints.">reference_data endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

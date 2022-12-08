@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a list of log source types. If called by a user/authorized service with System Administrator, Security Admin, or Manage Log Source Types permissions, then all fields will be returned in each log source type. If called by a less privileged client, only name and ID are returned in each log source type.">
+<meta name="keywords" content="/config/event_sources/log_source_management/log_source_types, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>GET /config/event_sources/log_source_management/log_source_types</title>
+</head>
+<body id="api-19.0--config-event_sources-log_source_management-log_source_types-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--config-event_sources-log_source_management-log_source_types-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__title__1">GET /config/event_sources/log_source_management/log_source_types</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-event_sources-log_source_management-log_source_types-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-event_sources-log_source_management-log_source_types-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a list of log source types. If called by a user/authorized service with System Administrator, Security Admin, or Manage Log Source Types permissions, then all fields will be returned in each log source type. If called by a less privileged client, only name and ID are returned in each log source type.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/log_source_management/log_source_types resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /config/event_sources/log_source_management/log_source_types resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/log_source_management/log_source_types request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /config/event_sources/log_source_management/log_source_types request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__3 "><p>Range</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__8 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__3 "><p>filter</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__8 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/log_source_management/log_source_types response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /config/event_sources/log_source_management/log_source_types response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__27" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__28" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__29" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__27 "><p>200</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__28 "><p></p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__29 "><p>The log source types were retrieved successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__27 "><p>500</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__28 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_source_types-GET__entry__29 "><p>An error occurred during the attempt to retrieve the log source types.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-event_sources-log_source_management-log_source_types-GET__title__5"><h2 class="sectiontitle" id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__title__5">Response Description</h2>
+
+<div class="p">The list of all log source types. A log source type contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Integer - The ID of the log source type.</li>
+
+ <li><strong>name</strong> - String - The unique name of the log source type. The name is not localized.</li>
+
+ <li><strong>internal</strong> - Boolean - The condition is set to 'true' if the log source type is an internal log source type (for example, System Notification, SIM Audit, Asset Profiler, and so on) for which log sources cannot be created, edited, or deleted. If this is a user configurable log source type, the condition is set to 'false'.</li>
+
+ <li><strong>custom</strong> - Boolean - The condition is set to 'true' if this is a custom log source type; otherwise, the condition is set to 'false'.</li>
+
+ <li><strong>protocol_types</strong> - Array - The full list of supported protocol types for the log source type. Ensure that every log source type links to at least one protocol type. Each item in this array is a ProtocolMapping structure, defining both the ID of the protocol type and a Boolean that indicates whether the protocol is documented/fully supported for this log source type.</li>
+
+ <li><strong>default_protocol_id</strong> - Long - The ID of the default protocol type for this log source type. The ID must correspond to an existing protocol type. See the Protocol Type API (/api/config/event_sources/log_source_management/protocol_types/).</li>
+
+ <li><strong>log_source_extension_id</strong> - Long - The log source extension that is associated with the log source type. The ID must correspond to an existing log source extension or be set to 'null'. See the Log Source Extension API (/api/config/event_sources/log_source_management/log_source_extensions/).</li>
+
+ <li><strong>supported_language_ids</strong> - Array - The IDs of the languages supported by this log source type. Each ID must correspond to an existing log source language. See the Log Source Language API (/api/config/event_sources/log_source_management/log_source_languages/). All non-custom log source types link to at least one language. Because languages are irrelevant for custom log source types, this field is 'null' for custom types.</li>
+
+ <li><strong>version</strong> - String - The log source type plugin version.</li>
+
+ <li><strong>latest_version</strong> - String - The latest available version of the log source type component.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-event_sources-log_source_management-log_source_types-GET__title__6"><h2 class="sectiontitle" id="api-19.0--config-event_sources-log_source_management-log_source_types-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "custom": true,
+        "default_protocol_id": 42,
+        "id": 42,
+        "internal": true,
+        "latest_version": "String",
+        "log_source_extension_id": 42,
+        "name": "String",
+        "protocol_types": [
+            {
+                "documented": true,
+                "protocol_id": 42
+            }
+        ],
+        "supported_language_ids": [
+            42
+        ],
+        "uuid": "String",
+        "version": "String"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-event_sources-log_source_management-log_source_types-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

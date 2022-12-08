@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a list of EULAs.">
+<meta name="keywords" content="/system/eulas, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_system_intro.html">
+<title>GET /system/eulas</title>
+</head>
+<body id="api-19.0--system-eulas-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--system-eulas-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--system-eulas-GET__title__1">GET /system/eulas</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--system-eulas-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--system-eulas-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a list of EULAs.</p>
+
+<div class="section refsyn">
+<p>Retrieves a list of EULAs.
+
+ All users are able to call this endpoint.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /system/eulas resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /system/eulas resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--system-eulas-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--system-eulas-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+<p>There are no parameters for this endpoint.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /system/eulas response codes" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /system/eulas response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--system-eulas-GET__entry__3" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--system-eulas-GET__entry__4" class="thbot">Unique Code</th>
+
+<th id="api-19.0--system-eulas-GET__entry__5" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--system-eulas-GET__entry__3 "><p>200</p>
+</td>
+
+<td headers="api-19.0--system-eulas-GET__entry__4 "><p></p>
+</td>
+
+<td headers="api-19.0--system-eulas-GET__entry__5 "><p>The EULA list was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-eulas-GET__entry__3 "><p>500</p>
+</td>
+
+<td headers="api-19.0--system-eulas-GET__entry__4 "><p>79301001</p>
+</td>
+
+<td headers="api-19.0--system-eulas-GET__entry__5 "><p>There was an unexpected error loading the EULAs.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--system-eulas-GET__title__4"><h2 class="sectiontitle" id="api-19.0--system-eulas-GET__title__4">Response Description</h2>
+
+<div class="p">All the available EULAs on the system, tagged with the language it's translated in
+ <ul>
+ <li><strong>locale_id</strong> - String - The Locale ID associated with this EULA translation.</li>
+
+ <li><strong>eula_text</strong> - String - The EULA text, translated for the indicated locale.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--system-eulas-GET__title__5"><h2 class="sectiontitle" id="api-19.0--system-eulas-GET__title__5">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "eula_text": "String",
+        "locale_id": "String"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--system-eulas-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_system_intro.html" title="Use the references for REST API 19.0 system endpoints.">system endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

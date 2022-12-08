@@ -1,0 +1,460 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a restore object in the PENDING state.">
+<meta name="keywords" content="/backup_and_restore/restores, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_backup_and_restore_intro.html">
+<title>POST /backup_and_restore/restores</title>
+</head>
+<body id="api-19.0--backup_and_restore-restores-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--backup_and_restore-restores-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--backup_and_restore-restores-POST__title__1">POST /backup_and_restore/restores</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--backup_and_restore-restores-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--backup_and_restore-restores-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a restore object in the PENDING state.</p>
+
+<div class="section refsyn">
+
+ <strong>Note:</strong> Only a single restore record can be created at a time and all other existing restores must be in a completed state. A completed restore has the status of SUCCESS or FAILED.
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /backup_and_restore/restores resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /backup_and_restore/restores resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--backup_and_restore-restores-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /backup_and_restore/restores request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /backup_and_restore/restores request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--backup_and_restore-restores-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--backup_and_restore-restores-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--backup_and_restore-restores-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--backup_and_restore-restores-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--backup_and_restore-restores-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--backup_and_restore-restores-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /backup_and_restore/restores request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /backup_and_restore/restores request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--backup_and_restore-restores-POST__entry__15" class="thbot">Parameter</th>
+
+<th id="api-19.0--backup_and_restore-restores-POST__entry__16" class="thbot">Data Type</th>
+
+<th id="api-19.0--backup_and_restore-restores-POST__entry__17" class="thbot">MIME Type</th>
+
+<th id="api-19.0--backup_and_restore-restores-POST__entry__18" class="thbot">Description</th>
+
+<th id="api-19.0--backup_and_restore-restores-POST__entry__19" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__15 "><p>restore</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__16 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__17 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__18 "><div class="p">Required. A single restore object has the following modifiable fields:
+ <ul>
+ <li><strong>groups</strong> - Required - Array of Enumeration - The set of groups that are included with the restore. These groups contain a subset of the following values: CUSTOM_RULES_CONFIG, DEPLOYMENT_CONFIG, USERS_CONFIG, LICENSE_CONFIG, QVM_CONFIG, INSTALLED_APPS_CONFIG, REPORT_TEMPLATES, ASSETS_DATA, OFFENSES_DATA.</li>
+
+ <li><strong>backup_id</strong> - Required - Long - The ID of the backup to restore.</li>
+
+ </ul>
+
+ Any other set fields will be ignored.</div>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__19 "><p>{
+  "backup_id": 42,
+  "groups": [
+    "CUSTOM_RULES_CONFIG",
+    "DEPLOYMENT_CONFIG", 
+    "USERS_CONFIG",
+    "LICENSE_CONFIG",
+    "QVM_CONFIG", 
+    "INSTALLED_APPS_CONFIG", 
+    "ASSETS_DATA", 
+    "OFFENSES_DATA"
+  ]
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /backup_and_restore/restores response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /backup_and_restore/restores response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--backup_and_restore-restores-POST__entry__25" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--backup_and_restore-restores-POST__entry__26" class="thbot">Unique Code</th>
+
+<th id="api-19.0--backup_and_restore-restores-POST__entry__27" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>201</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p></p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>The restore was created.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>409</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p>1011</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>A restore is&nbsp;currently&nbsp;pending or in progress. Only a single restore record can be created at a time and all other existing restores must be in a completed state. A completed restore has the status of&nbsp;SUCCESS or FAILED.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>The 'backup_id' parameter value cannot be null or empty.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p>1003</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>The&nbsp;backup&nbsp;does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p>1004</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>The backup type must be config.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>The backup status must be successful.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p>1006</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>The backup&nbsp;must be valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p>1007</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>The backup&nbsp;must be compatible.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p>1008</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>The 'groups' parameter value cannot be null or empty.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p>1009</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>The DEPLOYMENT_CONFIG group must be included with the INSTALLED_APPS_CONFIG or OFFENSES_DATA group.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p>1010</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>A group was provided that does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p>1019</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>"The ASSETS_DATA and USERS_CONFIG groups must be included with DOMAINS group."</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__26 "><p>1000</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-restores-POST__entry__27 "><p>An error occurred during the attempt to create the restore.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--backup_and_restore-restores-POST__title__6"><h2 class="sectiontitle" id="api-19.0--backup_and_restore-restores-POST__title__6">Response Description</h2>
+
+<div class="p">The created restore object containing the following fields:
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the restore.</li>
+
+ <li><strong>initiated_by</strong> - String - The user or authorized service that initiated the restore.</li>
+
+ <li><strong>host_id</strong> - Long - The host that was restored. For more information, see the following Hosts API:
+ <ul>
+ 		<li>api/config/deployment/hosts</li>
+
+ </ul>
+</li>
+
+ <li><strong>time_initiated</strong> - Long - The number of milliseconds since epoch when the restore was started.</li>
+
+ <li><strong>time_completed</strong> - Long - The number of milliseconds since epoch when the restore completed.</li>
+
+ <li><strong>status</strong> - Enumeration - The status of the restore. The following values are available: PENDING, REQUESTING, INITIALIZING, IN_PROGRESS, FAILED, SUCCESS.
+ <ul>
+ 		<li>PENDING: This is the initial state of the restore once it is created. From this state the restore can be updated to the REQUESTING state.</li>
+
+ 		<li>REQUESTING: After the status is set to REQUESTING, a restore request is sent to the Backup and Restore Engine to initialize it as a new restore.</li>
+
+ 		<li>INITIALIZING: After the restore request is received by the Backup and Restore Engine it will update the status to INITIALIZING.</li>
+
+ 		<li>IN_PROGRESS: After the restore process begins the status will be updated to IN_PROGRESS.</li>
+
+ 		<li>FAILED: If the restore has completed with errors the status will be updated to FAILED.</li>
+
+ 		<li>SUCCESS: If the restore has completed without errors the status will be updated to SUCCESS.</li>
+
+ </ul>
+</li>
+
+ <li><strong>is_cross_deployment_restore</strong> - Boolean - If the associated backup is being restored on a different Console with a set of new managed hosts, the condition is set to 'true'; otherwise, the condition is set to 'false'.</li>
+
+ <li><strong>backup_id</strong> - Long - The ID of the backup associated with the restore. Once the restore completes this value will be updated to null.</li>
+
+ <li><strong>backup_name</strong> - String - The name of the backup that was restored.</li>
+
+ <li><strong>backup_version</strong> - String - The QRadar version that corresponds to the backup that was restored.</li>
+
+ <li><strong>backup_type</strong> - Enumeration - The backup type that was restored. This value will always be CONFIG.</li>
+
+ <li><strong>backup_filename</strong> - String - The filename of the backup that was restored.</li>
+
+ <li><strong>groups</strong> - Array of Enumeration - The set of groups that are included with the restore. These groups contain a subset of the following values: CUSTOM_RULES_CONFIG, DEPLOYMENT_CONFIG, USERS_CONFIG, LICENSE_CONFIG, QVM_CONFIG, INSTALLED_APPS_CONFIG, REPORT_TEMPLATES, ASSETS_DATA, OFFENSES_DATA.
+ <ul>
+ 		<li>CUSTOM_RULES_CONFIG: Restores custom rules, reference sets, reference data, and saved searches.&nbsp;If you have rules that depend on items other than reference data and saved searches, you need to use DEPLOYMENT_CONFIG in addition to CUSTOM_RULES_CONFIG for rules to be fully functional.</li>
+
+ 		<li>DEPLOYMENT_CONFIG: Restores the deployment model and administrator controlled settings and content. This group includes, but is not limited to the following content: domains, log sources, flow sources, system settings, and forwarding rules.</li>
+
+ 		<li>USERS_CONFIG: Restores users, authorized services, user roles, security profiles, and dashboards.</li>
+
+ 		<li>LICENSE_CONFIG: NEEDS DESCRIPTION</li>
+
+ 		<li>QVM_CONFIG: NEEDS DESCRIPTION</li>
+
+ 		<li>INSTALLED_APPS_CONFIG: Restores installed applications.</li>
+
+		<li>REPORT_TEMPLATES: Restores report templates.</li>
+
+ 		<li>ASSETS_DATA: Restores the asset model.</li>
+
+ 		<li>OFFENSES_DATA: Restores offenses. All offenses will be restored as closed.</li>
+
+ </ul>
+</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--backup_and_restore-restores-POST__title__7"><h2 class="sectiontitle" id="api-19.0--backup_and_restore-restores-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "backup_filename": "String",
+    "backup_id": 42,
+    "backup_name": "String",
+    "backup_type": "String",
+    "backup_version": "String",
+    "groups": [
+        "String"
+    ],
+    "host_id": 42,
+    "id": 42,
+    "initiated_by": "String",
+    "is_cross_deployment_restore": true,
+    "status": "String",
+    "time_completed": 42,
+    "time_initiated": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--backup_and_restore-restores-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_backup_and_restore_intro.html" title="Use the references for REST API 19.0 backup_and_restore endpoints.">backup_and_restore endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

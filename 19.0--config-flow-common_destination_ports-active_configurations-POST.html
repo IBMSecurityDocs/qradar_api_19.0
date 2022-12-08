@@ -1,0 +1,335 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a new active configuration.">
+<meta name="keywords" content="/config/flow/common_destination_ports/active_configurations, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>POST /config/flow/common_destination_ports/active_configurations</title>
+</head>
+<body id="api-19.0--config-flow-common_destination_ports-active_configurations-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--config-flow-common_destination_ports-active_configurations-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--config-flow-common_destination_ports-active_configurations-POST__title__1">POST /config/flow/common_destination_ports/active_configurations</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-flow-common_destination_ports-active_configurations-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-flow-common_destination_ports-active_configurations-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a new active configuration.</p>
+
+<div class="section refsyn">
+<p>Creates a new active configuration.
+ 
+ You must have System Administrator or Security Admin permissions to use this endpoint.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/flow/common_destination_ports/active_configurations resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/flow/common_destination_ports/active_configurations resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/flow/common_destination_ports/active_configurations request body details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/flow/common_destination_ports/active_configurations request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__4" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__5" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__6" class="thbot">Description</th>
+
+<th id="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__7" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__3 "><p>body</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__4 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__5 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__6 "><div class="p">Only port, application_id, content_capture_size, app_detection_enabled and flow_direciton_enabled fields can be set when creating an active Common Destination Port configuration. All other fields are ignored.
+ <ul>
+ <li><strong>port</strong> - Integer - The unique port number that you want to configure. </li>
+
+ <li><strong>application_id</strong> - Long - (Optional) The application ID for this port configuration. The application ID for this port configuration that is used by the QRadar port-based mapping algorithm.</li>
+
+ <li><strong>content_capture_size</strong> - Integer - The maximum amount of payload to capture and store for an application on this port. Set this value to 1 if you want the application to inherit the content capture size from the SV_CONTENT_CAPTURE_LENGTH field in the nva.conf file.</li>
+
+ <li><strong>app_detection_enabled</strong> - Boolean - TRUE if the port configuration will be used to determine the application. If true, you must set the application_id.</li>
+
+ <li><strong>flow_direction_enabled</strong> - Boolean - TRUE if the port configuration will be used to determine the flow direction.</li>
+
+ </ul>
+</div>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__7 "><p>{
+    "app_detection_enabled": true,
+    "application_id": 42,
+    "content_capture_size": 42,
+    "flow_direction_enabled": true,
+    "port": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/flow/common_destination_ports/active_configurations response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/flow/common_destination_ports/active_configurations response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__13" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__14" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__15" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__13 "><p>201</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__14 "><p></p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__15 "><p>The active Common Destination Port configuration was created.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__14 "><p>3000</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__15 "><p>A configuration already exists for this port number.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__14 "><p>3001</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__15 "><p>The port field is required, but was not provided.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__14 "><p>3002</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__15 "><p>The port must be between 1 and 65535 (inclusive).</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__14 "><p>3003</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__15 "><p>The application_id field is required, but was not provided.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__14 "><p>3004</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__15 "><p>The application ID is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__14 "><p>3005</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__15 "><p>The content_capture_size field is required, but was not provided.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__14 "><p>3006</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__15 "><p>The content capture size must be between 0 and 65535 (inclusive).</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__14 "><p>3007</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__15 "><p>The app_detection_enabled field is required, but was not provided.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__14 "><p>3008</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__15 "><p>The flow_direction_enabled field is required, but was not provided.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__13 "><p>500</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__14 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--config-flow-common_destination_ports-active_configurations-POST__entry__15 "><p>An error occurred while creating new active Common Destination Port configuration.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-flow-common_destination_ports-active_configurations-POST__title__5"><h2 class="sectiontitle" id="api-19.0--config-flow-common_destination_ports-active_configurations-POST__title__5">Response Description</h2>
+
+<div class="p">201 response with the new active Common Destination Port configuration structure. Location header set to the URL of the new active Common Destination Port.
+ <ul>
+ <li><strong>id</strong> - Long - The unique ID of the configuration.</li>
+
+ <li><strong>port</strong> - Integer - The unique port number that you want to configure. </li>
+
+ <li><strong>application_id</strong> - Long - The application ID for this port configuration. The application ID for this port configuration that is used by the QRadar port-based mapping algorithm.</li>
+
+ <li><strong>application_name</strong> - String - The name of the application as it would appear on the Network Activity tab. </li>
+
+ <li><strong>content_capture_size</strong> - Integer - The maximum amount of payload to capture and store for an application on this port. Set this value to 1 if you want the application to inherit the content capture size from the SV_CONTENT_CAPTURE_LENGTH field in the nva.conf file.</li>
+
+ <li><strong>app_detection_enabled</strong> - Boolean - TRUE if the port configuration will be used to determine the application. If true, you must set the application_id.</li>
+
+ <li><strong>flow_direction_enabled</strong> - Boolean - TRUE if the port configuration will be used to determine the flow direction.</li>
+
+ <li><strong>uuid</strong> - String - The unique global ID of the configuration, specified as a UUID.</li>
+
+ <li><strong>last_update_time</strong> - Long - The epoch timestamp, represented in milliseconds, since this configuration was last modified.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-flow-common_destination_ports-active_configurations-POST__title__6"><h2 class="sectiontitle" id="api-19.0--config-flow-common_destination_ports-active_configurations-POST__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "app_detection_enabled": true,
+    "application_id": 42,
+    "application_name": "String",
+    "content_capture_size": 42,
+    "flow_direction_enabled": true,
+    "id": 42,
+    "last_update_time": 42,
+    "port": 42,
+    "uuid": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-flow-common_destination_ports-active_configurations-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a single endpoint documentation object.">
+<meta name="keywords" content="/help/endpoints/{endpoint_id}, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_help_intro.html">
+<title>GET /help/endpoints/{endpoint_id}</title>
+</head>
+<body id="api-19.0--help-endpoints-endpoint_id-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--help-endpoints-endpoint_id-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--help-endpoints-endpoint_id-GET__title__1">GET /help/endpoints/{endpoint_id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--help-endpoints-endpoint_id-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--help-endpoints-endpoint_id-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a single endpoint documentation object.</p>
+
+<div class="section refsyn">
+<p>Retrieves a single endpoint documentation object.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /help/endpoints/{endpoint_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /help/endpoints/{endpoint_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--help-endpoints-endpoint_id-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /help/endpoints/{endpoint_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /help/endpoints/{endpoint_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--help-endpoints-endpoint_id-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--help-endpoints-endpoint_id-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--help-endpoints-endpoint_id-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--help-endpoints-endpoint_id-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--help-endpoints-endpoint_id-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--help-endpoints-endpoint_id-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__3 "><p>endpoint_id</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__8 "><p>The endpoint id.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /help/endpoints/{endpoint_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /help/endpoints/{endpoint_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--help-endpoints-endpoint_id-GET__entry__21" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--help-endpoints-endpoint_id-GET__entry__22" class="thbot">Unique Code</th>
+
+<th id="api-19.0--help-endpoints-endpoint_id-GET__entry__23" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__21 "><p>200</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__22 "><p></p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__23 "><p>The endpoint documentation object was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__21 "><p>404</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__22 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__23 "><p>No endpoint documentation object was found for the provided endpoint id.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__21 "><p>500</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__22 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--help-endpoints-endpoint_id-GET__entry__23 "><p>An unexpected error has occurred.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--help-endpoints-endpoint_id-GET__title__5"><h2 class="sectiontitle" id="api-19.0--help-endpoints-endpoint_id-GET__title__5">Response Description</h2>
+
+<div class="p">An endpoint documentation object. An endpoint documentation object contains the following fields:
+         <ul>
+         <li><strong>id</strong> - Number - The ID of the endpoint documentation. This ID is not permanent. It might change
+         any time services are restarted.</li>
+
+         <li><strong>summary</strong> - String - A brief summary of the endpoint.</li>
+
+         <li><strong>deprecated</strong> - Boolean - Returns true if the endpoint is deprecated. Returns false
+         otherwise.</li>
+
+         <li><strong>http_method</strong> - String - The HTTP request type. One of OPTIONS, GET, HEAD, POST, PUT, DELETE,
+         TRACE, CONNECT, PATCH.</li>
+
+         <li><strong>error_responses</strong> - Array of Objects - A list of potential error responses of this
+         endpoint.</li>
+
+         <li><strong>error_responses(response_code)</strong> - Number - The HTTP code for this error response.</li>
+
+         <li><strong>error_responses(description)</strong> - String - The description for this error response.</li>
+
+         <li><strong>error_responses(unique_code)</strong> - Number - The unique code for this error response.</li>
+
+         <li><strong>error_responses(response_code_description)</strong> - String - The description of the response.</li>
+
+         <li><strong>response_description</strong> - String - The description of the response.</li>
+
+         <li><strong>version</strong> - String - The version of this endpoint.</li>
+
+         <li><strong>success_responses</strong> - Array of Objects - A list of potential success responses for this
+         endpoint.</li>
+
+         <li><strong>success_responses(response_code)</strong> - Number - The HTTP code for this response.</li>
+
+         <li><strong>success_responses(description)</strong> - String - The description of this response.</li>
+
+         <li><strong>success_responses(response_code_description)</strong> - String - The name for the response code from
+         RFC 2616.</li>
+
+         <li><strong>description</strong> - String - A description of this endpoint.</li>
+
+         <li><strong>path</strong> - String - The path of this endpoint.</li>
+
+         <li><strong>response_mime_types</strong> - Array of Objects - A list of possible response MIME types for this
+         endpoint.</li>
+
+         <li><strong>response_mime_types(mime_type)</strong> - String - The MIME type value, e.g. TEXT_PLAIN</li>
+
+         <li><strong>response_mime_types(media_type)</strong> - String - The RFC style Media Type, e.g. text/plain This
+         value is suitable for use in HTTP requests.</li>
+
+         <li><strong>response_mime_types(sample)</strong> - String - The sample of this response MIME type.</li>
+
+         <li><strong>parameters</strong> - Array of Objects - A list of user parameters for this endpoint.</li>
+
+         <li><strong>parameters(description)</strong> - String - A description of this parameter.</li>
+
+         <li><strong>parameters(default_value)</strong> - String - The default value of this parameter. Null if there is no
+         default value for this parameter. This is always a String, regardless of the underlying data type of the
+         parameter.</li>
+
+         <li><strong>parameters(type)</strong> - String - The type of parameter, one of QUERY, HEADER, PATH, BODY.</li>
+
+         <li><strong>parameters(parameter_name)</strong> - String - The name of this parameter.</li>
+
+         <li><strong>parameters(mime_types)</strong> - Array of Objects - A list of possible mime_types for this
+         parameter.</li>
+
+         <li><strong>parameters(mime_types(data_type))</strong> - String - A description of the data type of this parameter.
+         </li>
+
+         <li><strong>parameters(mime_types(mime_type))</strong> - String - The MIME type of the parameter.</li>
+
+         <li><strong>parameters(mime_types(sample))</strong> - String - The sample for this parameter.</li>
+
+         <li><strong>resource_id</strong> - Number - The ID of the associated resource.</li>
+
+         <li><strong>last_modified_version</strong> - String - The API version this endpoint was last modified. It will be
+         less than or equal to the version in the version field.</li>
+
+         <li><strong>caller_has_access</strong> - Boolean - Returns true if the user has the required capabilities to call
+         this endpoint. Returns false otherwise.</li>
+
+         </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--help-endpoints-endpoint_id-GET__title__6"><h2 class="sectiontitle" id="api-19.0--help-endpoints-endpoint_id-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+  "caller_has_access": true,
+  "deprecated": true,
+  "description": "String",
+  "error_responses": [
+    {
+      "description": "String",
+      "response_code": 42,
+      "response_code_description": "String",
+      "unique_code": 42
+    }
+  ],
+  "http_method": "String &lt;one of: OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, PATCH&gt;",
+  "id": 42,
+  "last_modified_version": "String",
+  "parameters": [
+    {
+      "default_value": "String",
+      "description": "String",
+      "mime_types": [
+        {
+          "data_type": "String",
+          "mime_type": "String",
+          "sample": "String"
+        }
+      ],
+      "parameter_name": "String",
+      "type": "String &lt;one of: QUERY, HEADER, PATH, BODY&gt;"
+    }
+  ],
+  "path": "String",
+  "resource_id": 42,
+  "response_description": "String",
+  "response_mime_types": [
+    {
+      "mime_type": "String",
+      "sample": "String"
+    }
+  ],
+  "success_responses": [
+    {
+      "description": "String",
+      "response_code": 42,
+      "response_code_description": "String"
+    }
+  ],
+  "summary": "String",
+  "version": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--help-endpoints-endpoint_id-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_help_intro.html" title="Use the references for REST API 19.0 help endpoints.">help endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a list of recovery tasks.">
+<meta name="keywords" content="/forensics/capture/recovery_tasks, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_forensics_intro.html">
+<title>GET /forensics/capture/recovery_tasks</title>
+</head>
+<body id="api-19.0--forensics-capture-recovery_tasks-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--forensics-capture-recovery_tasks-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--forensics-capture-recovery_tasks-GET__title__1">GET /forensics/capture/recovery_tasks</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--forensics-capture-recovery_tasks-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--forensics-capture-recovery_tasks-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a list of recovery tasks.</p>
+
+<div class="section refsyn">
+<p>Retrieves a list of recovery tasks.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /forensics/capture/recovery_tasks resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /forensics/capture/recovery_tasks resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--forensics-capture-recovery_tasks-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /forensics/capture/recovery_tasks request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /forensics/capture/recovery_tasks request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--forensics-capture-recovery_tasks-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--forensics-capture-recovery_tasks-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--forensics-capture-recovery_tasks-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--forensics-capture-recovery_tasks-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--forensics-capture-recovery_tasks-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--forensics-capture-recovery_tasks-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__3 "><p>Range</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__8 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__3 "><p>filter</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__8 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /forensics/capture/recovery_tasks response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /forensics/capture/recovery_tasks response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--forensics-capture-recovery_tasks-GET__entry__27" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--forensics-capture-recovery_tasks-GET__entry__28" class="thbot">Unique Code</th>
+
+<th id="api-19.0--forensics-capture-recovery_tasks-GET__entry__29" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__27 "><p>200</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__28 "><p></p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__29 "><p>The workflow recovery job tasks were retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__27 "><p>500</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__28 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--forensics-capture-recovery_tasks-GET__entry__29 "><p>An error occurred while the recovery job task list was being retrieved.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--forensics-capture-recovery_tasks-GET__title__5"><h2 class="sectiontitle" id="api-19.0--forensics-capture-recovery_tasks-GET__title__5">Response Description</h2>
+
+<div class="p">A list of recovery tasks.  A recovery task contains the following fields:
+ <ul>
+ <li><strong>assigned_to</strong> - String - The username of the user the recovery task is assigned to.</li>
+
+ <li><strong>bpf</strong> - String - Berkeley Packet Filter sent to capture device when recovering.</li>
+
+ <li><strong>capture_device_id</strong> - String - Capture device where this task collected its data.  The IP address of the capture device at time of recovery.</li>
+
+ <li><strong>case_id</strong> - String - ID of case where the collection is created.</li>
+
+ <li><strong>collection_name</strong> - String - Name of collection where recovered data is stored.  Derived from device recovery collection name suffix.  NOTE: This is used as part of the collection_name to uniquely identify and index the data at time of recovery and is not updated if the capture device IP address is changed.</li>
+
+ <li><strong>id</strong> - Long - ID for the recovery task.</li>
+
+ <li><strong>managed_host_hostname</strong> - String - The managed host the recovery task is running on.</li>
+
+ <li><strong>recovery_id</strong> - Long - ID of the recovery this task belongs to.</li>
+
+ <li><strong>recovery_window_end_time</strong> - Long - End of time range for data recovery window sent to capture device.  Data recovered is from before this time.</li>
+
+ <li><strong>recovery_window_start_time</strong> - Long - Start of time range for data recovery window sent to capture device.  Data recovered is from after this time.</li>
+
+ <li><strong>status</strong> - String - Current status of this task. Possible values are:<ul>
+<li><strong>CANCELED</strong> - Recovery from capture device canceled. Any documents recovered before
+cancellation remain in the system.</li>
+
+<li><strong>CANCELLING</strong> - Recovery from capture device in process of cancellation</li>
+
+<li><strong>FAILED</strong> - Something went wrong with the recovery.</li>
+
+<li><strong>IN_PROGRESS</strong> - The capture device is processing the recovery.</li>
+
+<li><strong>NEW</strong> - The recovery task was created and is waiting to be picked up by the system.</li>
+
+<li><strong>PENDING</strong> - The recovery task was picked up by the system and is waiting for the capture
+device to start processing the recovery.</li>
+
+<li><strong>SUCCESS</strong> - Recovery from capture device successfully completed</li>
+
+</ul>
+</li>
+
+ <li><strong>tags</strong> - String Array -  Identifiers that are applied to recovered data to assist with grouping when searching.  These are user-supplied string identifiers that are used to mark the data so the user can easily look up the data later.</li>
+
+ <li><strong>task_end_time</strong> - Long - Timestamp the recovery task completed.</li>
+
+ <li><strong>task_start_time</strong> - Long - Timestamp the recovery task started.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--forensics-capture-recovery_tasks-GET__title__6"><h2 class="sectiontitle" id="api-19.0--forensics-capture-recovery_tasks-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "assignee": "String",
+        "bpf": "String",
+        "capture_device_ip": "String",
+        "case_id": 42,
+        "collection_name": "String",
+        "id": 42,
+        "managed_host_hostname": "String",
+        "recovery_id": 42,
+        "recovery_window_end_time": 42,
+        "recovery_window_start_time": 42,
+        "status": "String &lt;one of: CANCELED, CANCELING, FAILED, IN_PROGRESS, NEW, PENDING, SUCCESS&gt;",
+        "tags": [
+            "String"
+        ],
+        "task_end_time": 42,
+        "task_start_time": 42
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--forensics-capture-recovery_tasks-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_forensics_intro.html" title="Use the references for REST API 19.0 forensics endpoints.">forensics endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

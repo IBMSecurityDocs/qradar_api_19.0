@@ -1,0 +1,465 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates an authorized service. The response to this API invocation will contain the API token. This will be the only time the token value is available.">
+<meta name="keywords" content="/config/access/authorized_services, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>POST /config/access/authorized_services</title>
+</head>
+<body id="api-19.0--config-access-authorized_services-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--config-access-authorized_services-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--config-access-authorized_services-POST__title__1">POST /config/access/authorized_services</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-access-authorized_services-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-access-authorized_services-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates an authorized service. The response to this API invocation will contain the API token. This will be the only time the token value is available.</p>
+
+<div class="section refsyn">
+<p>Any user or authorized service can call this endpoint. To create an authorized service with any user role, security profile, or tenant, the caller must have the Administrator Manager permission. Callers who don't have the Administrator Manager permission can only create an authorized service with their own user role, security profile and tenant. An authorized service that is created by a caller who doesn't have the Administrator Manager permission expires no later than the default expiration time, even if the caller enters a later time. The default expiration time is also what is set as the expiration date for the authorized service if the expiration_date is not set in the request. This default expiration time can be configured using the Authentication Settings API found here: /api/system/authorization/settings.</p>
+
+ <p>
+ Only the label, tenant_id, security_profile_id, user_role_id, and expiration_date fields can be set when creating an authorized service. All other fields are ignored.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/access/authorized_services resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/access/authorized_services resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-access-authorized_services-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/access/authorized_services request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/access/authorized_services request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-access-authorized_services-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-access-authorized_services-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--config-access-authorized_services-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--config-access-authorized_services-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-access-authorized_services-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-access-authorized_services-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/access/authorized_services request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/access/authorized_services request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-access-authorized_services-POST__entry__15" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-access-authorized_services-POST__entry__16" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-access-authorized_services-POST__entry__17" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-access-authorized_services-POST__entry__18" class="thbot">Description</th>
+
+<th id="api-19.0--config-access-authorized_services-POST__entry__19" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__15 "><p>authorized_service</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__16 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__17 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__18 "><p>Only the label, tenant_id, security_profile_id, user_role_id, and expiration_date fields can be set when creating an authorized service. All other fields are ignored.</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__19 "><p>{
+    "created_by": "String",
+    "creation_date": 42,
+    "expiration_date": 42,
+    "id": 42,
+    "label": "String",
+    "last_used_date": 42,
+    "security_profile_id": 42,
+    "tenant_id": 42,
+    "token": "String",
+    "user_role_id": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/access/authorized_services response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/access/authorized_services response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-access-authorized_services-POST__entry__25" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-access-authorized_services-POST__entry__26" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-access-authorized_services-POST__entry__27" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>201</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p></p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>response with the new authorized service structure. Location header set to the URL of the new authorized service.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103001</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The label field must be provided.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103002</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The security_profile_id field must be provided.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103003</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The security_profile_id provided must reference a deployed security profile.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103004</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The user_role_id field must be provided.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103005</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The user_role_id provided must reference a deployed user role.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103006</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The tenant_id provided must reference an existing tenant.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103007</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The tenant_id was provided, but the security_profile_id does not limit access to data in that tenant.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103008</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The authorized service label must be unique for all authorized services and usernames.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103009</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>security_profile_id must be set to the Admin security profile when creating an authorized service with the System Administrator permission.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103010</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>tenant_id must be null when creating an authorized service with a user role that contains the System Administrator permission.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103011</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The length of the label field cannot exceed 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103012</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The expiration_date must expire before the default expiration time if you do not have the Administrator Manager permission.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103013</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The expiration_date must be set to a time in the future.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103014</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The limit for the number of authorized services that a user or authorized service without the Administrator Manager permission is allowed to create has been met by the caller.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103015</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The user_role_id must match your own if you do not have the Administrator Manager permission.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103016</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The security_profile_id must match your own if you do not have the Administrator Manager permission.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103017</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>The tenant_id must match your own if you do not have the Administrator Manager permission.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-authorized_services-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__26 "><p>95103018</p>
+</td>
+
+<td headers="api-19.0--config-access-authorized_services-POST__entry__27 "><p>Manage Local Only Authentication Setting permission required to perform action.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-access-authorized_services-POST__title__6"><h2 class="sectiontitle" id="api-19.0--config-access-authorized_services-POST__title__6">Response Description</h2>
+
+<div class="p"><ul>
+ <li><strong>label</strong> - String - 	The label of the authorized service. Authorized service labels and usernames must be unique between them. This field is not configurable if the caller does not have the Administrator Manager permission. The label will instead be auto-generated by appending the callers label with a randomly generated UUID.</li>
+
+ <li><strong>token</strong> - String - The token of this authorized service. The authorized service token is a pre-authorized key. This token can be used in place of a username and password when authentication to the APIs. This field is only available in the response to a POST to the /api/config/access/authorized_services endpoint.</li>
+
+ <li><strong>tenant_id</strong> - Long - (Optional) The tenant ID of the authorized service. Access a list of tenants using /api/config/access/tenant_management/tenants. When set, this field will restrict the security_profile_id field to ones that are completely contained within the specified tenant. Only callers with the Administrator Manager permission can configure this field. For callers without the Administrator Manager permission, the tenant_id of the authorized service must be the same as the tenant_id of the caller.</li>
+
+ <li><strong>security_profile_id</strong> - Long - 	The security profile ID of the authorized service. Access security profiles using /api/config/security_profiles API. Only callers with the Administrator Manager permission can configure this field. For callers without the Administrator Manager permission, the security_profile_id of the authorized service must be the same as the security_profile_id of the caller.</li>
+
+ <li><strong>user_role_id</strong> - Long - The user role ID of the authorized service. Access user roles using /api/config/user_roles API. Only callers with the Administrator Manager permission can configure this field. For callers without the Administrator Manager permission, the user_role_id of the authorized service must be the same as the user_role_id of the caller.</li>
+
+ <li><strong>expiration_date</strong> - Long - The time in milliseconds since epoch that this authorized service will expire. This field, if set, must always be set to a time in the future. Only callers with the Administrator Manager permission can set this field to null. If this field is set to null, this authorized service does not expire. A caller who does not have the Administrator Manager permission can only set the expiration_date to a value that is less than or equal to the default expiration time described in the main description of this endpoint, and cannot set it to null. If this field is not set, the expiration_date is set to the default expiration time. This value will be truncated to seconds.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-access-authorized_services-POST__title__7"><h2 class="sectiontitle" id="api-19.0--config-access-authorized_services-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "created_by": "String",
+    "creation_date": 42,
+    "expiration_date": 42,
+    "id": 42,
+    "label": "String",
+    "last_used_date": 42,
+    "security_profile_id": 42,
+    "tenant_id": 42,
+    "token": "String",
+    "user_role_id": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-access-authorized_services-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

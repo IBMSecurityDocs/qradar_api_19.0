@@ -1,0 +1,934 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates a log source by ID.">
+<meta name="keywords" content="/config/event_sources/log_source_management/log_sources/{id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>POST /config/event_sources/log_source_management/log_sources/{id}</title>
+</head>
+<body id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__title__1">POST /config/event_sources/log_source_management/log_sources/{id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-event_sources-log_source_management-log_sources-id-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-event_sources-log_source_management-log_sources-id-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates a log source by ID.
+
+</p>
+
+<div class="section refsyn">   * A log source contains the following fields:
+<ul>
+<li><strong>id</strong> - Number - The ID of the log source.</li>
+
+<li><strong>name</strong> - String - The unique name of the log source.</li>
+
+<li><strong>description</strong> - String - An optional description of the log source.</li>
+
+<li><strong>type_id</strong> - Number - The type of the log source. Must correspond to an existing log source type. See the Log Source Type API (/api/config/event_sources/log_source_management/log_source_types/).</li>
+
+<li><strong>protocol_type_id</strong> - Number - The type of protocol that is used by the log source. Must correspond to an existing protocol type. See the Protocol Type API (/api/config/event_sources/log_source_management/protocol_types/). Individual log source types can support only a subset of all available protocol types, as indicated by the protocol_types field of the log source type structure.</li>
+
+<li><strong>protocol_parameters</strong> - Array - The set of protocol parameters. This set is a collection of ProtocolParameter structures. The structure of the parameters is defined by the protocol type that is used by the log source. See the Protocol Type API (/api/config/event_sources/log_source_management/protocol_types/).</li>
+
+<li><strong>enabled</strong> - Boolean - If the log source is enabled, the condition is set to 'true'; otherwise, the condition is set to 'false'.</li>
+
+<li><strong>gateway</strong> - Boolean - If the log source is configured as a gateway, the condition is set to 'true'; otherwise, the condition is set to 'false'. A gateway log source is a stand-alone protocol configuration. The log source receives no events itself, and serves as a host for a protocol configuration that retrieves event data to feed other log sources. It acts as a "gateway" for events from multiple systems to enter the event pipeline.</li>
+
+<li><strong>internal</strong> - Boolean - If the log source is internal (when the log source type is defined as internal), the condition is set to 'true'.</li>
+
+<li><strong>credibility</strong> - Short - On a scale of 0 - 10 inclusive, the amount of credibility that the QRadar administrator places on this log source.</li>
+
+<li><strong>target_event_collector_id</strong> - Number -  The ID of the event collector where the log source sends its data. The ID must correspond to an existing event collector. See the Event Collector API (/api/config/event_sources/event_collectors/).</li>
+
+<li><strong>disconnected_log_collector_id</strong> - Number -  The ID of the disconnected log collector where this log source will run. The ID must correspond to an existing disconnected log collector. See the Disconnected Log Collector API (/api/config/event_sources/disconnected_log_collectors/).</li>
+
+<li><strong>coalesce_events</strong> - Boolean -  If events collected by this log source are coalesced based on common properties, the condition is set to 'true'. If each individual event is stored, then the condition is set to 'false'.</li>
+
+<li><strong>store_event_payload</strong> - Boolean - If the payloads of events that are collected by this log source are stored, the condition is set to 'true'. If only the normalized event records are stored, then the condition is set to 'false'.</li>
+
+<li><strong>log_source_extension_id</strong> - Long - The log source extension associated with the log source. The ID must correspond to an existing log source extension or be set to 'null'. See the Log Source Extension API (/api/config/event_sources/log_source_management/log_source_extensions/)</li>
+
+<li><strong>language_id</strong> - Integer - The language of the events that are being processed by this log source. Must correspond to an existing log source language. See the Log Source Language API (/api/config/event_sources/log_source_management/log_source_languages/). Individual log source types can support only a subset of all available log source languages, as indicated by the supported_language_ids field of the log source type structure</li>
+
+<li><strong>group_ids</strong> - Array - The set of log source group IDs this log source is a member of. Each ID must correspond to an existing log source group. See the Log Source Group API (/api/config/event_sources/log_source_management/log_source_groups/).</li>
+
+<li><strong>requires_deploy</strong> Boolean - Set to 'true' if you need to deploy changes to enable the log source for use; otherwise, set to 'false' if the log source is already active.</li>
+
+<li><strong>status</strong> - Object - The status of the log source.</li>
+
+<li><strong>auto_discovered</strong> - Boolean -  If the log source was auto-discovered, the condition is set to 'true'. If the log source was created by a user, then the condition is set to 'false'.</li>
+
+<li><strong>average_eps</strong> - Number - The average events per second (EPS) rate of the log source over the last 60 seconds.</li>
+
+<li><strong>creation_date</strong> - Number - The creation date/time of the log source (in milliseconds since epoch).</li>
+
+<li><strong>modified_date</strong> - Number - The last modified date/time of the log source (in milliseconds since epoch).</li>
+
+<li><strong>last_event_time</strong> - Number - The date/time of the last event received by the log source (in milliseconds since epoch).</li>
+
+<li><strong>wincollect_internal_destination_id</strong> - Long - The internal WinCollect destination for this log source, if applicable. Log sources without an associated WinCollect agent have a null value. Must correspond to an existing WinCollect destination. See the WinCollect Destination API (/api/config/event_sources/wincollect/wincollect_destinations/).</li>
+
+<li><strong>wincollect_external_destination_ids</strong> - Array&lt;Long&gt; - The set of external WinCollect destinations for this log source, if applicable. Log Sources without an associated WinCollect agent have a null value. Each ID must correspond to an existing WinCollect destination. See the WinCollect Destination API (/api/config/event_sources/wincollect/wincollect_destinations/).</li>
+
+<li><strong>legacy_bulk_group_name</strong> - Array&lt;Long&gt; - The name of the legacy bulk group that this log source belongs to. If the field is null, then the log source is not part of any legacy bulk groups.</li>
+
+<li><strong>sending_ip</strong> - String - The ip of the system which the log source is associated to, or fed by.</li>
+
+<li><strong>parsing_order</strong> - Integer - The order in which log sources will parse if multiple exists with a common identifier.</li>
+
+</ul>
+
+
+A protocol parameter contains the following fields:
+<ul>
+<li><strong>id</strong> - Number - The ID of the protocol parameter. The ID matches one of the ProtocolParameterType objects defined by the Protocol Type used by the log source. See the Protocol Type API (/api/config/event_sources/log_source_management/protocol_types/).</li>
+
+<li><strong>name</strong> - The name of the protocol parameter. The name matches one of the ProtocolParameterType objects defined by the Protocol Type used by the log source. See the Protocol Type API (/api/config/event_sources/log_source_management/protocol_types/).</li>
+
+<li><strong>value</strong> - String - The value of the parameter.</li>
+
+</ul>
+
+
+A status parameter contains the following fields:
+<ul>
+<li><strong>status</strong> - Enumeration - The status of the log source. Possible values are N/A, SUCCESS, WARN, ERROR, DISABLED.</li>
+
+<li><strong>messages</strong> - Array An array of LogSourceStatusMessage structures.</li>
+
+<li><strong>last_updated</strong> - String - The time of the last status update (in milliseconds since epoch).</li>
+
+</ul>
+
+
+A 'status' message parameter contains the following fields:
+<ul>
+<li><strong>severity</strong> - Enumeration - The severity of the status message. Possible values are INFO, WARN, ERROR.</li>
+
+<li><strong>text</strong> - The localized text of the status message.</li>
+
+</ul>
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_sources/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/event_sources/log_source_management/log_sources/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_sources/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/event_sources/log_source_management/log_sources/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__3 "><p>id</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__8 "><p>The ID of the log source to update.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_sources/{id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/event_sources/log_source_management/log_sources/{id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__21" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__22" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__23" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__24" class="thbot">Description</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__25" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__21 "><p>log_source_data</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__22 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__23 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__24 "><p>The updated log source data.  Any field not provided will be ignored.</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__25 "><p>{
+    "coalesce_events": true,
+    "credibility": 42,
+    "deleted": true,
+    "description": "String",
+    "disconnected_log_collector_id": 42,
+    "enabled": true,
+    "gateway": true,
+    "group_ids": [
+        42
+    ],
+    "id": 42,
+    "language_id": 42,
+    "legacy_bulk_group_name": "String",
+    "log_source_extension_id": 42,
+    "name": "String",
+    "parsing_order": 42,
+    "protocol_parameters": [
+        {
+            "id": 42,
+            "name": "String",
+            "value": "String"
+        }
+    ],
+    "protocol_type_id": 42,
+    "requires_deploy": true,
+    "sending_ip": "String",
+    "store_event_payload": true,
+    "target_event_collector_id": 42,
+    "type_id": 42,
+    "wincollect_external_destination_ids": [
+        42
+    ],
+    "wincollect_internal_destination_id": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_sources/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/event_sources/log_source_management/log_sources/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>200</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p></p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The log source was updated successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1000</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The endpoint cannot be used by users associated with a tenant.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>404</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1050</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The requested log source cannot be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>409</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1001</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'name' parameter must be unique.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>409</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The combination of 'type_id','protocol_type_id' and 'identifier' (from 'protocol_parameters') must be unique.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1004</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'name' parameter is required.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'name' parameter must not exceed 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1006</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'description' parameter must not exceed 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1007</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'type_id' parameter does not match any of the available log source types.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1008</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'type_id' parameter cannot correspond to an internal log source type.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1009</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'protocol_type_id' parameter does not match any of the available protocol types.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1010</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The combination of 'type_id' and 'protocol_type_id' is not supported.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1011</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The requested log source cannot be updated because its type_id corresponds to an internal log source type.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1012</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The protocol parameter is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1013</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The protocol parameter id or name is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1014</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The protocol parameter value format is incorrect.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1015</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The protocol parameter is required but the value is missing.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1016</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The protocol parameter value does not match one of the allowed values.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1017</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The protocol parameter value is too short.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1018</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The protocol parameter value is too long.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1019</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The protocol parameter value is too big.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The protocol parameter value is too small.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1021</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The protocol parameter value does not match the allowed pattern.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1022</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The protocol parameter is not a supported encoding.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1023</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>At least one protocol parameter from the group must be set.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1024</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'credibility' parameter must be a value 0 - 10 inclusive.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1025</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'target_event_collector_id' parameter does not match any of the available event collectors.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1026</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'log_source_extension_id' parameter does not match any of the available log source extensions.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1027</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'language_id' parameter does not match any of the available log source languages.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1028</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'language_id' parameter does not match a supported language for the selected log source type.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1029</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'group_ids' parameter contains one or more group IDs that cannot be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1030</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'group_ids' parameter contains unassignable groups (IDs 0 or 1).</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1031</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'wincollect_internal_destination_id' parameter does not match any available internal WinCollect destination.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1032</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'wincollect_external_destination_ids' parameter contains one or more IDs that do not match an available external WinCollect destination.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1033</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>At least one internal or external WinCollect destination must be provided for log sources that are associated with a WinCollect agent.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1034</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>This method is not supported for this log source because it is part of a bulk group.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1035</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>This legacy_bulk_group_name field can only be set to null.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1036</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>A log source using this protocol cannot be used as a gateway.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1039</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'sending_ip' parameter is not a valid IP address.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1040</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'parsing_order' parameter must be a nonnegative integer.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1041</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The requested 'parsing_order' is already in use by a log source with the same identifier.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1042</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The 'disconnected_log_collector_id' parameter does not match any of the available collectors.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1043</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>The log source can have a value for 'target_event_collector_id' or 'disconnected_log_collector_id`, but not both.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1044</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>A log source associated with a Disconnected Log Collector must have its 'identifier' end with the collector's UUID.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__31 "><p>500</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__32 "><p>1100</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__entry__33 "><p>An error occurred during the attempt to create the log source.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__title__6"><h2 class="sectiontitle" id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__title__6">Response Description</h2>
+
+<p>The updated log source identified by the id specified in the request.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__title__7"><h2 class="sectiontitle" id="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "auto_discovered": true,
+    "average_eps": 42,
+    "coalesce_events": true,
+    "creation_date": 42,
+    "credibility": 42,
+    "description": "String",
+    "disconnected_log_collector_id": 42,
+    "enabled": true,
+    "gateway": true,
+    "group_ids": [
+        42
+    ],
+    "id": 42,
+    "internal": true,
+    "language_id": 42,
+    "last_event_time": 42,
+    "legacy_bulk_group_name": "String",
+    "log_source_extension_id": 42,
+    "modified_date": 42,
+    "name": "String",
+    "parsing_order": 42,
+    "protocol_parameters": [
+        {
+            "id": 42,
+            "name": "String",
+            "value": "String"
+        }
+    ],
+    "protocol_type_id": 42,
+    "requires_deploy": true,
+    "sending_ip": "String",
+    "status": {
+        "last_updated": 42,
+        "messages": [
+            {
+                "severity": "String",
+                "text": "String",
+                "timestamp": 42
+            }
+        ],
+        "status": "String"
+    },
+    "store_event_payload": true,
+    "target_event_collector_id": 42,
+    "type_id": 42,
+    "wincollect_external_destination_ids": [
+        42
+    ],
+    "wincollect_internal_destination_id": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-event_sources-log_source_management-log_sources-id-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

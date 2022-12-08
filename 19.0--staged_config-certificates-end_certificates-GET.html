@@ -1,0 +1,381 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Gets the list of uploaded certificates from the staged area. You must have System Administrator, Security Administrator, Manage Log Sources, or WinCollect permissions to use this endpoint.">
+<meta name="keywords" content="/staged_config/certificates/end_certificates, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_staged_config_intro.html">
+<title>GET /staged_config/certificates/end_certificates</title>
+</head>
+<body id="api-19.0--staged_config-certificates-end_certificates-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--staged_config-certificates-end_certificates-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--staged_config-certificates-end_certificates-GET__title__1">GET /staged_config/certificates/end_certificates</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--staged_config-certificates-end_certificates-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--staged_config-certificates-end_certificates-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Gets the list of uploaded certificates from the staged area.
+ You must have System Administrator, Security Administrator, Manage Log Sources, or WinCollect permissions to use this endpoint.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /staged_config/certificates/end_certificates resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /staged_config/certificates/end_certificates resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-certificates-end_certificates-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /staged_config/certificates/end_certificates request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /staged_config/certificates/end_certificates request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-certificates-end_certificates-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__3 "><p>Range</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__8 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__3 "><p>filter</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__8 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /staged_config/certificates/end_certificates response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /staged_config/certificates/end_certificates response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-certificates-end_certificates-GET__entry__27" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-GET__entry__28" class="thbot">Unique Code</th>
+
+<th id="api-19.0--staged_config-certificates-end_certificates-GET__entry__29" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__27 "><p>200</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__28 "><p></p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__29 "><p>An array of the certificate resources.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__27 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__28 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__29 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__27 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__28 "><p>1101</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__29 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__27 "><p>500</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__28 "><p>2035</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-end_certificates-GET__entry__29 "><p>null</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--staged_config-certificates-end_certificates-GET__title__5"><h2 class="sectiontitle" id="api-19.0--staged_config-certificates-end_certificates-GET__title__5">Response Description</h2>
+
+<p>A list of deployed and staged end certificate resources. The list is filtered based on the user permissions.
+
+ Users with System Administrator or Security Administrator permissions can see all certificates that are in the system.
+ Other administrative users can see the certificates that are mapped to the component for which they have permissions. For example, users who have the Log Source Manage permission can see only the certificates that apply to the Log Source component.</p>
+
+ <p>Non-administrative users see only the certificate name and ID. All other fields appear as 'null'.</p>
+
+
+ <div class="p">A certificate object has the following format:
+      <ul>
+      <li><strong>id</strong> - The certificate resource ID.</li>
+
+      <li><strong>name</strong> - A unique name that identifies the certificate.</li>
+
+      <li><strong>purpose</strong> - The intended use of the certificate.</li>
+
+      <li><strong>subject</strong> - Returns the Subject of the certificate.</li>
+
+      <li><strong>issuer</strong> - Returns the Issuer of the certificate.</li>
+
+      <li><strong>not_before</strong> - Returns the "Validity Not Before" value of the certificate, represented as the number of milliseconds since UNIX Epoch.</li>
+
+      <li><strong>expiry</strong> - Returns the "Validity Not After" field of the certificate, represented as the number of milliseconds since UNIX epoch.</li>
+
+      <li><strong>serial_number</strong> - Returns the "Serial Number" field of the certificate.</li>
+
+ 	 <li><strong>key_usage</strong> - Returns the "Key Usage" field of the certificate. The values are one or more of the enum X509Certificate.KeyUsage
+ 		 <ul>
+ 	 	    <li>CRL_SIGN</li>
+
+ 	 	    <li>DATA_ENCIPHERMENT</li>
+
+ 		     <li>DECIPHER_ONLY</li>
+
+ 	 	    <li>DIGITAL_SIGNATURE</li>
+
+ 	 	    <li>ENCIPHER_ONLY</li>
+
+ 		     <li>KEY_AGREEMENT</li>
+
+ 		     <li>KEY_CERT_SIGN</li>
+
+ 	 	    <li>KEY_ENCIPHERMENT</li>
+
+ 	 	    <li>NON_REPUDIATION</li>
+
+ 	 	 </ul>
+
+  </li>
+
+ 	 <li><strong>extended_key_usage</strong> - Returns the "Extended Key Usage" field of the certificate. Values will be one or more of the enum X509Certificate.ExtendedKeyUsage values: "CLIENT_AUTH", "CODE_SIGNING", "EMAIL_PROTECTION", "OCSP_SIGNING", "SERVER_AUTH", "TIME_STAMPING"</li>
+
+ 	 <li><strong>certificate_revocation_list_distribution_point</strong> - returns the "CRL Distribution Points" field of the certificate</li>
+
+      <li><strong>password</strong> - Returns the password that is used to encrypt the private key. This value is always null in the response.</li>
+
+      <li><strong>component_id</strong> - Returns the assigned component ID of the certificate.</li>
+
+      <li><strong>validation</strong> - Returns the code to indicate whether the certificate is valid. If not, it returns the reason that the certificate is not valid.
+                <ul>
+                <li>-1 - The certificate has not been validated.</li>
+
+                <li>0 - The certificate is valid or has not been checked .</li>
+
+                <li>2001 - Error parsing a certificate.</li>
+
+                <li>2002 - Error decoding a certificate.</li>
+
+                <li>2003 - The certificate is expired.</li>
+
+                <li>2004 - The certificate is not yet valid.</li>
+
+                <li>2005 - The certificate is revoked.</li>
+
+                <li>2010 - Unexpected error occurred when processing a certificate.</li>
+
+                <li>2011 - Error finding the issuer certificates. </li>
+
+                <li>2012 - The certificate's key usage or extended key usage does not match its purpose.</li>
+
+                <li>2013 - Error validating the full chain of the certificate.</li>
+
+                <li>2014 - The certificate is an invalid self-signed certificate.</li>
+
+                <li>2020 - The CRL is invalid.</li>
+
+                <li>2030 - Unexpected error when processing the CRL.</li>
+
+                <li>2031 - Error finding the issuer certificates for the CRL.</li>
+
+                <li>2032 - The issuer does not have the <em>CRL sign</em> usage.</li>
+
+                <li>2033 - Error validating the CRL.</li>
+
+                <li>2034 - The CRL is expired.</li>
+
+	    </ul>
+</li>
+
+  </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--staged_config-certificates-end_certificates-GET__title__6"><h2 class="sectiontitle" id="api-19.0--staged_config-certificates-end_certificates-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "ca_chain_file": "String",
+        "cert_file": "String",
+        "certificate_revocation_list_distribution_point": "String",
+        "component_id": 42,
+        "component_name": "String",
+        "csrId": 42,
+        "expiry": 42,
+        "extended_key_usage": [
+            "String &lt;one of: TLS_Web_server_authentication, TLS_Web_client_authentication, Email_protection&gt;"
+        ],
+        "id": 42,
+        "issuer": [
+            {
+                "field_name": "String",
+                "value": "String"
+            }
+        ],
+        "key_file": "String",
+        "key_password": "String",
+        "key_usage": [
+            "String &lt;one of: CRL_SIGN, DATA_ENCIPHERMENT, DECIPHER_ONLY, DIGITAL_SIGNATURE, ENCIPHER_ONLY, KEY_AGREEMENT, KEY_CERT_SIGN, KEY_ENCIPHERMENT, NON_REPUDIATION&gt;"
+        ],
+        "name": "String",
+        "not_before": 42,
+        "purpose": "String",
+        "serial_number": "String",
+        "status": "String",
+        "subject": [
+            {
+                "field_name": "String",
+                "value": "String"
+            }
+        ],
+        "validation": 42
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--staged_config-certificates-end_certificates-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_staged_config_intro.html" title="Use the references for REST API 19.0 staged_config endpoints.">staged_config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

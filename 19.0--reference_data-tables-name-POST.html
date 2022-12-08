@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Add or update an element in a reference table.">
+<meta name="keywords" content="/reference_data/tables/{name}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_reference_data_intro.html">
+<title>POST /reference_data/tables/{name}</title>
+</head>
+<body id="api-19.0--reference_data-tables-name-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--reference_data-tables-name-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--reference_data-tables-name-POST__title__1">POST /reference_data/tables/{name}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--reference_data-tables-name-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--reference_data-tables-name-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Add or update an element in a reference table.</p>
+
+<div class="section refsyn">
+<p>Add or update an element in a reference table.  The value to be added must be of the appropriate type: either the type that corresponds to the innerKey predefined for the reference table, or the
+ default elementType of the reference table</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /reference_data/tables/{name} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /reference_data/tables/{name} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--reference_data-tables-name-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /reference_data/tables/{name} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /reference_data/tables/{name} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--reference_data-tables-name-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--reference_data-tables-name-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--reference_data-tables-name-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--reference_data-tables-name-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--reference_data-tables-name-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--reference_data-tables-name-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__3 "><p>name</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__8 "><p>Required - The name of the reference table to add or update an element in</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__3 "><p>namespace</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__8 "><p>- Either SHARED or TENANT, default is SHARED.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__3 "><p>outer_key</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__8 "><p>Required - The outer key for the element  to add or update</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__3 "><p>inner_key</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__8 "><p>Required - The inner key for the element to add or update</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__3 "><p>value</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__8 "><p>Required - The value to add or update in the reference table. Note: Date values must be represented in milliseconds since the Unix Epoch January 1st 1970.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__3 "><p>source</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__8 "><p>Optional - An indication of where the data originated. The default value is 'reference data api'</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__3 "><p>domain_id</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__8 "><p>Optional - This allows the domain id for the value to be specified. If null, the shared domain will be used.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /reference_data/tables/{name} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /reference_data/tables/{name} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--reference_data-tables-name-POST__entry__57" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--reference_data-tables-name-POST__entry__58" class="thbot">Unique Code</th>
+
+<th id="api-19.0--reference_data-tables-name-POST__entry__59" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__57 "><p>200</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__58 "><p></p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__59 "><p>The reference table has had an element added or updated</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__57 "><p>404</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__58 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__59 "><p>The reference table does not exist</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__57 "><p>404</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__58 "><p>1011</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__59 "><p>Domain not found</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__57 "><p>422</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__58 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__59 "><p>A request parameter is not valid</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__57 "><p>422</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__58 "><p>1012</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__59 "><p>The namespace value of SHARED was expected</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__57 "><p>422</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__58 "><p>1014</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__59 "><p>The domain_id parameter must be specified</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--reference_data-tables-name-POST__entry__57 "><p>500</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__58 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--reference_data-tables-name-POST__entry__59 "><p>An error occurred while attempting to add or update data in the reference table</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--reference_data-tables-name-POST__title__5"><h2 class="sectiontitle" id="api-19.0--reference_data-tables-name-POST__title__5">Response Description</h2>
+
+<p>Information about the reference table that had an element added or updated. This returns information about the reference table but not the contained data.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--reference_data-tables-name-POST__title__6"><h2 class="sectiontitle" id="api-19.0--reference_data-tables-name-POST__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "collection_id": 42,
+    "creation_time": 42,
+    "element_type": "String &lt;one of: ALN, NUM, IP, PORT, ALNIC, DATE&gt;",
+    "key_label": "String",
+    "key_name_types": {
+        "String": "String &lt;one of: ALN, NUM, IP, PORT, ALNIC, DATE&gt;"
+    },
+    "name": "String",
+    "namespace": "String &lt;one of: PRIVATE, SHARED, TENANT&gt;",
+    "number_of_elements": 42,
+    "time_to_live": "String",
+    "timeout_type": "String &lt;one of: UNKNOWN, FIRST_SEEN, LAST_SEEN&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--reference_data-tables-name-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_reference_data_intro.html" title="Use the references for REST API 19.0 reference_data endpoints.">reference_data endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

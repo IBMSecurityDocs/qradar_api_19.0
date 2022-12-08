@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a building block rule.">
+<meta name="keywords" content="/analytics/building_blocks/{id}, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_analytics_intro.html">
+<title>GET /analytics/building_blocks/{id}</title>
+</head>
+<body id="api-19.0--analytics-building_blocks-id-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--analytics-building_blocks-id-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--analytics-building_blocks-id-GET__title__1">GET /analytics/building_blocks/{id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--analytics-building_blocks-id-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--analytics-building_blocks-id-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a building block rule.</p>
+
+<div class="section refsyn">
+<p>Retrieves a building block rule.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /analytics/building_blocks/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /analytics/building_blocks/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--analytics-building_blocks-id-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /analytics/building_blocks/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /analytics/building_blocks/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--analytics-building_blocks-id-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--analytics-building_blocks-id-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--analytics-building_blocks-id-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--analytics-building_blocks-id-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--analytics-building_blocks-id-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--analytics-building_blocks-id-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__3 "><p>id</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__8 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /analytics/building_blocks/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /analytics/building_blocks/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--analytics-building_blocks-id-GET__entry__21" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--analytics-building_blocks-id-GET__entry__22" class="thbot">Unique Code</th>
+
+<th id="api-19.0--analytics-building_blocks-id-GET__entry__23" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__21 "><p>200</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__22 "><p></p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__23 "><p>The building block rule was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__21 "><p>404</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__22 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__23 "><p>The building block rule does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__21 "><p>500</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__22 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--analytics-building_blocks-id-GET__entry__23 "><p>An error occurred during the attempt to retrieve the building block rule.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--analytics-building_blocks-id-GET__title__5"><h2 class="sectiontitle" id="api-19.0--analytics-building_blocks-id-GET__title__5">Response Description</h2>
+
+<div class="p">The building block rule after it is retrieved. An Building Block Rule object contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Long - The sequence ID of the building block rule.</li>
+
+ <li><strong>name</strong> - String - The name of the building block rule.</li>
+
+ <li><strong>building_block_type</strong> - String - The type of building block rule: EVENT, FLOW, COMMON, USER.</li>
+
+ <li><strong>enabled</strong> - Boolean - True if the building block rule is enabled.</li>
+
+ <li><strong>owner</strong> - String - The owner of the building block rule.</li>
+
+ <li><strong>origin</strong> - String - The origin of the building block rule: SYSTEM, OVERRIDE, USER.</li>
+
+ <li><strong>base_capacity</strong> - Long - The base capacity of the building block rule in events per second.</li>
+
+ <li><strong>base_host_id</strong> - Long - The ID of the host from which the building block rule's base capacity was determined</li>
+
+ <li><strong>average_capacity</strong> - Long - The moving average capacity, in EPS, of the building block rule across all hosts.</li>
+
+ <li><strong>capacity_timestamp</strong> - Long - The epoch timestamp, in milliseconds, since the building block's capacity values were last updated.</li>
+
+ <li><strong>identifier</strong> - String - The unique ID of the rule. This value is typically in the form of a UUID, with the exception of legacy system rules.</li>
+
+ <li><strong>linked_rule_identifier</strong> - String - The linked ID of the rule. This value is typically in the form of a UUID, with the exception of legacy system rules, and varies depending on the rule's origin as follows:
+ 		<ul>
+ 		<li><strong>SYSTEM</strong> - The identifier value of the override rule, if one exists. If the system rule has not been overridden, the value will be null.</li>
+
+ 		<li><strong>OVERRIDE</strong> - The identifier value of the system rule being overridden.</li>
+
+ 		<li><strong>USER</strong> - The value will be null.</li>
+
+ 		</ul>
+
+ </li>
+
+ <li><strong>creation_date</strong> - Long - The number of milliseconds since epoch when the rule was created.</li>
+
+ <li><strong>modification_date</strong> - Long - The number of milliseconds since epoch when the rule was last modified.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--analytics-building_blocks-id-GET__title__6"><h2 class="sectiontitle" id="api-19.0--analytics-building_blocks-id-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "average_capacity": 42,
+    "base_capacity": 42,
+    "base_host_id": 42,
+    "capacity_timestamp": 42,
+    "creation_date": 42,
+    "enabled": true,
+    "id": 42,
+    "identifier": "String",
+    "linked_rule_identifier": "String",
+    "modification_date": 42,
+    "name": "String",
+    "origin": "String &lt;one of: SYSTEM, OVERRIDE, USER&gt;",
+    "owner": "String",
+    "type": "String &lt;one of: EVENT, FLOW, COMMON, OFFENSE&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--analytics-building_blocks-id-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_analytics_intro.html" title="Use the references for REST API 19.0 analytics endpoints.">analytics endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

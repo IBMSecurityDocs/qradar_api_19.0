@@ -1,0 +1,463 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieve list of application definitions.">
+<meta name="keywords" content="/gui_app_framework/application_definitions, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_gui_app_framework_intro.html">
+<title>GET /gui_app_framework/application_definitions</title>
+</head>
+<body id="api-19.0--gui_app_framework-application_definitions-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--gui_app_framework-application_definitions-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--gui_app_framework-application_definitions-GET__title__1">GET /gui_app_framework/application_definitions</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--gui_app_framework-application_definitions-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--gui_app_framework-application_definitions-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieve list of application definitions.</p>
+
+<div class="section refsyn">
+<p>Retrieves a list of all application definitions.</p>
+
+ <p>
+ Retrieved details include the application definition manifest and current status.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /gui_app_framework/application_definitions resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /gui_app_framework/application_definitions resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--gui_app_framework-application_definitions-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /gui_app_framework/application_definitions request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /gui_app_framework/application_definitions request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--gui_app_framework-application_definitions-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--gui_app_framework-application_definitions-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--gui_app_framework-application_definitions-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--gui_app_framework-application_definitions-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--gui_app_framework-application_definitions-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--gui_app_framework-application_definitions-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__3 "><p>Range</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__8 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__3 "><p>filter</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__8 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /gui_app_framework/application_definitions response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /gui_app_framework/application_definitions response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--gui_app_framework-application_definitions-GET__entry__27" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--gui_app_framework-application_definitions-GET__entry__28" class="thbot">Unique Code</th>
+
+<th id="api-19.0--gui_app_framework-application_definitions-GET__entry__29" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__27 "><p>200</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__28 "><p></p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__29 "><p>Application definition list was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__27 "><p>409</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__28 "><p>33700</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__29 "><p>The application framework is currently disabled.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__27 "><p>500</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__28 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-application_definitions-GET__entry__29 "><p>The request could not be completed.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--gui_app_framework-application_definitions-GET__title__5"><h2 class="sectiontitle" id="api-19.0--gui_app_framework-application_definitions-GET__title__5">Response Description</h2>
+
+<p>A list of application definition details. For a description of what each list entry contains,
+         see GET /application_definitions/{application_definition_id}.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--gui_app_framework-application_definitions-GET__title__6"><h2 class="sectiontitle" id="api-19.0--gui_app_framework-application_definitions-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "application_definition_id": 42,
+        "created_by": "String",
+        "created_on": 42,
+        "error_messages": "String",
+        "error_messages_json": [
+            {
+                "code": "String",
+                "message": "String",
+                "source": "String"
+            }
+        ],
+        "image": "String",
+        "manifest": {
+            "areas": [
+                {
+                    "description": "String",
+                    "id": "String",
+                    "named_service": "String",
+                    "required_capabilities": [
+                        "String"
+                    ],
+                    "text": "String",
+                    "url": "String"
+                }
+            ],
+            "authentication": {
+                "oauth2": {
+                    "authorization_flow": "String",
+                    "requested_capabilities": [
+                        "String"
+                    ]
+                }
+            },
+            "configuration_pages": [
+                {
+                    "description": "String",
+                    "icon": "String",
+                    "location": "String",
+                    "named_service": "String",
+                    "required_capabilities": [
+                        "String"
+                    ],
+                    "text": "String",
+                    "url": "String"
+                }
+            ],
+            "console_ip": "String",
+            "custom_columns": [
+                {
+                    "label": "String",
+                    "named_service": "String",
+                    "page_id": "String",
+                    "required_capabilities": [
+                        "String"
+                    ],
+                    "rest_endpoint": "String"
+                }
+            ],
+            "dashboard_items": [
+                {
+                    "description": "String",
+                    "required_capabilities": [
+                        "String"
+                    ],
+                    "rest_method": "String",
+                    "text": "String"
+                }
+            ],
+            "dependencies": {
+                "pip_directory": "String",
+                "rpms_directory": "String"
+            },
+            "description": "String",
+            "environment_variables": [
+                {
+                    "name": "String",
+                    "value": "String"
+                }
+            ],
+            "fragments": [
+                {
+                    "app_name": "String",
+                    "location": "String",
+                    "named_service": "String",
+                    "page_id": "String",
+                    "required_capabilities": [
+                        "String"
+                    ],
+                    "rest_endpoint": "String"
+                }
+            ],
+            "gui_actions": [
+                {
+                    "description": "String",
+                    "groups": [
+                        "String"
+                    ],
+                    "icon": "String",
+                    "id": "String",
+                    "javascript": "String",
+                    "named_service": "String",
+                    "required_capabilities": [
+                        "String"
+                    ],
+                    "rest_method": "String",
+                    "text": "String"
+                }
+            ],
+            "image": "String",
+            "load_flask": "String",
+            "log_level": "String",
+            "metadata_providers": [
+                {
+                    "metadata_type": "String",
+                    "rest_method": "String"
+                }
+            ],
+            "multitenancy_safe": "String",
+            "name": "String",
+            "page_scripts": [
+                {
+                    "app_name": "String",
+                    "named_service": "String",
+                    "page_id": "String",
+                    "scripts": [
+                        "String"
+                    ]
+                }
+            ],
+            "resource_bundles": [
+                {
+                    "bundle": "String",
+                    "locale": "String"
+                }
+            ],
+            "resources": {
+                "memory": 42
+            },
+            "rest_methods": [
+                {
+                    "argument_names": [
+                        "String"
+                    ],
+                    "method": "String &lt;one of: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH&gt;",
+                    "name": "String",
+                    "named_service": "String",
+                    "required_capabilities": [
+                        "String"
+                    ],
+                    "url": "String"
+                }
+            ],
+            "services": [
+                {
+                    "autorestart": "String",
+                    "autostart": "String",
+                    "command": "String",
+                    "directory": "String",
+                    "endpoints": [
+                        {
+                            "error_mime_type": "String",
+                            "http_method": "String",
+                            "name": "String",
+                            "parameters": [
+                                {
+                                    "definition": "String",
+                                    "location": "String",
+                                    "name": "String"
+                                }
+                            ],
+                            "path": "String",
+                            "request_mime_type": "String",
+                            "response": {
+                                "mime_type": "String"
+                            }
+                        }
+                    ],
+                    "environment": "String",
+                    "exitcodes": "String",
+                    "name": "String",
+                    "numprocs": 42,
+                    "port": 42,
+                    "priority": 42,
+                    "process_name": "String",
+                    "redirect_stderr": "String",
+                    "serverurl": "String",
+                    "startretries": 42,
+                    "startsecs": 42,
+                    "stderr_capture_maxbytes": "String",
+                    "stderr_events_enabled": "String",
+                    "stderr_logfile": "String",
+                    "stderr_logfile_backups": 42,
+                    "stderr_logfile_maxbytes": "String",
+                    "stdout_capture_maxbytes": "String",
+                    "stdout_events_enabled": "String",
+                    "stdout_logfile": "String",
+                    "stdout_logfile_backups": 42,
+                    "stdout_logfile_maxbyte": "String",
+                    "stopsignal": "String",
+                    "stopwaitsecs": 42,
+                    "umask": "String",
+                    "user": "String",
+                    "uuid": "String",
+                    "version": "String"
+                }
+            ],
+            "single_instance_only": "String",
+            "uninstall_hooks": [
+                {
+                    "description": "String",
+                    "documentation_url": "String",
+                    "last_instance_only": "String",
+                    "rest_method": "String"
+                }
+            ],
+            "uuid": "String",
+            "version": "String"
+        },
+        "status": "String &lt;one of: CREATING, UPGRADING, COMPLETED, ERROR, DELETING, CANCELLED&gt;",
+        "user_role_ids": [
+            42
+        ]
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--gui_app_framework-application_definitions-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_gui_app_framework_intro.html" title="Use the references for REST API 19.0 gui_app_framework endpoints.">gui_app_framework endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

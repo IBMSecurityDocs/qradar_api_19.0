@@ -1,0 +1,396 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates a Custom Property Calculated Expression. Requires the System Administrator, Security Admin or User Defined Event Properties permission.">
+<meta name="keywords" content="/config/event_sources/custom_properties/property_calculated_expressions/{expression_id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>POST /config/event_sources/custom_properties/property_calculated_expressions/{expression_id}</title>
+</head>
+<body id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__title__1">POST /config/event_sources/custom_properties/property_calculated_expressions/{expression_id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates a Custom Property Calculated Expression. Requires the System Administrator, Security Admin or User Defined Event Properties permission.</p>
+
+<div class="section refsyn">
+<p>Updates a Custom Property Calculated Expression. Requires the System Administrator, Security Admin or User Defined Event Properties permission.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/custom_properties/property_calculated_expressions/{expression_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/event_sources/custom_properties/property_calculated_expressions/{expression_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/custom_properties/property_calculated_expressions/{expression_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/event_sources/custom_properties/property_calculated_expressions/{expression_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__3 "><p>expression_id</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__8 "><p>Required - The identifier of the Calculated expression.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/custom_properties/property_calculated_expressions/{expression_id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/event_sources/custom_properties/property_calculated_expressions/{expression_id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__21" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__22" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__23" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__24" class="thbot">Description</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__25" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__21 "><p>data</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__22 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__23 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__24 "><div class="p">Required - A JSON representation of the Calculated expression object.
+         <ul>
+         <li><strong>regex_property_identifier</strong> - Optional - String - The identifier of the event regex property to which this expression belongs.</li>
+
+         <li><strong>enabled</strong> - Optional - Boolean - Flag that indicates whether this expression is enabled.</li>
+
+         <li><strong>first_operand</strong> - Optional - Operand Object - An object describing the first operand in the expression.</li>
+
+         <li><strong>second_operand</strong> - Optional - Operand Object - An object describing the second operand in the expression.</li>
+
+         <li><strong>operator</strong> - Optional -String - A string that represents one of the basic arithmetic operations in the expression. Defaults to "ADD".</li>
+
+         <li><strong>payload</strong> - Optional - String - Test payload. This parameter is only used in the UI so that you can verify that your expression matches the expected payload.</li>
+
+         <li><strong>log_source_type_id</strong> - Optional - Integer - The expression is only applied to events for this log source type.</li>
+
+         <li><strong>log_source_id</strong> - Optional - Integer - The expression is only applied to events for this log source (more specific than type alone). </li>
+
+         <li><strong>qid</strong> - Optional - Integer - The expression is only applied to events associated with this QID record. </li>
+
+         <li><strong>low_level_category_id</strong> - Optional - Integer - The expression is only applied to events with this low level category. </li>
+
+         <li><strong>username</strong> - Optional - String - The owner of the Calculated expression. If the input username is an authorized service, the prefix "API_token: " is required.</li>
+
+         </ul>
+</div>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__25 "><p>{
+    "creation_date": 42,
+    "enabled": true,
+    "first_operand": {
+        "numeric_value": 42.5,
+        "property_name": "String",
+        "type": "String &lt;one of: STATIC, PROPERTY&gt;"
+    },
+    "id": 42,
+    "identifier": "String",
+    "log_source_id": 42,
+    "log_source_type_id": 42,
+    "low_level_category_id": 42,
+    "modification_date": 42,
+    "operator": "String &lt;one of: ADD, SUBTRACT, MULTIPLY, DIVIDE&gt;",
+    "payload": "String",
+    "qid": 42,
+    "regex_property_identifier": "String",
+    "second_operand": {
+        "numeric_value": 42.5,
+        "property_name": "String",
+        "type": "String &lt;one of: STATIC, PROPERTY&gt;"
+    },
+    "username": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/custom_properties/property_calculated_expressions/{expression_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/event_sources/custom_properties/property_calculated_expressions/{expression_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__31" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__32" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__33" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__31 "><p>200</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__32 "><p></p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__33 "><p>The Calculated expression was updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__32 "><p>1009</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__33 "><p>The user cannot update the resource because it only can be updated by the owner or admin user.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__31 "><p>404</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__32 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__33 "><p>The requested Calculated expression cannot be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__32 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__33 "><p>One or more parameters are invalid in request.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__31 "><p>500</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__32 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__entry__33 "><p>An error occurred during the attempt to update a Calculated expression.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__title__6"><h2 class="sectiontitle" id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__title__6">Response Description</h2>
+
+<div class="p">The updated Calculated expression object contains the following fields:
+         <ul>
+         <li><strong>id</strong> - Integer - The sequence ID of the Calculated expression.</li>
+
+         <li><strong>identifier</strong> - String - The unique ID of the Calculated expression. This value is in the form of a UUID.</li>
+
+         <li><strong>regex_property_identifier</strong> - String - The identifier of the event regex property to which this expression belongs.</li>
+
+         <li><strong>enabled</strong> - Boolean - Flag that indicates whether this expression is enabled.</li>
+
+         <li><strong>first_operand</strong> - Operand Object - An <strong>operand object</strong> describing the first operand in the expression.</li>
+
+         <li><strong>second_operand</strong> - Operand Object - An <strong>operand object</strong> describing the second operand in the expression.</li>
+
+         <li><strong>operator</strong> - String - A string that represents one of the basic arithmetic operations in the expression.</li>
+
+         <li><strong>creation_date</strong> - Long - The epoch timestamp in milliseconds of the time the expression was created.</li>
+
+         <li><strong>modification_date</strong> - Long - The epoch timestamp in milliseconds of the time the expression was last modified.</li>
+
+         <li><strong>payload</strong> - String - Test payload. This parameter is only used in the UI so that you can verify that your expression matches the expected payload.</li>
+
+         <li><strong>log_source_type_id</strong> - Integer - The expression is only applied to events for this log source type.</li>
+
+         <li><strong>log_source_id</strong> - Integer - The expression is only applied to events for this log source (more specific than type alone). </li>
+
+         <li><strong>qid</strong> - Integer - The expression is only applied to events associated with this QID record. </li>
+
+         <li><strong>low_level_category_id</strong> - Integer - The expression is only applied to events with this low level category. </li>
+
+         <li><strong>username</strong> - String - The owner of the Calculated expression.</li>
+
+         </ul>
+
+
+         An <strong>operand object</strong> contains the following fields:
+         <ul>
+         <li><strong>type</strong> - String - can be "STATIC" (for numeric operand) or "PROPERTY" (for operand that is a property).</li>
+
+         <li><strong>numeric_value</strong> - Number - when property_type is "STATIC", this is the value of the operand; otherwise, it is suppressed. </li>
+
+         <li><strong>property_name</strong> - String - when property_type is "PROPERTY", this is the name of the property that is being used as the operand; otherwise, it is suppressed.  </li>
+
+         </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__title__7"><h2 class="sectiontitle" id="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "creation_date": 42,
+    "enabled": true,
+    "first_operand": {
+        "numeric_value": 42.5,
+        "property_name": "String",
+        "type": "String &lt;one of: STATIC, PROPERTY&gt;"
+    },
+    "id": 42,
+    "identifier": "String",
+    "log_source_id": 42,
+    "log_source_type_id": 42,
+    "low_level_category_id": 42,
+    "modification_date": 42,
+    "operator": "String &lt;one of: ADD, SUBTRACT, MULTIPLY, DIVIDE&gt;",
+    "payload": "String",
+    "qid": 42,
+    "regex_property_identifier": "String",
+    "second_operand": {
+        "numeric_value": 42.5,
+        "property_name": "String",
+        "type": "String &lt;one of: STATIC, PROPERTY&gt;"
+    },
+    "username": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-event_sources-custom_properties-property_calculated_expressions-expression_id-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

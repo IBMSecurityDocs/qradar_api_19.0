@@ -1,0 +1,415 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a list of log sources.">
+<meta name="keywords" content="/config/event_sources/log_source_management/log_sources, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>GET /config/event_sources/log_source_management/log_sources</title>
+</head>
+<body id="api-19.0--config-event_sources-log_source_management-log_sources-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--config-event_sources-log_source_management-log_sources-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--config-event_sources-log_source_management-log_sources-GET__title__1">GET /config/event_sources/log_source_management/log_sources</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-event_sources-log_source_management-log_sources-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-event_sources-log_source_management-log_sources-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a list of log sources.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/log_source_management/log_sources resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /config/event_sources/log_source_management/log_sources resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/log_source_management/log_sources request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /config/event_sources/log_source_management/log_sources request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__3 "><p>x-qrd-encryption-algorithm</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__8 "><p>The algorithm to use for encrypting the sensitive data of this endpoint.  Must be one of: AES128 or AES256.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__3 "><p>x-qrd-encryption-password</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__8 "><p>The password to use for encrypting the sensitive data of this endpoint.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__3 "><p>Range</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__8 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__3 "><p>filter</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__8 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__3 "><p>sort</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__8 "><p>Optional - This parameter is used to sort the elements in a list.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/log_source_management/log_sources response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /config/event_sources/log_source_management/log_sources response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__45" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__46" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__47" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__45 "><p>200</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__46 "><p></p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__47 "><p>The log sources were retrieved successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__45 "><p>403</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__46 "><p>1010</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__47 "><p>Sensitive data requests require admin capabilities.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__45 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__46 "><p>1000</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__47 "><p>Sorting not supported on the provided field.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__45 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__46 "><p>1001</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__47 "><p>An invalid filter criteria was specified.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__45 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__46 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__47 "><p>The 'x-qrd-encryption-algorithm' parameter does not match any of the available encryption algorithms.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__45 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__46 "><p>1003</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__47 "><p>The specified encryption strength is not available. Consider installing "Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy" or using a weaker encryption.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__45 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__46 "><p>1004</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__47 "><p>The 'x-qrd-encryption-password' parameter is required.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__45 "><p>500</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__46 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-log_sources-GET__entry__47 "><p>An error occurred during the attempt to retrieve the log sources.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-event_sources-log_source_management-log_sources-GET__title__5"><h2 class="sectiontitle" id="api-19.0--config-event_sources-log_source_management-log_sources-GET__title__5">Response Description</h2>
+
+<div class="p">The list of all log sources. A log source contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Number - The ID of the log source.</li>
+
+ <li><strong>name</strong> - String - The unique name of the log source.</li>
+
+ <li><strong>description</strong> - String - An optional description of the log source.</li>
+
+ <li><strong>type_id</strong> - Number - The type of the log source. Must correspond to an existing log source type. See the Log Source Type API (/api/config/event_sources/log_source_management/log_source_types/).</li>
+
+ <li><strong>protocol_type_id</strong> - Number - The type of protocol that is used by the log source. Must correspond to an existing protocol type. See the Protocol Type API (/api/config/event_sources/log_source_management/protocol_types/). Individual log source types can support only a subset of all available protocol types, as indicated by the protocol_types field of the log source type structure.</li>
+
+ <li><strong>protocol_parameters</strong> - Array - The set of protocol parameters. This set is a collection of ProtocolParameter structures. The structure of the parameters is defined by the protocol type that is used by the log source. See the Protocol Type API (/api/config/event_sources/log_source_management/protocol_types/).</li>
+
+ <li><strong>enabled</strong> - Boolean - If the log source is enabled, the condition is set to 'true'; otherwise, the condition is set to 'false'.</li>
+
+ <li><strong>gateway</strong> - Boolean - If the log source is configured as a gateway, the condition is set to 'true'; otherwise, the condition is set to 'false'. A gateway log source is a stand-alone protocol configuration. The log source receives no events itself, and serves as a host for a protocol configuration that retrieves event data to feed other log sources. It acts as a "gateway" for events from multiple systems to enter the event pipeline.</li>
+
+ <li><strong>internal</strong> - Boolean - If the log source is internal (when the log source type is defined as internal), the condition is set to 'true'.</li>
+
+ <li><strong>credibility</strong> - Short - On a scale of 0 - 10 inclusive, the amount of credibility that the QRadar administrator places on this log source.</li>
+
+ <li><strong>target_event_collector_id</strong> - Number -  The ID of the event collector where the log source sends its data. The ID must correspond to an existing event collector. See the Event Collector API (/api/config/event_sources/event_collectors/).</li>
+
+ <li><strong>disconnected_log_collector_id</strong> - Number -  The ID of the disconnected log collector where this log source will run. The ID must correspond to an existing disconnected log collector. See the Disconnected Log Collector API (/api/config/event_sources/disconnected_log_collectors/).</li>
+
+ <li><strong>coalesce_events</strong> - Boolean -  If events collected by this log source are coalesced based on common properties, the condition is set to 'true'. If each individual event is stored, then the condition is set to 'false'.</li>
+
+ <li><strong>store_event_payload</strong> - Boolean - If the payloads of events that are collected by this log source are stored, the condition is set to 'true'. If only the normalized event records are stored, then the condition is set to 'false'.</li>
+
+ <li><strong>log_source_extension_id</strong> - Long - The log source extension associated with the log source. The ID must correspond to an existing log source extension or be set to 'null'. See the Log Source Extension API (/api/config/event_sources/log_source_management/log_source_extensions/)</li>
+
+ <li><strong>language_id</strong> - Integer - The language of the events that are being processed by this log source. Must correspond to an existing log source language. See the Log Source Language API (/api/config/event_sources/log_source_management/log_source_languages/). Individual log source types can support only a subset of all available log source languages, as indicated by the supported_language_ids field of the log source type structure</li>
+
+ <li><strong>group_ids</strong> - Array - The set of log source group IDs this log source is a member of. Each ID must correspond to an existing log source group. See the Log Source Group API (/api/config/event_sources/log_source_management/log_source_groups/).</li>
+
+ <li><strong>requires_deploy</strong> Boolean - Set to 'true' if you need to deploy changes to enable the log source for use; otherwise, set to 'false' if the log source is already active.</li>
+
+ <li><strong>status</strong> - Object - The status of the log source.</li>
+
+ <li><strong>auto_discovered</strong> - Boolean -  If the log source was auto-discovered, the condition is set to 'true'. If the log source was created by a user, then the condition is set to 'false'.</li>
+
+ <li><strong>average_eps</strong> - Number - The average events per second (EPS) rate of the log source over the last 60 seconds.</li>
+
+ <li><strong>creation_date</strong> - Number - The creation date/time of the log source (in milliseconds since epoch).</li>
+
+ <li><strong>modified_date</strong> - Number - The last modified date/time of the log source (in milliseconds since epoch).</li>
+
+ <li><strong>last_event_time</strong> - Number - The date/time of the last event received by the log source (in milliseconds since epoch).</li>
+
+ <li><strong>wincollect_internal_destination_id</strong> - Long - The internal WinCollect destination for this log source, if applicable. Log sources without an associated WinCollect agent have a null value. Must correspond to an existing WinCollect destination. See the WinCollect Destination API (/api/config/event_sources/wincollect/wincollect_destinations/).</li>
+
+ <li><strong>wincollect_external_destination_ids</strong> - Array&lt;Long&gt; - The set of external WinCollect destinations for this log source, if applicable. Log Sources without an associated WinCollect agent have a null value. Each ID must correspond to an existing WinCollect destination. See the WinCollect Destination API (/api/config/event_sources/wincollect/wincollect_destinations/).</li>
+
+ <li><strong>legacy_bulk_group_name</strong> - Array&lt;Long&gt; - The name of the legacy bulk group that this log source belongs to. If the field is null, then the log source is not part of any legacy bulk groups.</li>
+
+ <li><strong>sending_ip</strong> - String - The ip of the system which the log source is associated to, or fed by.</li>
+
+ <li><strong>parsing_order</strong> - Integer - The order in which log sources will parse if multiple exists with a common identifier.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-event_sources-log_source_management-log_sources-GET__title__6"><h2 class="sectiontitle" id="api-19.0--config-event_sources-log_source_management-log_sources-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[{"sending_ip": "String", "internal": true, "legacy_bulk_group_name": "String", "protocol_parameters": [{"name": "String", "id": 42, "value": "String"}], "description": "String", "coalesce_events": true, "enabled": true, "parsing_order": 42, "group_ids": [42], "average_eps": 42, "credibility": 42, "id": 42, "store_event_payload": true, "target_event_collector_id": 42, "protocol_type_id": 42, "language_id": 42, "creation_date": 42, "log_source_extension_id": 42, "wincollect_external_destination_ids": [42], "name": "String", "auto_discovered": true, "modified_date": 42, "type_id": 42, "last_event_time": 42, "requires_deploy": true, "gateway": true, "wincollect_internal_destination_id": 42, "status": {"last_updated": 42, "messages": [{"severity": "String", "text": "String", "timestamp": 42}], "status": "String"}, "disconnected_log_collector_id": 42}]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-event_sources-log_source_management-log_sources-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

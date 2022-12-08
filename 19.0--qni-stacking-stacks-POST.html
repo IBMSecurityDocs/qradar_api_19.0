@@ -1,0 +1,456 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a QNI stack.">
+<meta name="keywords" content="/qni/stacking/stacks, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_qni_intro.html">
+<title>POST /qni/stacking/stacks</title>
+</head>
+<body id="api-19.0--qni-stacking-stacks-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--qni-stacking-stacks-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--qni-stacking-stacks-POST__title__1">POST /qni/stacking/stacks</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--qni-stacking-stacks-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--qni-stacking-stacks-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a QNI stack.</p>
+
+<div class="section refsyn">
+<p>Creates a QNI stack.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /qni/stacking/stacks resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /qni/stacking/stacks resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--qni-stacking-stacks-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /qni/stacking/stacks request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /qni/stacking/stacks request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--qni-stacking-stacks-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--qni-stacking-stacks-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--qni-stacking-stacks-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--qni-stacking-stacks-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--qni-stacking-stacks-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--qni-stacking-stacks-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /qni/stacking/stacks request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /qni/stacking/stacks request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--qni-stacking-stacks-POST__entry__15" class="thbot">Parameter</th>
+
+<th id="api-19.0--qni-stacking-stacks-POST__entry__16" class="thbot">Data Type</th>
+
+<th id="api-19.0--qni-stacking-stacks-POST__entry__17" class="thbot">MIME Type</th>
+
+<th id="api-19.0--qni-stacking-stacks-POST__entry__18" class="thbot">Description</th>
+
+<th id="api-19.0--qni-stacking-stacks-POST__entry__19" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__15 "><p>stack</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__16 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__17 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__18 "><p>null</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__19 "><p>{
+    "hosts": [
+        {
+            "host_id": 42,
+            "host_ip": "String",
+            "primary": true
+        }
+    ],
+    "inspection_level": "String &lt;one of: BASIC, ADVANCED, ENRICHED, DEFAULT&gt;",
+    "name": "String",
+    "ports_type": "String &lt;one of: IN_4, IN_2_OUT_2, IN_1_OUT_1, IN_1_OUT_3, IN_3_OUT_1&gt;",
+    "raw_payload": 42,
+    "stack_id": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /qni/stacking/stacks response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /qni/stacking/stacks response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--qni-stacking-stacks-POST__entry__25" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--qni-stacking-stacks-POST__entry__26" class="thbot">Unique Code</th>
+
+<th id="api-19.0--qni-stacking-stacks-POST__entry__27" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>201</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p></p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>The QNI stack has been created.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>44131</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>The inspection level is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>44132</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>The raw payload value is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>3830131</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>The host is not available for stacking.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>3830134</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>The stack must include a minimum of 1 host.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>3830135</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>The stack exceeds the maximum number of hosts.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>3830136</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>The host IP address does not match the host ID.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>3830137</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>Two or more hosts in the stack have the same IP address.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>3830138</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>One host must be declared as the primary host.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>3830139</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>The stack can have only 1 host defined as the primary.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>3830132</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>The stack name must begin with a letter.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>3830140</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>Specify the stack name.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>3830141</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>The stack name already exists. The stack name must be unique.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>3830133</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>The port type is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__26 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--qni-stacking-stacks-POST__entry__27 "><p>An error occurred attempting to create QNI stack.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--qni-stacking-stacks-POST__title__6"><h2 class="sectiontitle" id="api-19.0--qni-stacking-stacks-POST__title__6">Response Description</h2>
+
+<div class="p">A QNI stack. The stack contains the following fields: 
+         <ul> 
+         <li><strong>stack_id</strong> - Long - The ID of the QNI stack.</li>
+
+         <li><strong>hosts</strong> - List&lt;Host&gt; - The list of the QNI managed hosts in the stack.</li>
+
+         <li><strong>name</strong> - String - The name of the QNI stack.</li>
+
+         <li><strong>ports_type</strong> - enum - Port configuration type for the QNI stack. The possible
+values are:<ul>
+<li>IN_4</li>
+
+<li>IN_2_OUT_2</li>
+
+<li>IN_1_OUT_1</li>
+
+<li>IN_1_OUT_3</li>
+
+<li>IN_3_OUT_1</li>
+
+</ul>
+</li>
+
+         <li><strong>inspection_level</strong> - <em>Optional</em> - Enumeration - The depth of content
+inspection. The possible values are:<ul>
+<li><em>BASIC</em> - Lowest level of inspection. Flows are detected by 5-tuple, and the number of
+bytes and packets that are flowing in each direction are counted.</li>
+
+<li><em>ENRICHED</em> - Each flow is identified and inspected by one of the protocol or domain
+inspectors. The inspection can generate many kinds of attributes.</li>
+
+<li><em>ADVANCED</em> - The highest level of inspection. It does everything that the Enriched level
+does, but it also scans and inspects the content of the files that it finds.</li>
+
+<li><em>DEFAULT</em> - Indicates that the QNI host is configured to use the globally-set inspection
+level.</li>
+
+</ul>
+</li>
+
+         <li><strong>raw_payload</strong> - <em>Optional</em> - Long - The maximum amount of data (Bytes) that
+the QFlow Collector captures and retains in the flow payload. The possible values are:<ul>
+<li>-1: The QNI host is set to use the globally-set raw payload setting</li>
+
+<li>0: Turn off the payload</li>
+
+<li>1 - 32768: Number of bytes</li>
+
+</ul>
+</li>
+
+         </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--qni-stacking-stacks-POST__title__7"><h2 class="sectiontitle" id="api-19.0--qni-stacking-stacks-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "hosts": [
+        {
+            "host_id": 42,
+            "host_ip": "String",
+            "primary": true
+        }
+    ],
+    "inspection_level": "String &lt;one of: BASIC, ADVANCED, ENRICHED, DEFAULT&gt;",
+    "name": "String",
+    "ports_type": "String &lt;one of: IN_4, IN_2_OUT_2, IN_1_OUT_1, IN_1_OUT_3, IN_3_OUT_1&gt;",
+    "raw_payload": 42,
+    "stack_id": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--qni-stacking-stacks-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_qni_intro.html" title="Use the references for REST API 19.0 qni endpoints.">qni endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

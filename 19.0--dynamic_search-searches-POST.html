@@ -1,0 +1,1013 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Posts a search to be performed by the service.">
+<meta name="keywords" content="/dynamic_search/searches, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_dynamic_search_intro.html">
+<title>POST /dynamic_search/searches</title>
+</head>
+<body id="api-19.0--dynamic_search-searches-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--dynamic_search-searches-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--dynamic_search-searches-POST__title__1">POST /dynamic_search/searches</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--dynamic_search-searches-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--dynamic_search-searches-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Posts a search to be performed by the service.</p>
+
+<div class="section refsyn">
+<p>Posts a search to be performed by the service.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /dynamic_search/searches resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /dynamic_search/searches resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--dynamic_search-searches-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /dynamic_search/searches request body details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /dynamic_search/searches request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--dynamic_search-searches-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--dynamic_search-searches-POST__entry__4" class="thbot">Data Type</th>
+
+<th id="api-19.0--dynamic_search-searches-POST__entry__5" class="thbot">MIME Type</th>
+
+<th id="api-19.0--dynamic_search-searches-POST__entry__6" class="thbot">Description</th>
+
+<th id="api-19.0--dynamic_search-searches-POST__entry__7" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__3 "><p>search</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__4 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__5 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__6 "><p>null</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__7 "><p>{
+	"query":"Coming soon!"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /dynamic_search/searches response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /dynamic_search/searches response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--dynamic_search-searches-POST__entry__13" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--dynamic_search-searches-POST__entry__14" class="thbot">Unique Code</th>
+
+<th id="api-19.0--dynamic_search-searches-POST__entry__15" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>201</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p></p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>A list of searches that the user has made.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1001</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>Error processing a supplied Field object (or one of its sub-objects).</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>Error processing a supplied Filter object (or one of its sub-objects)</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1003</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>Error processing a supplied Function object (or one of its sub-objects).</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1004</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>Error processing a supplied Operator object (or one of its sub-objects).</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>Error processing a supplied Range object (or one of its sub-objects).</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1006</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>Error processing a supplied Sort object (or one of its sub-objects).</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1007</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>Error combining elements of the Query object.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1011</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>No Schema was found that match the posted Query.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1012</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1013</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>Don't specify a retain_duration and an expires_at time.  Provide one, and the other will be automatically computed.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1014</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>Retention must be positive or Expiration time must be in the future</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1017</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>A range was not specified when required</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1028</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>500</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1010</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--dynamic_search-searches-POST__entry__13 "><p>500</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__14 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--dynamic_search-searches-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--dynamic_search-searches-POST__title__5"><h2 class="sectiontitle" id="api-19.0--dynamic_search-searches-POST__title__5">Response Description</h2>
+
+<div class="p">An handle for the newly posted search.
+ <ul>
+ <li><strong>handle</strong> - String - The unique, server-generated UUID that represents this search.</li>
+
+ <li><strong>status</strong> - String - The current status of this search, one of (POSTED, QUEUED, RUNNING, DONE, or ERROR) </li>
+
+ <li><strong>search_type</strong> - String - The type of this search, one of (SYNCH or ASYNCH).  Defaults to ASYNCH.</li>
+
+ <li><strong>storage_type</strong> - String - The storage type of this search, one of (NONE, COLD, or HOT).  Legal combos with search_type are SYNCH/NONE, ASYNCH/COLD, or ASYNCH/HOT.  Defaults to COLD.</li>
+
+ <li><strong>retention</strong> - The date/time info related to this search.
+ <ul>
+ <li><strong>creation_date</strong> - Long - The date and time that this search was posted, in milliseconds since the epoch.</li>
+
+ <li><strong>last_accessed_date</strong> - Long - The date and time that the results for this search were last accessed, in milliseconds since the epoch.</li>
+
+ <li><strong>expires_at</strong> - Long - The date and time until which that this search will be kept, in milliseconds since the epoch.</li>
+
+ <li><strong>retain_duration</strong> - Long - The number of milliseconds (counting from creation_date) to keep this search and the associated results.</li>
+
+ </ul>
+
+ </li>
+
+ <li><strong>description</strong> - String - A user-supplied freeform string used to store identifying or descriptive information.  It has no effect on search execution.</li>
+
+ <li><strong>header</strong> - An explanation of the structure of the results below.
+ <ul>
+ <li><strong>columns</strong> - A description of the returned columns
+ <ul>
+ <li><strong>field</strong> - One of the fields requested in this search.</li>
+
+ <li><strong>column_name</strong> - String - The name of the column variable that contains that field. Always of the form "columnN".</li>
+
+ </ul>
+
+ </li>
+
+ </ul>
+
+ </li>
+
+ <li><strong>query</strong> - The query that created this search.
+ <ul>
+ <li><strong>fields</strong> - A list of the fields which specifies the columns returned by this search.</li>
+
+ <li><strong>filters</strong> - A list of the conditions that will filter the row returned by this search
+ <ul>
+ <li><strong>argument</strong> - The argument field for this filter.</li>
+
+ <li><strong>parameters</strong> - A list of string parameters for this filter.</li>
+
+ <li><strong>operator</strong> - The operator for this filter. Must be a value returned from the Operators endpoint or a valid logical operator (AND, OR, NOT).</li>
+
+ <li><strong>left_filter</strong> - The left child of the complex filter case. Must be not-null if operator is (AND or OR) and null otherwise.</li>
+
+ <li><strong>right_filter</strong> - The right child of the complex filter case. Must be not-null if operator is (AND, OR or NOT) and null otherwise.</li>
+
+ </ul>
+
+ </li>
+
+ <li><strong>sorts</strong> - An ordered list of the Sorts (each a Field plus a direction (ASC/DESC)) that should be applied to the results of this search
+ <ul>
+ <li><strong>field</strong> - The field on which to apply sorting.</li>
+
+ <li><strong>direction</strong> - String - The direction of the sort (must be one of ASC/DESC).</li>
+
+ </ul>
+
+ </li>
+
+ <li><strong>range</strong> - A specification of the limit and offset that should be applied to the results returned by this search. If a range is specified, at least one sort must also be specified.
+ <ul>
+ <li><strong>limit</strong> - Integer - The non-negative number of results to return.</li>
+
+ <li><strong>offset</strong> - Integer - The non-negative position at which to begin returning results.</li>
+
+ </ul>
+
+ </li>
+
+ </ul>
+</li>
+
+ <li><strong>results</strong> - The list of results returned by this search.
+ <ul>
+ <li><strong>columns</strong> -Contains a map of columns and their values, both as strings.</li>
+
+ </ul>
+</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--dynamic_search-searches-POST__title__6"><h2 class="sectiontitle" id="api-19.0--dynamic_search-searches-POST__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+	{
+	  "description": "String",
+	  "handle": "String",
+	  "header": {
+	    "columns": [
+	      {
+	        "column_name": "String",
+	        "field": {
+	          "argument_fields": [
+	            {
+	              "contextual_type": "String",
+	              "data_type": "String",
+	              "localized_name": "String",
+	              "semantic_type": "String"
+	            }
+	          ],
+	          "contextual_type": "String",
+	          "data_type": "String",
+	          "filter": {
+	            "argument": "Object",
+	            "left_filter": {
+	              "argument": "Object",
+	              "left_filter": {
+	                "argument": "Object",
+	                "operator": {
+	                  "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                  "data_type": "String",
+	                  "localized_name": "String",
+	                  "name": "String"
+	                },
+	                "parameter": "String"
+	              },
+	              "operator": {
+	                "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                "data_type": "String",
+	                "localized_name": "String",
+	                "name": "String"
+	              },
+	              "parameter": "String",
+	              "right_filter": {
+	                "argument": "Object",
+	                "operator": {
+	                  "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                  "data_type": "String",
+	                  "localized_name": "String",
+	                  "name": "String"
+	                },
+	                "parameter": "String"
+	              }
+	            },
+	            "operator": {
+	              "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	              "data_type": "String",
+	              "localized_name": "String",
+	              "name": "String"
+	            },
+	            "parameter": "String",
+	            "right_filter": {
+	              "argument": "Object",
+	              "left_filter": {
+	                "argument": "Object",
+	                "operator": {
+	                  "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                  "data_type": "String",
+	                  "localized_name": "String",
+	                  "name": "String"
+	                },
+	                "parameter": "String"
+	              },
+	              "operator": {
+	                "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                "data_type": "String",
+	                "localized_name": "String",
+	                "name": "String"
+	              },
+	              "parameter": "String",
+	              "right_filter": {
+	                "argument": "Object",
+	                "operator": {
+	                  "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                  "data_type": "String",
+	                  "localized_name": "String",
+	                  "name": "String"
+	                },
+	                "parameter": "String"
+	              }
+	            }
+	          },
+	          "function": {
+	            "aggregate": true,
+	            "argument_types": [
+	              {
+	                "position": 42,
+	                "type": "String"
+	              }
+	            ],
+	            "localized_name": "String",
+	            "name": "String",
+	            "return_data_type": "String"
+	          },
+	          "localized_name": "String",
+	          "semantic_type": "String"
+	        }
+	      }
+	    ]
+	  },
+	  "query": {
+	    "fields": [
+	      {
+	        "argument_fields": [
+	          {
+	            "contextual_type": "String",
+	            "data_type": "String",
+	            "localized_name": "String",
+	            "semantic_type": "String"
+	          }
+	        ],
+	        "contextual_type": "String",
+	        "data_type": "String",
+	        "filter": {
+	          "argument": "Object",
+	          "left_filter": {
+	            "argument": "Object",
+	            "left_filter": {
+	              "argument": "Object",
+	              "operator": {
+	                "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                "data_type": "String",
+	                "localized_name": "String",
+	                "name": "String"
+	              },
+	              "parameter": "String"
+	            },
+	            "operator": {
+	              "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	              "data_type": "String",
+	              "localized_name": "String",
+	              "name": "String"
+	            },
+	            "parameter": "String",
+	            "right_filter": {
+	              "argument": "Object",
+	              "operator": {
+	                "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                "data_type": "String",
+	                "localized_name": "String",
+	                "name": "String"
+	              },
+	              "parameter": "String"
+	            }
+	          },
+	          "operator": {
+	            "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	            "data_type": "String",
+	            "localized_name": "String",
+	            "name": "String"
+	          },
+	          "parameter": "String",
+	          "right_filter": {
+	            "argument": "Object",
+	            "left_filter": {
+	              "argument": "Object",
+	              "operator": {
+	                "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                "data_type": "String",
+	                "localized_name": "String",
+	                "name": "String"
+	              },
+	              "parameter": "String"
+	            },
+	            "operator": {
+	              "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	              "data_type": "String",
+	              "localized_name": "String",
+	              "name": "String"
+	            },
+	            "parameter": "String",
+	            "right_filter": {
+	              "argument": "Object",
+	              "operator": {
+	                "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                "data_type": "String",
+	                "localized_name": "String",
+	                "name": "String"
+	              },
+	              "parameter": "String"
+	            }
+	          }
+	        },
+	        "function": {
+	          "aggregate": true,
+	          "argument_types": [
+	            {
+	              "position": 42,
+	              "type": "String"
+	            }
+	          ],
+	          "localized_name": "String",
+	          "name": "String",
+	          "return_data_type": "String"
+	        },
+	        "localized_name": "String",
+	        "semantic_type": "String"
+	      }
+	    ],
+	    "filters": [
+	      {
+	        "argument": {
+	          "argument_fields": [
+	            {
+	              "contextual_type": "String",
+	              "data_type": "String",
+	              "localized_name": "String",
+	              "semantic_type": "String"
+	            }
+	          ],
+	          "contextual_type": "String",
+	          "data_type": "String",
+	          "filter": "Object",
+	          "function": {
+	            "aggregate": true,
+	            "argument_types": [
+	              {
+	                "position": 42,
+	                "type": "String"
+	              }
+	            ],
+	            "localized_name": "String",
+	            "name": "String",
+	            "return_data_type": "String"
+	          },
+	          "localized_name": "String",
+	          "semantic_type": "String"
+	        },
+	        "left_filter": {
+	          "argument": {
+	            "argument_fields": [
+	              {
+	                "contextual_type": "String",
+	                "data_type": "String",
+	                "localized_name": "String",
+	                "semantic_type": "String"
+	              }
+	            ],
+	            "contextual_type": "String",
+	            "data_type": "String",
+	            "filter": "Object",
+	            "function": {
+	              "aggregate": true,
+	              "argument_types": [
+	                {
+	                  "position": 42,
+	                  "type": "String"
+	                }
+	              ],
+	              "localized_name": "String",
+	              "name": "String",
+	              "return_data_type": "String"
+	            },
+	            "localized_name": "String",
+	            "semantic_type": "String"
+	          },
+	          "left_filter": {
+	            "argument": {
+	              "argument_fields": [
+	                {
+	                  "contextual_type": "String",
+	                  "data_type": "String",
+	                  "localized_name": "String",
+	                  "semantic_type": "String"
+	                }
+	              ],
+	              "contextual_type": "String",
+	              "data_type": "String",
+	              "filter": "Object",
+	              "function": {
+	                "aggregate": true,
+	                "argument_types": [
+	                  {
+	                    "position": 42,
+	                    "type": "String"
+	                  }
+	                ],
+	                "localized_name": "String",
+	                "name": "String",
+	                "return_data_type": "String"
+	              },
+	              "localized_name": "String",
+	              "semantic_type": "String"
+	            },
+	            "operator": {
+	              "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	              "data_type": "String",
+	              "localized_name": "String",
+	              "name": "String"
+	            },
+	            "parameter": "String"
+	          },
+	          "operator": {
+	            "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	            "data_type": "String",
+	            "localized_name": "String",
+	            "name": "String"
+	          },
+	          "parameter": "String",
+	          "right_filter": {
+	            "argument": {
+	              "argument_fields": [
+	                {
+	                  "contextual_type": "String",
+	                  "data_type": "String",
+	                  "localized_name": "String",
+	                  "semantic_type": "String"
+	                }
+	              ],
+	              "contextual_type": "String",
+	              "data_type": "String",
+	              "filter": "Object",
+	              "function": {
+	                "aggregate": true,
+	                "argument_types": [
+	                  {
+	                    "position": 42,
+	                    "type": "String"
+	                  }
+	                ],
+	                "localized_name": "String",
+	                "name": "String",
+	                "return_data_type": "String"
+	              },
+	              "localized_name": "String",
+	              "semantic_type": "String"
+	            },
+	            "operator": {
+	              "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	              "data_type": "String",
+	              "localized_name": "String",
+	              "name": "String"
+	            },
+	            "parameter": "String"
+	          }
+	        },
+	        "operator": {
+	          "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	          "data_type": "String",
+	          "localized_name": "String",
+	          "name": "String"
+	        },
+	        "parameter": "String",
+	        "right_filter": {
+	          "argument": {
+	            "argument_fields": [
+	              {
+	                "contextual_type": "String",
+	                "data_type": "String",
+	                "localized_name": "String",
+	                "semantic_type": "String"
+	              }
+	            ],
+	            "contextual_type": "String",
+	            "data_type": "String",
+	            "filter": "Object",
+	            "function": {
+	              "aggregate": true,
+	              "argument_types": [
+	                {
+	                  "position": 42,
+	                  "type": "String"
+	                }
+	              ],
+	              "localized_name": "String",
+	              "name": "String",
+	              "return_data_type": "String"
+	            },
+	            "localized_name": "String",
+	            "semantic_type": "String"
+	          },
+	          "left_filter": {
+	            "argument": {
+	              "argument_fields": [
+	                {
+	                  "contextual_type": "String",
+	                  "data_type": "String",
+	                  "localized_name": "String",
+	                  "semantic_type": "String"
+	                }
+	              ],
+	              "contextual_type": "String",
+	              "data_type": "String",
+	              "filter": "Object",
+	              "function": {
+	                "aggregate": true,
+	                "argument_types": [
+	                  {
+	                    "position": 42,
+	                    "type": "String"
+	                  }
+	                ],
+	                "localized_name": "String",
+	                "name": "String",
+	                "return_data_type": "String"
+	              },
+	              "localized_name": "String",
+	              "semantic_type": "String"
+	            },
+	            "operator": {
+	              "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	              "data_type": "String",
+	              "localized_name": "String",
+	              "name": "String"
+	            },
+	            "parameter": "String"
+	          },
+	          "operator": {
+	            "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	            "data_type": "String",
+	            "localized_name": "String",
+	            "name": "String"
+	          },
+	          "parameter": "String",
+	          "right_filter": {
+	            "argument": {
+	              "argument_fields": [
+	                {
+	                  "contextual_type": "String",
+	                  "data_type": "String",
+	                  "localized_name": "String",
+	                  "semantic_type": "String"
+	                }
+	              ],
+	              "contextual_type": "String",
+	              "data_type": "String",
+	              "filter": "Object",
+	              "function": {
+	                "aggregate": true,
+	                "argument_types": [
+	                  {
+	                    "position": 42,
+	                    "type": "String"
+	                  }
+	                ],
+	                "localized_name": "String",
+	                "name": "String",
+	                "return_data_type": "String"
+	              },
+	              "localized_name": "String",
+	              "semantic_type": "String"
+	            },
+	            "operator": {
+	              "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	              "data_type": "String",
+	              "localized_name": "String",
+	              "name": "String"
+	            },
+	            "parameter": "String"
+	          }
+	        }
+	      }
+	    ],
+	    "range": {
+	      "limit": 42,
+	      "offset": 42
+	    },
+	    "sorts": [
+	      {
+	        "direction": "String",
+	        "field": {
+	          "argument_fields": [
+	            {
+	              "contextual_type": "String",
+	              "data_type": "String",
+	              "localized_name": "String",
+	              "semantic_type": "String"
+	            }
+	          ],
+	          "contextual_type": "String",
+	          "data_type": "String",
+	          "filter": {
+	            "argument": "Object",
+	            "left_filter": {
+	              "argument": "Object",
+	              "left_filter": {
+	                "argument": "Object",
+	                "operator": {
+	                  "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                  "data_type": "String",
+	                  "localized_name": "String",
+	                  "name": "String"
+	                },
+	                "parameter": "String"
+	              },
+	              "operator": {
+	                "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                "data_type": "String",
+	                "localized_name": "String",
+	                "name": "String"
+	              },
+	              "parameter": "String",
+	              "right_filter": {
+	                "argument": "Object",
+	                "operator": {
+	                  "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                  "data_type": "String",
+	                  "localized_name": "String",
+	                  "name": "String"
+	                },
+	                "parameter": "String"
+	              }
+	            },
+	            "operator": {
+	              "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	              "data_type": "String",
+	              "localized_name": "String",
+	              "name": "String"
+	            },
+	            "parameter": "String",
+	            "right_filter": {
+	              "argument": "Object",
+	              "left_filter": {
+	                "argument": "Object",
+	                "operator": {
+	                  "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                  "data_type": "String",
+	                  "localized_name": "String",
+	                  "name": "String"
+	                },
+	                "parameter": "String"
+	              },
+	              "operator": {
+	                "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                "data_type": "String",
+	                "localized_name": "String",
+	                "name": "String"
+	              },
+	              "parameter": "String",
+	              "right_filter": {
+	                "argument": "Object",
+	                "operator": {
+	                  "connective": "String &lt;one of: AND, OR, NOT&gt;",
+	                  "data_type": "String",
+	                  "localized_name": "String",
+	                  "name": "String"
+	                },
+	                "parameter": "String"
+	              }
+	            }
+	          },
+	          "function": {
+	            "aggregate": true,
+	            "argument_types": [
+	              {
+	                "position": 42,
+	                "type": "String"
+	              }
+	            ],
+	            "localized_name": "String",
+	            "name": "String",
+	            "return_data_type": "String"
+	          },
+	          "localized_name": "String",
+	          "semantic_type": "String"
+	        }
+	      }
+	    ]
+	  },
+	  "retention": {
+	    "creation_date": 42,
+	    "expires_at": 42,
+	    "last_accessed_date": 42,
+	    "retain_duration": 42
+	  },
+	  "search_type": "String &lt;one of: SYNCH, ASYNCH&gt;",
+	  "status": "String &lt;one of: DONE, ERROR, QUEUED&gt;"
+	}
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--dynamic_search-searches-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_dynamic_search_intro.html" title="Use the references for REST API 19.0 dynamic_search endpoints.">dynamic_search endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

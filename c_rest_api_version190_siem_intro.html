@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Use the references for REST API 19.0 siem endpoints.">
+
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>siem endpoints</title>
+</head>
+<body id="c_rest_api_version190_siem_intro"><main role="main"><article role="article" aria-labelledby="c_rest_api_version190_siem_intro__title__1">
+<h1 class="topictitle1" id="c_rest_api_version190_siem_intro__title__1">siem endpoints</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/c_rest_api_version190_siem_intro.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2Fc_rest_api_version190_siem_intro.dita">Edit online</a></span></div>
+
+
+<div class="body conbody"><p class="shortdesc">Use the references for REST API 19.0 siem endpoints.</p>
+<p></p>
+</div>
+
+<aside role="complementary" aria-labelledby="c_rest_api_version190_siem_intro__title__1"><nav role="navigation">
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="19.0--siem-local_destination_addresses-GET.html">GET /siem/local_destination_addresses</a></strong><br>
+Retrieve a list offense local destination addresses currently in the system.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-local_destination_addresses-local_destination_address_id-GET.html">GET /siem/local_destination_addresses/{local_destination_address_id}</a></strong><br>
+Retrieve an offense local destination address.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_closing_reasons-GET.html">GET /siem/offense_closing_reasons</a></strong><br>
+Retrieve a list of all offense closing reasons.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_closing_reasons-POST.html">POST /siem/offense_closing_reasons</a></strong><br>
+Create an offense closing reason.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_closing_reasons-closing_reason_id-GET.html">GET /siem/offense_closing_reasons/{closing_reason_id}</a></strong><br>
+Retrieve an offense closing reason.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_search_delete_tasks-task_id-GET.html">GET /siem/offense_saved_search_delete_tasks/{task_id}</a></strong><br>
+Retrieves the delete the offense saved search task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_search_dependent_tasks-task_id-GET.html">GET /siem/offense_saved_search_dependent_tasks/{task_id}</a></strong><br>
+Retrieves the dependent the offense saved search task status.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_search_dependent_tasks-task_id-POST.html">POST /siem/offense_saved_search_dependent_tasks/{task_id}</a></strong><br>
+Cancels the dependent the offense saved search task.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_search_dependent_tasks-task_id-results-GET.html">GET /siem/offense_saved_search_dependent_tasks/{task_id}/results</a></strong><br>
+Retrieves the offense saved search dependent task results.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_search_groups-GET.html">GET /siem/offense_saved_search_groups</a></strong><br>
+Retrieves a list of offense saved search groups.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_search_groups-group_id-DELETE.html">DELETE /siem/offense_saved_search_groups/{group_id}</a></strong><br>
+Deletes an offense saved search group.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_search_groups-group_id-GET.html">GET /siem/offense_saved_search_groups/{group_id}</a></strong><br>
+Retrieves an offense saved search group.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_search_groups-group_id-POST.html">POST /siem/offense_saved_search_groups/{group_id}</a></strong><br>
+Updates the owner of an offense saved search group.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_searches-GET.html">GET /siem/offense_saved_searches</a></strong><br>
+Retrieves a list of offense saved searches.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_searches-id-DELETE.html">DELETE /siem/offense_saved_searches/{id}</a></strong><br>
+Deletes an offense saved search. To ensure safe deletion, a dependency check is carried out. This check might take some time. An asynchronous task to do is started for this check.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_searches-id-GET.html">GET /siem/offense_saved_searches/{id}</a></strong><br>
+Retrieves an offense saved search.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_searches-id-POST.html">POST /siem/offense_saved_searches/{id}</a></strong><br>
+Updates the offense saved search owner only.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_saved_searches-id-dependents-GET.html">GET /siem/offense_saved_searches/{id}/dependents</a></strong><br>
+Retrieves the objects that depend on an offense saved search.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_types-GET.html">GET /siem/offense_types</a></strong><br>
+Retrieve all the Offense Types</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offense_types-offense_type_id-GET.html">GET /siem/offense_types/{offense_type_id}</a></strong><br>
+Retrieve an offense type structure that describes the properties of an offense type.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offenses-GET.html">GET /siem/offenses</a></strong><br>
+Retrieve a list of offenses currently in the system.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offenses-offense_id-GET.html">GET /siem/offenses/{offense_id}</a></strong><br>
+Retrieve an offense structure that describes  properties of an offense</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offenses-offense_id-POST.html">POST /siem/offenses/{offense_id}</a></strong><br>
+Update an offense.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offenses-offense_id-assignable_actors-GET.html">GET /siem/offenses/{offense_id}/assignable_actors</a></strong><br>
+Retrieve assignable actors.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offenses-offense_id-notes-GET.html">GET /siem/offenses/{offense_id}/notes</a></strong><br>
+Retrieve a list of notes for an offense.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offenses-offense_id-notes-POST.html">POST /siem/offenses/{offense_id}/notes</a></strong><br>
+Create a note on an offense.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-offenses-offense_id-notes-note_id-GET.html">GET /siem/offenses/{offense_id}/notes/{note_id}</a></strong><br>
+Retrieve a note for an offense.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-source_addresses-GET.html">GET /siem/source_addresses</a></strong><br>
+Retrieve a list offense source addresses currently in the system.</li>
+<li class="ulchildlink"><strong><a href="19.0--siem-source_addresses-source_address_id-GET.html">GET /siem/source_addresses/{source_address_id}</a></strong><br>
+Retrieve an offense source address.</li>
+</ul>
+</nav></aside></article></main></body></html>

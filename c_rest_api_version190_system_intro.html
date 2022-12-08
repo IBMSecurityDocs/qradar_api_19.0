@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Use the references for REST API 19.0 system endpoints.">
+
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>system endpoints</title>
+</head>
+<body id="c_rest_api_version190_system_intro"><main role="main"><article role="article" aria-labelledby="c_rest_api_version190_system_intro__title__1">
+<h1 class="topictitle1" id="c_rest_api_version190_system_intro__title__1">system endpoints</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/c_rest_api_version190_system_intro.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2Fc_rest_api_version190_system_intro.dita">Edit online</a></span></div>
+
+
+<div class="body conbody"><p class="shortdesc">Use the references for REST API 19.0 system endpoints.</p>
+<p></p>
+</div>
+
+<aside role="complementary" aria-labelledby="c_rest_api_version190_system_intro__title__1"><nav role="navigation">
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="19.0--system-about-GET.html">GET /system/about</a></strong><br>
+Retrieves the current system information</li>
+<li class="ulchildlink"><strong><a href="19.0--system-authorization-password_policies-GET.html">GET /system/authorization/password_policies</a></strong><br>
+Retrieves a list of Password Policies that exist on the system</li>
+<li class="ulchildlink"><strong><a href="19.0--system-authorization-password_policies-id-GET.html">GET /system/authorization/password_policies/{id}</a></strong><br>
+Retrieves a single Password Policies that exist on the system</li>
+<li class="ulchildlink"><strong><a href="19.0--system-authorization-password_policies-id-POST.html">POST /system/authorization/password_policies/{id}</a></strong><br>
+  Update a single Password Policies available on the system. This policy  defines the requirements for passwords that are stored locally, and that  will be enforced on login or while creating a new user, or while a user  is updating their password.  </li>
+<li class="ulchildlink"><strong><a href="19.0--system-authorization-password_validators-POST.html">POST /system/authorization/password_validators</a></strong><br>
+Creates a new password validator for the provided password based           on the current Password Policy.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-authorization-settings-GET.html">GET /system/authorization/settings</a></strong><br>
+Retrieves the current Authentication Settings.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-authorization-settings-POST.html">POST /system/authorization/settings</a></strong><br>
+Updates the Authentication Settings.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-email_servers-GET.html">GET /system/email_servers</a></strong><br>
+Retrieves a list of all email servers.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-email_servers-POST.html">POST /system/email_servers</a></strong><br>
+Creates a new email server.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-email_servers-email_server_id-DELETE.html">DELETE /system/email_servers/{email_server_id}</a></strong><br>
+Deletes an email server.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-email_servers-email_server_id-GET.html">GET /system/email_servers/{email_server_id}</a></strong><br>
+Retrieves an email server based on the supplied email server ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-email_servers-email_server_id-POST.html">POST /system/email_servers/{email_server_id}</a></strong><br>
+Updates an existing email server.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-eula_acceptances-GET.html">GET /system/eula_acceptances</a></strong><br>
+Retrieves the list of EULA acceptance statuses that the caller has permission to see.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-eula_acceptances-id-GET.html">GET /system/eula_acceptances/{id}</a></strong><br>
+Retrieves an individual EULA Acceptance by id.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-eula_acceptances-id-POST.html">POST /system/eula_acceptances/{id}</a></strong><br>
+Updates an individual EULA acceptance.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-eulas-GET.html">GET /system/eulas</a></strong><br>
+Retrieves a list of EULAs.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-information-encodings-GET.html">GET /system/information/encodings</a></strong><br>
+Retrieves the list of encodings that are supported by the system for event data..</li>
+<li class="ulchildlink"><strong><a href="19.0--system-information-locales-GET.html">GET /system/information/locales</a></strong><br>
+Retrieve Locales.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-server_connection_validator-POST.html">POST /system/server_connection_validator</a></strong><br>
+Creates a server connection validator for the provided hostname and port, based           on the provided host ids.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-GET.html">GET /system/servers</a></strong><br>
+Retrieves a list of all server hosts in the deployment.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-GET.html">GET /system/servers/{server_id}</a></strong><br>
+Retrieves a server host based on the supplied server ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-POST.html">POST /system/servers/{server_id}</a></strong><br>
+Updates an existing server.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-firewall_rules-GET.html">GET /system/servers/{server_id}/firewall_rules</a></strong><br>
+Retrieves a list of access control firewall rules based on the supplied server ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-firewall_rules-PUT.html">PUT /system/servers/{server_id}/firewall_rules</a></strong><br>
+Sets the access control firewall rules based on the supplied server ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-network_interfaces-bonded-GET.html">GET /system/servers/{server_id}/network_interfaces/bonded</a></strong><br>
+Retrieves a list of the bonded network interfaces based on the supplied server ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-network_interfaces-bonded-POST.html">POST /system/servers/{server_id}/network_interfaces/bonded</a></strong><br>
+Creates a new bonded network interface.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-network_interfaces-bonded-device_name-DELETE.html">DELETE /system/servers/{server_id}/network_interfaces/bonded/{device_name}</a></strong><br>
+Removes a bonded network interface.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-network_interfaces-bonded-device_name-POST.html">POST /system/servers/{server_id}/network_interfaces/bonded/{device_name}</a></strong><br>
+Updates an existing bonded network interface.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-network_interfaces-ethernet-GET.html">GET /system/servers/{server_id}/network_interfaces/ethernet</a></strong><br>
+Retrieves a list of the ethernet network interfaces based on the supplied server ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-network_interfaces-ethernet-device_name-POST.html">POST /system/servers/{server_id}/network_interfaces/ethernet/{device_name}</a></strong><br>
+Updates an ethernet network interface based on the suppied server_Id and device_name.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-system_time_settings-GET.html">GET /system/servers/{server_id}/system_time_settings</a></strong><br>
+Retrieves the system time and time zone settings of a server host based on the supplied server ID.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-system_time_settings-POST.html">POST /system/servers/{server_id}/system_time_settings</a></strong><br>
+Sets the system time and time zone settings of to a server host. Services are restarted after the call and service interruptions will occur.</li>
+<li class="ulchildlink"><strong><a href="19.0--system-servers-server_id-timezones-GET.html">GET /system/servers/{server_id}/timezones</a></strong><br>
+Retrieves all the available time zones that can be set for a server.</li>
+</ul>
+</nav></aside></article></main></body></html>

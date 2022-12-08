@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a case create task based on the supplied id.">
+<meta name="keywords" content="/forensics/case_management/case_create_tasks/{id}, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_forensics_intro.html">
+<title>GET /forensics/case_management/case_create_tasks/{id}</title>
+</head>
+<body id="api-19.0--forensics-case_management-case_create_tasks-id-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--forensics-case_management-case_create_tasks-id-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--forensics-case_management-case_create_tasks-id-GET__title__1">GET /forensics/case_management/case_create_tasks/{id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--forensics-case_management-case_create_tasks-id-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--forensics-case_management-case_create_tasks-id-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a case create task based on the supplied id.</p>
+
+<div class="section refsyn">
+<p>Retrieves a case create task based on the supplied id.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /forensics/case_management/case_create_tasks/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /forensics/case_management/case_create_tasks/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /forensics/case_management/case_create_tasks/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /forensics/case_management/case_create_tasks/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__3 "><p>id</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__8 "><p>Required - The id of the case create task to retrieve.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /forensics/case_management/case_create_tasks/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /forensics/case_management/case_create_tasks/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__21" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__22" class="thbot">Unique Code</th>
+
+<th id="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__23" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__21 "><p>200</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__22 "><p></p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__23 "><p>The case create task was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__21 "><p>404</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__22 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__23 "><p>No case create task was found for the provided ID.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__21 "><p>500</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__22 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--forensics-case_management-case_create_tasks-id-GET__entry__23 "><p>An error occurred during the retrieval of the case create task.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--forensics-case_management-case_create_tasks-id-GET__title__5"><h2 class="sectiontitle" id="api-19.0--forensics-case_management-case_create_tasks-id-GET__title__5">Response Description</h2>
+
+<div class="p">A case create task containing the following fields:
+ <ul>
+ <li><strong>assigned_to</strong> - String Array - Usernames of users to give access to the case once it is created.  Users must have the FORENSICS role.  Authorized services are not allowed.</li>
+
+ <li><strong>case_id</strong> - Long - ID for the created case .</li>
+
+ <li><strong>case_name</strong> - String - Name to give the created case.</li>
+
+ <li><strong>id</strong> - Long - ID for the case create task.</li>
+
+ <li><strong>status</strong> - String - Possible values are:<ul>
+<li><strong>COMPLETE</strong> - The case has been created across all managed hosts.</li>
+
+<li><strong>PARTIALLY_COMPLETE</strong> - The case was created on at least one managed host, but not all of
+them. The case is considered to be usable, but functionality might be limited. This usually means
+one or more managed hosts are down and the case is not created yet. The task completes after all
+offending managed hosts either complete the task, or are removed from the deployment.</li>
+
+<li><strong>PROCESSING</strong> - The task has been picked up by QRadar and is actively being processed. Cases
+are being created on the managed hosts.</li>
+
+<li><strong>WAITING</strong> - The task is waiting for its time to be processed. Nothing is being done at this
+time.</li>
+
+</ul>
+</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--forensics-case_management-case_create_tasks-id-GET__title__6"><h2 class="sectiontitle" id="api-19.0--forensics-case_management-case_create_tasks-id-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "assigned_to": [
+        "String"
+    ],
+    "case_id": 42,
+    "id": 42,
+    "name": "String",
+    "state": "String &lt;one of: COMPLETE, PARTIALLY_COMPLETE, PROCESSING, WAITING&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--forensics-case_management-case_create_tasks-id-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_forensics_intro.html" title="Use the references for REST API 19.0 forensics endpoints.">forensics endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a named service.">
+<meta name="keywords" content="/gui_app_framework/named_services/{uuid}, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_gui_app_framework_intro.html">
+<title>GET /gui_app_framework/named_services/{uuid}</title>
+</head>
+<body id="api-19.0--gui_app_framework-named_services-uuid-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--gui_app_framework-named_services-uuid-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--gui_app_framework-named_services-uuid-GET__title__1">GET /gui_app_framework/named_services/{uuid}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--gui_app_framework-named_services-uuid-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--gui_app_framework-named_services-uuid-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a named service.</p>
+
+<div class="section refsyn">
+<p>Using the supplied uuid, retrieves a named service registered with the Application Framework.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /gui_app_framework/named_services/{uuid} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /gui_app_framework/named_services/{uuid} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--gui_app_framework-named_services-uuid-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /gui_app_framework/named_services/{uuid} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /gui_app_framework/named_services/{uuid} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--gui_app_framework-named_services-uuid-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--gui_app_framework-named_services-uuid-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--gui_app_framework-named_services-uuid-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--gui_app_framework-named_services-uuid-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--gui_app_framework-named_services-uuid-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--gui_app_framework-named_services-uuid-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__3 "><p>uuid</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__8 "><p>Required - A named service uuid.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /gui_app_framework/named_services/{uuid} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /gui_app_framework/named_services/{uuid} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--gui_app_framework-named_services-uuid-GET__entry__15" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--gui_app_framework-named_services-uuid-GET__entry__16" class="thbot">Unique Code</th>
+
+<th id="api-19.0--gui_app_framework-named_services-uuid-GET__entry__17" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__15 "><p>200</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__16 "><p></p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__17 "><p>The requested named service was returned.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__15 "><p>404</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__16 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__17 "><p>The requested named service could not be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__15 "><p>409</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__16 "><p>33700</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__17 "><p>The application framework is currently disabled.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__15 "><p>500</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__16 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-named_services-uuid-GET__entry__17 "><p>An error occurred while trying to retrieve the requested named service.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--gui_app_framework-named_services-uuid-GET__title__5"><h2 class="sectiontitle" id="api-19.0--gui_app_framework-named_services-uuid-GET__title__5">Response Description</h2>
+
+<div class="p">The details of a named service:
+ <ul>
+ <li><strong>name</strong> - String - Service name.</li>
+
+ <li><strong>version</strong> - String - Service version.</li>
+
+ <li><strong>application_id</strong> - Integer - ID of the application that implements this service.</li>
+
+ <li><strong>uuid</strong> - Integer - Unique identifier for this service.</li>
+
+ <li><strong>endpoints</strong> - Array - List of endpoints provided by this service.<ul>
+<li><strong>name</strong> - String - Endpoint name.</li>
+
+<li><strong>path</strong> - String - Endpoint URL.</li>
+
+<li><strong>http_method</strong> - String - One of GET/POST/PUT/DELETE.</li>
+
+<li><strong>request_mime_type</strong> - String - MIME type of request body.</li>
+
+<li><strong>request_body_type</strong> - Object - JSON definition of request body.</li>
+
+<li><strong>parameters</strong> - Array - List of request parameters.<ul>
+<li><strong>location</strong> - String - Where the parameter goes in the request. One of PATH/QUERY/BODY.</li>
+
+<li><strong>name</strong> - String - Parameter name.</li>
+
+<li><strong>definition</strong> - String - Parameter definition, e.g. "String".</li>
+
+</ul>
+</li>
+
+<li><strong>response</strong> - Object - Response definition.<ul>
+<li><strong>mime_type</strong> - String - MIME type of response body.</li>
+
+<li><strong>body_type</strong> - Object - JSON definition of response body.</li>
+
+</ul>
+</li>
+
+<li><strong>error_mime_type</strong> - String - MIME type of response body when an error occurs.</li>
+
+</ul>
+</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--gui_app_framework-named_services-uuid-GET__title__6"><h2 class="sectiontitle" id="api-19.0--gui_app_framework-named_services-uuid-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+  "name": "resourceservice",
+  "version": "1",
+  "application_id": 1001,
+  "uuid": "e4081cd1-c3c8-4089-afc7-c32039bd796c",
+  "endpoints": [
+    {
+      "name": "getResource",
+      "path": "/console/plugins/1001/app_proxy:resourceservice/resource/{resource_id}",
+      "http_method": "GET",
+      "parameters": [
+        { "location": "PATH", "name": "resource_id" }
+      ],
+      "response": {
+        "mime_type": "application/json+ld",
+        "body_type": {
+          "@type": "http://id.ibm.com/Resource",
+          "resource_id": "http://id.ibm.com/resourceID",
+          "resource_name": "http://id.ibm.com/resourceName",
+          "resource_owner": "http://id.ibm.com/personId"
+        }
+      },
+      "error_mime_type": "text/plain"
+    },
+    {
+      "name": "createResource",
+      "path": "/console/plugins/1001/app_proxy:resourceservice/resource",
+      "http_method": "POST",
+      "request_mime_type": "application/json+ld",
+      "request_body_type": {
+        "@type": "http://id.ibm.com/Resource",
+        "resource_name": "http://id.ibm.com/resourceName",
+        "resource_owner": "http://id.ibm.com/personId"
+      },
+      "response": {
+        "mime_type": "application/json+ld",
+        "body_type": {
+          "@type": "http://id.ibm.com/Resource",
+          "resource_id": "http://id.ibm.com/resourceID",
+          "resource_name": "http://id.ibm.com/resourceName",
+          "resource_owner": "http://id.ibm.com/personId"
+        }
+      },
+      "error_mime_type": "text/plain"
+    },
+    {
+      "name": "updateResource",
+      "path": "/console/plugins/1001/app_proxy:resourceservice/resource/{resource_id}",
+      "http_method": "PUT",
+      "request_mime_type": "application/json+ld",
+      "request_body_type": {
+        "@type": "http://id.ibm.com/Resource",
+        "resource_name": "http://id.ibm.com/resourceName",
+        "resource_owner": "http://id.ibm.com/personId"
+      },
+      "parameters": [
+        { "location": "PATH", "name": "resource_id" }
+      ],
+      "response": {
+        "mime_type": "application/json+ld",
+        "body_type": {
+          "@type": "http://id.ibm.com/Resource",
+          "resource_id": "http://id.ibm.com/resourceID",
+          "resource_name": "http://id.ibm.com/resourceName",
+          "resource_owner": "http://id.ibm.com/personId"
+        }
+      },
+      "error_mime_type": "text/plain"
+    }
+  ]
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--gui_app_framework-named_services-uuid-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_gui_app_framework_intro.html" title="Use the references for REST API 19.0 gui_app_framework endpoints.">gui_app_framework endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

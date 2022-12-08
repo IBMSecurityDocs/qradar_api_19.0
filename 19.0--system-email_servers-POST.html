@@ -1,0 +1,413 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a new email server.">
+<meta name="keywords" content="/system/email_servers, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_system_intro.html">
+<title>POST /system/email_servers</title>
+</head>
+<body id="api-19.0--system-email_servers-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--system-email_servers-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--system-email_servers-POST__title__1">POST /system/email_servers</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--system-email_servers-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--system-email_servers-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a new email server.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /system/email_servers resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /system/email_servers resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--system-email_servers-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /system/email_servers request body details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /system/email_servers request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--system-email_servers-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--system-email_servers-POST__entry__4" class="thbot">Data Type</th>
+
+<th id="api-19.0--system-email_servers-POST__entry__5" class="thbot">MIME Type</th>
+
+<th id="api-19.0--system-email_servers-POST__entry__6" class="thbot">Description</th>
+
+<th id="api-19.0--system-email_servers-POST__entry__7" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__3 "><p>email_server_details</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__4 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__5 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__6 "><div class="p">Required - An email server details record that contains the following fields: <ul>
+<li><strong>description</strong> - String - Description identifying the email server.</li>
+
+<li><strong>hostname</strong> - String - Hostname of the email server.</li>
+
+<li><strong>port</strong> - Number - Port to connect to the email server with.</li>
+
+<li><strong>username</strong> - String - User name to authenticate with the email server.</li>
+
+<li><strong>password</strong> - String - Password to authenticate with the email server.</li>
+
+<li><strong>enable_tls</strong> - Boolean - Whether to ignore TLS verification errors to the email
+server.</li>
+
+</ul>
+</div>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__7 "><p>{
+    "default": true,
+    "description": "String",
+    "enable_tls": true,
+    "hostname": "String",
+    "password": "String",
+    "port": 42,
+    "username": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /system/email_servers response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /system/email_servers response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--system-email_servers-POST__entry__13" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--system-email_servers-POST__entry__14" class="thbot">Unique Code</th>
+
+<th id="api-19.0--system-email_servers-POST__entry__15" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>201</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p></p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>The email server record was created.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4011</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>An email server with the same hostname, port and username already exists.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4000</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>The required field hostname was not given.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4001</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>The hostname is an IP address.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4002</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>The hostname cannot be longer than 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4003</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>The username cannot be longer than 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4004</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>The password cannot be longer than 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4005</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>Problem encountered while encrypting email server password.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4006</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>Port must be bewtween 1 and 65535 inclusive.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4007</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>The default value can only be set to true.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4010</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>The description cannot be longer than 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4014</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>The username cannot contain spaces or quotes.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4015</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>Username or password not given while creating either field for email server.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4016</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>500</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4008</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>Problem encountered while updating default email server database entry.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>500</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4009</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>Problem encountered while attempting to read the default email server from the database.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>500</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4012</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>Problem encountered while creating new EmailServer database entry.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--system-email_servers-POST__entry__13 "><p>500</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__14 "><p>4013</p>
+</td>
+
+<td headers="api-19.0--system-email_servers-POST__entry__15 "><p>Problem encountered while attempting to read the database.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--system-email_servers-POST__title__5"><h2 class="sectiontitle" id="api-19.0--system-email_servers-POST__title__5">Response Description</h2>
+
+<div class="p">The created email server record that contains the following fields: <ul>
+<li><strong>id</strong> - Number - ID of the email server.</li>
+
+<li><strong>description</strong> - String - Description identifying the email server.</li>
+
+<li><strong>hostname</strong> - String - Hostname of the email server.</li>
+
+<li><strong>port</strong> - Number - Port to connect to the email server with.</li>
+
+<li><strong>username</strong> - String - User name to authenticate with the email server.</li>
+
+<li><strong>password</strong> - String - Password to authenticate with the email server.</li>
+
+<li><strong>enable_tls</strong> - Boolean - Whether to ignore TLS verification errors to the email
+server.</li>
+
+</ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--system-email_servers-POST__title__6"><h2 class="sectiontitle" id="api-19.0--system-email_servers-POST__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "default": true,
+    "description": "String",
+    "enable_tls": true,
+    "hostname": "String",
+    "id": 42,
+    "password": "String",
+    "port": 42,
+    "username": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--system-email_servers-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_system_intro.html" title="Use the references for REST API 19.0 system endpoints.">system endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

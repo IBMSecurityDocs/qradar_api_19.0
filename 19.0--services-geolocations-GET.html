@@ -1,0 +1,468 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves the MaxMind geoip data for the given IP address.">
+<meta name="keywords" content="/services/geolocations, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_services_intro.html">
+<title>GET /services/geolocations</title>
+</head>
+<body id="api-19.0--services-geolocations-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--services-geolocations-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--services-geolocations-GET__title__1">GET /services/geolocations</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--services-geolocations-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--services-geolocations-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves the MaxMind geoip data for the given IP address.</p>
+
+<div class="section refsyn">
+<div class="p">Retrieves the MaxMind geoip location data for the given IP address.
+ 
+ A filter is required to identify which IP address to lookup. Only EQUALS or IN is supported.
+ Samples:
+ <ul>
+ <li>ip_address = "127.0.0.1"</li>
+
+ <li>ip_address IN ( "127.0.0.1", "127.0.0.2" )</li>
+
+ </ul>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /services/geolocations resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /services/geolocations resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--services-geolocations-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--services-geolocations-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /services/geolocations request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /services/geolocations request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--services-geolocations-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--services-geolocations-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--services-geolocations-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--services-geolocations-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--services-geolocations-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--services-geolocations-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--services-geolocations-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--services-geolocations-GET__entry__3 "><p>filter</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__8 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /services/geolocations response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /services/geolocations response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--services-geolocations-GET__entry__21" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--services-geolocations-GET__entry__22" class="thbot">Unique Code</th>
+
+<th id="api-19.0--services-geolocations-GET__entry__23" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--services-geolocations-GET__entry__21 "><p>200</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__22 "><p></p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__23 "><p>The location data was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--services-geolocations-GET__entry__21 "><p>404</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__22 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__23 "><p>The IP address does not exist in the database.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--services-geolocations-GET__entry__21 "><p>422</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__22 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__23 "><p>The provided IP address is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--services-geolocations-GET__entry__21 "><p>422</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__22 "><p>1010</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__23 "><p>A request parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--services-geolocations-GET__entry__21 "><p>500</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__22 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--services-geolocations-GET__entry__23 "><p>An error occurred while looking up the geodata.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--services-geolocations-GET__title__5"><h2 class="sectiontitle" id="api-19.0--services-geolocations-GET__title__5">Response Description</h2>
+
+<div class="p">The location data after it has been retrieved. A location object contains the following fields:
+ <ul>
+ <li><strong>ip_address</strong> - String - The IP address to lookup.</li>
+
+ <li><strong>city</strong> - City - Object containing details about the city that is associated with the IP address.
+ 		<ul>
+ 		<li><strong>name</strong> - String - The name of the city.</li>
+
+ 		<li><strong>geo_id</strong> - Integer - A unique identifier for the city as specified by GeoNames.</li>
+
+ 		<li><strong>confidence</strong> - Integer - A value from 0-100 that represents MaxMind's confidence that the city is correct.</li>
+
+ 		</ul>
+
+ </li>
+
+ <li><strong>continent</strong> - Continent - Object containing details about the continent that is associated with the IP address.
+ 		<ul>
+ 		<li><strong>name</strong> - String - The name of the continent.</li>
+
+ 		<li><strong>geo_id</strong> - Integer - A unique identifier for the continent as specified by GeoNames.</li>
+
+ 		<li><strong>code</strong> - String - A two-character code for the continent associated with the IP address.</li>
+
+ 		</ul>
+
+ </li>
+
+ <li><strong>physical_country</strong> - Country - Object containing details about the country where MaxMind believes the end user is located.
+ 		<ul>
+ 		<li><strong>name</strong> - String - The name of the country.</li>
+
+ 		<li><strong>geo_id</strong> - Integer - A unique identifier for the country as specified by GeoNames.</li>
+
+ 		<li><strong>iso_code</strong> - String - A two-character ISO 3166-1 country code for the country associated with the IP address.</li>
+
+ 		<li><strong>confidence</strong> - Integer - A value from 0-100 that represents MaxMind's confidence that the country is correct.</li>
+
+ 		</ul>
+
+ </li>
+
+ <li><strong>registered_country</strong> - Country - Object containing details about the country in which the ISP has registered the IP address.
+ 		<ul>
+ 		<li><strong>name</strong> - String - The name of the country.</li>
+
+ 		<li><strong>geo_id</strong> - Integer - A unique identifier for the country as specified by GeoNames.</li>
+
+ 		<li><strong>iso_code</strong> - String - A two-character ISO 3166-1 country code for the country associated with the IP address.</li>
+
+ 		<li><strong>confidence</strong> - Integer - A value from 0-100 that represents MaxMind's confidence that the country is correct.</li>
+
+ 		</ul>
+
+ </li>
+
+ <li><strong>represented_country</strong> - Country - Object containing details about the country which is represented by users of the IP address. For instance, the country represented by an overseas military base.
+ 		<ul>
+ 		<li><strong>name</strong> - String - The name of the country.</li>
+
+ 		<li><strong>geo_id</strong> - Integer - A unique identifier for the country as specified by GeoNames.</li>
+
+ 		<li><strong>iso_code</strong> - String - A two-character ISO 3166-1 country code for the country associated with the IP address.</li>
+
+ 		<li><strong>confidence</strong> - Integer - A value from 0-100 that represents MaxMind's confidence that the country is correct.</li>
+
+ 		<li><strong>type</strong> - String - The type of represented country. Currently limited to <strong>military</strong> but may include other types in the future.</li>
+
+ 		</ul>
+
+ </li>
+
+ <li><strong>location</strong> - Location - Object containing details about the city that is associated with the IP address.
+ 		<ul>
+ 		<li><strong>accuracy_radius</strong> - Integer - The approximate accuracy radius in kilometers around the latitude and longitude for the IP address. This is the radius where MaxMind has a 67% confidence that the device using the IP address resides within the circle centered at the latitude and longitude with the provided radius.</li>
+
+ 		<li><strong>average_income</strong> - Integer - The average income associated with the IP address.</li>
+
+ 		<li><strong>latitude</strong> - Double - The approximate latitude of the location associated with the IP address. Latitude and Longitude are often near the center of population.</li>
+
+ 		<li><strong>longitude</strong> - Double - The approximate longitude of the location associated with the IP address. Latitude and Longitude are often near the center of population.</li>
+
+ 		<li><strong>metro_code</strong> - Integer - The metro code associated with the IP address. These are only available for IP addresses in the US. Returns the same metro codes as the Google AdWords API.</li>
+
+ 		<li><strong>population_density</strong> - Integer - The estimated number of people per square kilometer.</li>
+
+ 		<li><strong>timezone</strong> - String - The time zone associated with location, as specified by the IANA Time Zone Database. For example, “America/New_York”.</li>
+
+ 		</ul>
+
+ </li>
+
+ <li><strong>postal</strong> - Postal - Object containing details about the postal code that is associated with the IP address.
+ 		<ul>
+ 		<li><strong>postal_code</strong> - String - The postal code associated with the IP address. These are available for some IP addresses in Australia, Canada, France, Germany, Italy, Spain, Switzerland, United Kingdom, and the US. Returns the first 3 characters for Canadian postal codes. Returns the the first 2-4 characters (outward code) for postal codes in the United Kingdom.</li>
+
+ 		<li><strong>confidence</strong> - Integer - A value from 0-100 that represents MaxMind's confidence that the postal code is correct.</li>
+
+ 		</ul>
+
+ </li>
+
+ <li><strong>subdivision</strong> - List of Subdivisions - Each of these objects contains details about a subdivision of the country in which the IP address resides. Subdivisions are arranged from largest to smallest.
+ 		<ul>
+ 		<li><strong>name</strong> - String - The name of the subdivision.</li>
+
+ 		<li><strong>geo_id</strong> - Integer - A unique identifier for the region as specified by GeoNames.</li>
+
+ 		<li><strong>iso_code</strong> - String - A string of up to three characters that contains the region-portion of theISO 3166-2 code for the region associated with the IP address.</li>
+
+ 		<li><strong>confidence</strong> - Integer - A value from 0-100 that represents MaxMind's confidence that the region is correct.</li>
+
+ 		</ul>
+
+ </li>
+
+ <li><strong>traits</strong> - Traits - Object containing general traits that is associated with the IP address.
+ 		<ul>
+ 		<li><strong>autonomous_system_number</strong> - Integer - The autonomous system number associated with the IP address.</li>
+
+ 		<li><strong>autonomous_system_organization</strong> - String - The organization associated with the registered autonomous system number for the IP address.</li>
+
+ 		<li><strong>domain</strong> - String - The second level domain associated with the IP address.</li>
+
+ 		<li><strong>internet_service_provider</strong> - String - The name of the Internet Service Provider associated with the IP address.</li>
+
+ 		<li><strong>organization</strong> - String - The name of the organization associated with the IP address.</li>
+
+ 		<li><strong>user_type</strong> - String - The user type associated with the IP address.</li>
+
+ 		</ul>
+
+ </li>
+
+ <li><strong>geo_json</strong> - GeoJSON - A standardize GeoJSON point object for the IP address.
+ 		<ul>
+ 		<li><strong>type</strong> - String - The type of GeoJSON. The default is "Point".</li>
+
+ 		<li><strong>coordinates</strong> - Array of Double - Latitude and Longitude from the Maxmind Location object.</li>
+
+ 		</ul>
+
+ </li>
+
+ <li><strong>is_local</strong> - Boolean - True if the IP address is defined in the network hierarchy.</li>
+
+ <li><strong>network</strong> - String - The local network that the IP address belongs to.</li>
+
+ <li><strong>domain_id</strong> - Integer - The domain id of the local network.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--services-geolocations-GET__title__6"><h2 class="sectiontitle" id="api-19.0--services-geolocations-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "city": {
+            "confidence": 42,
+            "geo_id": 42,
+            "name": "String"
+        },
+        "continent": {
+            "code": "String",
+            "geo_id": 42,
+            "name": "String"
+        },
+        "domain_id": 42,
+        "geo_json": {
+            "coordinates": [
+                42.5
+            ],
+            "type": "String"
+        },
+        "ip_address": "String",
+        "is_local": true,
+        "location": {
+            "accuracy_radius": 42,
+            "average_income": 42,
+            "latitude": 42.5,
+            "longitude": 42.5,
+            "metro_code": 42,
+            "population_density": 42,
+            "timezone": "String"
+        },
+        "network": "String",
+        "physical_country": {
+            "confidence": 42,
+            "geo_id": 42,
+            "iso_code": "String",
+            "name": "String"
+        },
+        "postal": {
+            "confidence": 42,
+            "postal_code": "String"
+        },
+        "registered_country": {
+            "confidence": 42,
+            "geo_id": 42,
+            "iso_code": "String",
+            "name": "String"
+        },
+        "represented_country": {
+            "confidence": 42,
+            "geo_id": 42,
+            "iso_code": "String",
+            "name": "String"
+        },
+        "subdivisions": [
+            {
+                "confidence": 42,
+                "geo_id": 42,
+                "iso_code": "String",
+                "name": "String"
+            }
+        ],
+        "traits": {
+            "autonomous_system_number": 42,
+            "autonomous_system_organization": "String",
+            "domain": "String",
+            "internet_service_provider": "String",
+            "organization": "String",
+            "user_type": "String"
+        }
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--services-geolocations-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_services_intro.html" title="Use the references for REST API 19.0 services endpoints.">services endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

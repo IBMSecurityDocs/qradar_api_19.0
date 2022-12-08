@@ -1,0 +1,548 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates the configuration of a QNI host. You cannot use this endpoint to update a host that is a part of a QNI stack. Use the QNI Stacking API instead.">
+<meta name="keywords" content="/qni/hosts/{host_id}/configs/{id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_qni_intro.html">
+<title>POST /qni/hosts/{host_id}/configs/{id}</title>
+</head>
+<body id="api-19.0--qni-hosts-host_id-configs-id-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--qni-hosts-host_id-configs-id-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--qni-hosts-host_id-configs-id-POST__title__1">POST /qni/hosts/{host_id}/configs/{id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--qni-hosts-host_id-configs-id-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--qni-hosts-host_id-configs-id-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates the configuration of a QNI host. You cannot use this endpoint to update a host that is a part of a QNI stack. Use the QNI Stacking API instead.</p>
+
+<div class="section refsyn">
+<div class="p">Updates the configuration of a QNI host. You cannot use this endpoint to update a host that is a part of a QNI stack. Use the QNI Stacking API instead.
+ Configuration should contain the following fields:
+ <ul>
+ 		<li><strong>id</strong> - <em>Required</em> - Number - The ID of the QNI configuration. Always equals 1 because QNI host has only one configuration.</li>
+
+ 		<li><strong>host_id</strong> - <em>Required</em> - Number - The ID of the QNI host.</li>
+
+ 		<li><strong>inspection_level</strong> - <em>Optional</em> - Enumeration - Depth of content inspection. The
+possible values are:<ul>
+<li><em>BASIC</em> - Lowest level of inspection. Flows are detected by 5-tuple, and the number of
+bytes and packets that are flowing in each direction are counted.</li>
+
+<li><em>ENRICHED</em> - Each flow is identified and inspected by one of the protocol or domain
+inspectors. The inspection can generate many kinds of attributes.</li>
+
+<li><em>ADVANCED</em> - The highest level of inspection. It does everything that the Enriched Flows
+levels does, but it also scans and inspects the content of the files that it finds.</li>
+
+<li><em>DEFAULT</em> - The QNI host uses the globally-set inspection level setting.</li>
+
+</ul>
+</li>
+
+ 		<li><strong>raw_payload</strong> - <em>Optional</em> - Long - The maximum amount of data (bytes) that the
+QFlow Collector is set to capture and retain in the flow payload. Possible values are:<ul>
+<li>-1: The QNI host is set to use the globally-set raw payload setting.</li>
+
+<li>0: Turn the payload off.</li>
+
+<li>1 - 32768: The number of bytes.</li>
+
+</ul>
+</li>
+
+ 		<li><strong>ports</strong> - <em>Optional</em> - Array - The updated port configuration. Each port has the following fields:
+ 			<ul>
+ 				<li><strong>port_id</strong> - <em>Required</em> - Number - The ID of the port.</li>
+
+ 				<li><strong>type</strong> - <em>Required</em> - Enumeration - The mode that the port is used in. The possible values are <em>RECEIVE</em>, <em>TRANSMIT</em>.</li>
+
+ 				<li><strong>source_port_id</strong> - <em>Optional</em> - Number - The ID of the port that re-transmits the traffic. Required only if the port type is <em>TRANSMIT</em>.</li>
+
+ 			</ul>
+
+ 		</li>
+
+ </ul>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /qni/hosts/{host_id}/configs/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /qni/hosts/{host_id}/configs/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /qni/hosts/{host_id}/configs/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /qni/hosts/{host_id}/configs/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__3 "><p>host_id</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__8 "><p>Long The ID of the QNI host.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__3 "><p>id</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__8 "><p>The ID of the QNI Configuration.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /qni/hosts/{host_id}/configs/{id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /qni/hosts/{host_id}/configs/{id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__27" class="thbot">Parameter</th>
+
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__28" class="thbot">Data Type</th>
+
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__29" class="thbot">MIME Type</th>
+
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__30" class="thbot">Description</th>
+
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__31" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__27 "><p>qni_configuration</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__28 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__29 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__30 "><p>The updated QNI Configuration (see above for more details).</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__31 "><p>{
+    "host_id": 42,
+    "id": 42,
+    "inspection_level": "String &lt;one of: BASIC, ADVANCED, ENRICHED, DEFAULT&gt;",
+    "ports": [
+        {
+            "id": 42,
+            "source_port_id": 42,
+            "type": "String &lt;one of: RECEIVE, TRANSMIT&gt;"
+        }
+    ],
+    "raw_payload": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /qni/hosts/{host_id}/configs/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /qni/hosts/{host_id}/configs/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38" class="thbot">Unique Code</th>
+
+<th id="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>200</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p></p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>QNI Configuration has been successfully updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>404</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44101</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>The QNI host ID does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>404</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44102</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>QNI Configuration ID does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44120</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>The QNI host ID is less than or equal to 0.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44122</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>Invalid number of ports listed.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44123</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>Port ID field is missing.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44124</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>Port ID is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44125</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>Two or more ports have the same ID.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44126</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>Source port ID field is missing.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44127</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>Source port ID is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44128</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>Source port is invalid. The type for the selected source port must be RECEIVE.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44129</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>Port type is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44130</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>The QNI host is part of a QNI Stack. You cannot configure the host individually.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44131</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>Inspection level is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>422</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44132</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>Raw payload value is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__37 "><p>500</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__38 "><p>44110</p>
+</td>
+
+<td headers="api-19.0--qni-hosts-host_id-configs-id-POST__entry__39 "><p>An internal server error occurred while processing a request.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--qni-hosts-host_id-configs-id-POST__title__6"><h2 class="sectiontitle" id="api-19.0--qni-hosts-host_id-configs-id-POST__title__6">Response Description</h2>
+
+<div class="p">The updated QNI configuration object representing a staged configuration of a QNI host.
+ <ul>
+ 		<li><strong>id</strong> - Number - ID of the QNI Configuration. Always equals 1 because QNI host has only one configuration.</li>
+
+ 		<li><strong>host_id</strong> - Number - ID of the QNI host.</li>
+
+ 		<li><strong>inspection_level</strong> - Enumeration - Depth of content inspection. The possible values are:<ul>
+<li><em>BASIC</em> - Lowest level of inspection. Flows are detected by 5-tuple, and the number of
+bytes and packets that are flowing in each direction are counted.</li>
+
+<li><em>ENRICHED</em> - Each flow is identified and inspected by one of the protocol or domain
+inspectors. The inspection can generate many kinds of attributes.</li>
+
+<li><em>ADVANCED</em> - The highest level of inspection. It does everything that the Enriched Flows
+levels does, but it also scans and inspects the content of the files that it finds.</li>
+
+<li><em>DEFAULT</em> - The QNI host uses the globally-set inspection level setting.</li>
+
+</ul>
+</li>
+
+ 		<li><strong>raw_payload</strong> - Long - The maximum amount of data (bytes) that the QFlow Collector is
+set to capture and retain in the flow payload. Possible values are:<ul>
+<li>-1: The QNI host is set to use the globally-set raw payload setting.</li>
+
+<li>0: Turn the payload off.</li>
+
+<li>1 - 32768: The number of bytes.</li>
+
+</ul>
+</li>
+
+ 		<li><strong>ports</strong> - Array - Array of configured network card ports. Each port has the following fields:
+ 			<ul>
+ 				<li><strong>port_id</strong> - Number - The ID of the port.</li>
+
+ 				<li><strong>type</strong> - Enumeration - The mode that the port is used in. The possible values are <em>RECEIVE</em>, <em>TRANSMIT</em>. <em>RECEIVE</em> type indicates the port is configured to receive traffic. <em>TRANSMIT</em> type indicates the port is transmitting traffic duplicated from another port.</li>
+
+ 				<li><strong>source_port_id</strong> - Number - The ID of the port the that re-transmits the traffic. Only populated if the port type is <em>TRANSMIT</em>.</li>
+
+ 			</ul>
+
+ 		</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--qni-hosts-host_id-configs-id-POST__title__7"><h2 class="sectiontitle" id="api-19.0--qni-hosts-host_id-configs-id-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "host_id": 42,
+    "id": 42,
+    "inspection_level": "String &lt;one of: BASIC, ADVANCED, ENRICHED, DEFAULT&gt;",
+    "ports": [
+        {
+            "id": 42,
+            "source_port_id": 42,
+            "type": "String &lt;one of: RECEIVE, TRANSMIT&gt;"
+        }
+    ],
+    "raw_payload": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--qni-hosts-host_id-configs-id-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_qni_intro.html" title="Use the references for REST API 19.0 qni endpoints.">qni endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

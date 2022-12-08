@@ -1,0 +1,368 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates an existing backup.">
+<meta name="keywords" content="/backup_and_restore/backups/{id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_backup_and_restore_intro.html">
+<title>POST /backup_and_restore/backups/{id}</title>
+</head>
+<body id="api-19.0--backup_and_restore-backups-id-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--backup_and_restore-backups-id-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--backup_and_restore-backups-id-POST__title__1">POST /backup_and_restore/backups/{id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--backup_and_restore-backups-id-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--backup_and_restore-backups-id-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates an existing backup.</p>
+
+<div class="section refsyn">
+
+ <strong>Note:</strong> Only the backup description field is modifiable. Any other set fields will be ignored.
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /backup_and_restore/backups/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /backup_and_restore/backups/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /backup_and_restore/backups/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /backup_and_restore/backups/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__3 "><p>id</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__8 "><p>Required. The ID of the backup to update.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /backup_and_restore/backups/{id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /backup_and_restore/backups/{id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__21" class="thbot">Parameter</th>
+
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__22" class="thbot">Data Type</th>
+
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__23" class="thbot">MIME Type</th>
+
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__24" class="thbot">Description</th>
+
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__25" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__21 "><p>backup</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__22 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__23 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__24 "><div class="p">Required. A single backup object has the following modifiable fields:
+ <ul>
+ <li><strong>description</strong> - String - An optional description of the backup.</li>
+
+ </ul>
+
+ Any other set fields will be ignored.</div>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__25 "><p>{
+  "description": "nightly_backup"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /backup_and_restore/backups/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /backup_and_restore/backups/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__31" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__32" class="thbot">Unique Code</th>
+
+<th id="api-19.0--backup_and_restore-backups-id-POST__entry__33" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__31 "><p>200</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__32 "><p></p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__33 "><p>The backup was updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__31 "><p>404</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__32 "><p>1001</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__33 "><p>The&nbsp;backup&nbsp;does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__32 "><p>1008</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__33 "><p>The 'description' parameter value must not exceed 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__31 "><p>500</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__32 "><p>1000</p>
+</td>
+
+<td headers="api-19.0--backup_and_restore-backups-id-POST__entry__33 "><p>An error occurred during the attempt to update the backup.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--backup_and_restore-backups-id-POST__title__6"><h2 class="sectiontitle" id="api-19.0--backup_and_restore-backups-id-POST__title__6">Response Description</h2>
+
+<div class="p">The updated backup object containing the following fields:
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the backup.</li>
+
+ <li><strong>configuration_id</strong> - Long - The ID of the configuration. This will always be 1. See the Backup Configuration APIs for more information:
+ <ul>
+ 		<li>api/config/backup_and_restore/scheduled_backup_configurations</li>
+
+ 		<li>api/staged_config/backup_and_restore/scheduled_backup_configurations</li>
+
+ </ul>
+</li>
+
+ <li><strong>host_id</strong> - Long - The host that corresponds with the backup. For more information, see the following Hosts API:
+ <ul>
+     <li>api/config/deployment/hosts</li>
+
+ </ul>
+</li>
+
+ <li><strong>name</strong> - String - The name of the backup.</li>
+
+ <li><strong>description</strong> - String - An optional description of the backup.</li>
+
+ <li><strong>type</strong> - Enumeration - The backup type. The following values are available: CONFIG, DATA.</li>
+
+ <li><strong>version</strong> - String - The QRadar version that corresponds to the backup.</li>
+
+ <li><strong>time_initiated</strong> - Long - The number of milliseconds since epoch when the backup was started.</li>
+
+ <li><strong>time_completed</strong> - Long - The number of milliseconds since epoch when the backup completed.</li>
+
+ <li><strong>initiated_by</strong> - String - The user or authorized service that started the backup.</li>
+
+ <li><strong>status</strong> - Enumeration - The status of the backup. The following values are available: INITIALIZING, IN_PROGRESS, FAILED, SUCCESS, CANCELLING, DELETING, MISSING.
+ <ul>
+ 		<li>INITIALIZING: The initial state of the backup when it is created. In this state a backup object is created and a request to the Backup and Restore Engine is sent.</li>
+
+ 		<li>IN_PROGRESS: When the backup request is received by the Backup and Restore Engine, the status is updated IN_PROGRESS.</li>
+
+ 		<li>FAILED: If the backup has completed with errors, the status is updated to FAILED.</li>
+
+ 		<li>SUCCESS: If the backup has completed without errors, the status is updated to SUCCESS.</li>
+
+ 		<li>CANCELLING: CANCELLING: If&nbsp;a request is sent from the API to delete a backup&nbsp;that is in progress, after the request is received by the Backup and Restore Engine, the backup status is updated to CANCELLING.</li>
+
+ 		<li>DELETING: If a request is sent to delete a backup, after the request is received by the Backup and Restore Engine the backup status is updated to DELETING. The backup record, along with the backup file, is deleted.</li>
+
+ 		<li>MISSING: If the backup file for a backup record is moved or deleted outside of the control of the Backup and Restore Engine, the status of that record is updated to MISSING.</li>
+
+ </ul>
+</li>
+
+ <li><strong>size_on_disk</strong> - Long - The size of the backup in bytes.</li>
+
+ <li><strong>content_file_path</strong> - String - The file path that corresponds to the backup contents.</li>
+
+ <li><strong>is_valid</strong> - Boolean - If the associated backup file, backup manifest and its properties are all in working order, the condition is set to 'true'; otherwise, the condition is set to 'false'.&nbsp; Some examples as to why the backup might not be valid are as follows:
+ <ul>
+ 		<li>The backup manifest is missing properties.</li>
+
+ 		<li>Unable to retrieve the backup manifest.</li>
+
+ 		<li>The backup from a non-HA standby system cannot be restored on a Console that is configured as a HA standby system.</li>
+
+ 		<li>The backup and the host product names do not match.</li>
+
+ 		<li>The backup and the host appliance names do not match.</li>
+
+ 		<li>The backup uses the current Console IP address for the non-Console managed host.</li>
+
+ </ul>
+</li>
+
+ <li><strong>is_version_compatible</strong> - Boolean - If the associated backup version is compatible with the system the condition is set to 'true'; otherwise, the condition is set to 'false'. </li>
+</ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--backup_and_restore-backups-id-POST__title__7"><h2 class="sectiontitle" id="api-19.0--backup_and_restore-backups-id-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "build_version": "String",
+    "configuration_id": 42,
+    "content_file_path": "String",
+    "description": "String",
+    "host_id": 42,
+    "id": 42,
+    "intiated_by": "String",
+    "is_valid": true,
+    "is_version_compatible": true,
+    "name": "String",
+    "size_on_disk": 42,
+    "status": "String",
+    "time_completed": 42,
+    "time_initiated": 42,
+    "type": "String",
+    "version": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--backup_and_restore-backups-id-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_backup_and_restore_intro.html" title="Use the references for REST API 19.0 backup_and_restore endpoints.">backup_and_restore endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

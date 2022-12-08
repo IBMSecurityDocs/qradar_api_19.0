@@ -1,0 +1,373 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Create a new active flow application in the staged configuration area.">
+<meta name="keywords" content="/staged_config/flow/applications/active_applications, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_staged_config_intro.html">
+<title>POST /staged_config/flow/applications/active_applications</title>
+</head>
+<body id="api-19.0--staged_config-flow-applications-active_applications-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--staged_config-flow-applications-active_applications-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--staged_config-flow-applications-active_applications-POST__title__1">POST /staged_config/flow/applications/active_applications</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--staged_config-flow-applications-active_applications-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--staged_config-flow-applications-active_applications-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Create a new active flow application in the staged configuration area.</p>
+
+<div class="section refsyn">
+<p>Create a new active flow application in the staged configuration area. The ID for custom applications should be in the 15,000 - 20,000 range.
+ 
+ Active applications are flow applications that are currently in-use by the system. Active applications that are in the staged configuration area are not yet deployed.
+ Changes or modifications to a flow application should always be made to the active applications list. Do not update the default applications.
+  
+ You must have System Administrator or Security Administrator permissions to use this endpoint.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/flow/applications/active_applications resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /staged_config/flow/applications/active_applications resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/flow/applications/active_applications request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /staged_config/flow/applications/active_applications request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/flow/applications/active_applications request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /staged_config/flow/applications/active_applications request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__15" class="thbot">Parameter</th>
+
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__16" class="thbot">Data Type</th>
+
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__17" class="thbot">MIME Type</th>
+
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__18" class="thbot">Description</th>
+
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__19" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__15 "><p>body</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__16 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__17 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__18 "><div class="p">Only id, level_one, level_two, level_three, level_four and level_five fields can be set when creating a staged active flow application. All other fields are ignored.
+ <ul>
+ <li><strong>id</strong> - Long - The unique ID for the application. </li>
+
+ <li><strong>level_one</strong> - String - The first category of the application name. </li>
+
+ <li><strong>level_two</strong> - String - The second category of the application name. </li>
+
+ <li><strong>level_three</strong> - String - The third category of the application name. </li>
+
+ <li><strong>level_four</strong> - String - The fourth category of the application name. </li>
+
+ <li><strong>level_five</strong> - String - The fifth category of the application name. </li>
+
+ </ul>
+</div>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__19 "><p>{
+    "id": 42,
+    "level_five": "String",
+    "level_four": "String",
+    "level_one": "String",
+    "level_three": "String",
+    "level_two": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/flow/applications/active_applications response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /staged_config/flow/applications/active_applications response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__25" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__26" class="thbot">Unique Code</th>
+
+<th id="api-19.0--staged_config-flow-applications-active_applications-POST__entry__27" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__25 "><p>201</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__26 "><p></p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__27 "><p>The active flow application was created in the staged configuration area.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__25 "><p>409</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__26 "><p>2010</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__27 "><p>The ID for the staged active flow application must be unique.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__26 "><p>2015</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__27 "><p>The id field is required, but was not provided.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__26 "><p>2016</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__27 "><p>The id field must be between 0 and 2147483647 inclusive.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__26 "><p>2020</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__27 "><p>The first category of the application must not be empty.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__26 "><p>2025</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__27 "><p>The first category is required, but was not provided.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__26 "><p>2030</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__27 "><p>The second category of the application must not be empty if lower level categories are populated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__26 "><p>2031</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__27 "><p>The third category of the application must not be empty if lower level categories are populated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__26 "><p>2032</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__27 "><p>The fourt category of the application must not be empty if lower level categories are populated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__26 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--staged_config-flow-applications-active_applications-POST__entry__27 "><p>An error occurred while retrieving the flow applications.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--staged_config-flow-applications-active_applications-POST__title__6"><h2 class="sectiontitle" id="api-19.0--staged_config-flow-applications-active_applications-POST__title__6">Response Description</h2>
+
+<div class="p">201 response with the new staged active flow application structure. The location header will be set to the URL of the new staged active flow application. An active flow application object contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Long - The unique ID for the application. </li>
+
+ <li><strong>name</strong> - String - The system-generated name of the application as it would appear on the Network Activity tab. The Network Activity tab displays only the first three subcategories of the application name </li>
+
+ <li><strong>level_one</strong> - String - The first category of the application name. </li>
+
+ <li><strong>level_two</strong> - String - The second category of the application name. </li>
+
+ <li><strong>level_three</strong> - String - The third category of the application name. </li>
+
+ <li><strong>level_four</strong> - String - The fourth category of the application name. </li>
+
+ <li><strong>level_five</strong> - String - The fifth category of the application name. </li>
+
+ <li><strong>last_update_time</strong> - String - The epoch timestamp, represented in milliseconds, since the application was last modified. </li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--staged_config-flow-applications-active_applications-POST__title__7"><h2 class="sectiontitle" id="api-19.0--staged_config-flow-applications-active_applications-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "id": 42,
+    "last_update_time": 42,
+    "level_five": "String",
+    "level_four": "String",
+    "level_one": "String",
+    "level_three": "String",
+    "level_two": "String",
+    "name": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--staged_config-flow-applications-active_applications-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_staged_config_intro.html" title="Use the references for REST API 19.0 staged_config endpoints.">staged_config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

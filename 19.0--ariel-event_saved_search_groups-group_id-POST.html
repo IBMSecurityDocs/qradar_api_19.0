@@ -1,0 +1,329 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates the owner of an event Ariel saved search group.">
+<meta name="keywords" content="/ariel/event_saved_search_groups/{group_id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_ariel_intro.html">
+<title>POST /ariel/event_saved_search_groups/{group_id}</title>
+</head>
+<body id="api-19.0--ariel-event_saved_search_groups-group_id-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--ariel-event_saved_search_groups-group_id-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--ariel-event_saved_search_groups-group_id-POST__title__1">POST /ariel/event_saved_search_groups/{group_id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--ariel-event_saved_search_groups-group_id-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--ariel-event_saved_search_groups-group_id-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates the owner of an event Ariel saved search group.</p>
+
+<div class="section refsyn">
+<p>Updates the owner of an event Ariel saved search group.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/event_saved_search_groups/{group_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /ariel/event_saved_search_groups/{group_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/event_saved_search_groups/{group_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /ariel/event_saved_search_groups/{group_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__3 "><p>group_id</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__8 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/event_saved_search_groups/{group_id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /ariel/event_saved_search_groups/{group_id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__21" class="thbot">Parameter</th>
+
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__22" class="thbot">Data Type</th>
+
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__23" class="thbot">MIME Type</th>
+
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__24" class="thbot">Description</th>
+
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__25" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__21 "><p>group</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__22 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__23 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__24 "><p>Required - Group object with the owner set to a valid deployed user.</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__25 "><p>{
+    "child_groups": [
+        42
+    ],
+    "child_items": [
+        "String"
+    ],
+    "description": "String",
+    "id": 42,
+    "level": 42,
+    "name": "String",
+    "owner": "String",
+    "parent_id": 42,
+    "type": "String &lt;one of: LOG_SOURCE_GROUP, REPORT_GROUP, RULE_GROUP, EVENT_SAVED_SEARCH_GROUP, FLOW_SAVED_SEARCH_GROUP, OFFENSE_SAVED_SEARCH_GROUP, QRM_SAVED_SEARCH_GROUP, MODEL_SAVED_SEARCH_GROUP, QUESTION_SAVED_SEARCH_GROUP, SIMULATION_SAVED_SEARCH_GROUP, TOPOLOGY_SAVED_SEARCH_GROUP, ASSET_SAVED_SEARCH_GROUP, VULNERABILITY_SAVED_SEARCH_GROUP&gt;"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/event_saved_search_groups/{group_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /ariel/event_saved_search_groups/{group_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__31" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__32" class="thbot">Unique Code</th>
+
+<th id="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__33" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__31 "><p>200</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__32 "><p></p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__33 "><p>The event Ariel saved search group was updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__31 "><p>404</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__32 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__33 "><p>The event Ariel saved search group does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__31 "><p>409</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__32 "><p>1004</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__33 "><p>The provided user does not have the required capabilities to own the Eevent Ariel saved search group.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__32 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__33 "><p>A request parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__31 "><p>500</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__32 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--ariel-event_saved_search_groups-group_id-POST__entry__33 "><p>An error occurred during the attempt to update the event Ariel saved search group.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--ariel-event_saved_search_groups-group_id-POST__title__6"><h2 class="sectiontitle" id="api-19.0--ariel-event_saved_search_groups-group_id-POST__title__6">Response Description</h2>
+
+<div class="p">The updated Group object. A Group object contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the group.</li>
+
+ <li><strong>parent_id</strong> - Long - The id of the parent group (default resources can have localized names).</li>
+
+ <li><strong>type</strong> - String - The type of the group.</li>
+
+ <li><strong>level</strong> - Long - The depth of the group in the group hierarchy.</li>
+
+ <li><strong>name</strong> - String - The name of the group (default resources can have localized names).</li>
+
+ <li><strong>description</strong> - String - The description of the group (default resources can have localized names).</li>
+
+ <li><strong>owner</strong> - String - The owner of the group.</li>
+
+ <li><strong>modified_time</strong> - Long - The time in milliseconds since epoch since the group was last modified.</li>
+
+ <li><strong>child_group_ids</strong> - Array of Longs - List of the child group ids.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--ariel-event_saved_search_groups-group_id-POST__title__7"><h2 class="sectiontitle" id="api-19.0--ariel-event_saved_search_groups-group_id-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "child_groups": [
+        42
+    ],
+    "child_items": [
+        "String"
+    ],
+    "description": "String",
+    "id": 42,
+    "level": 42,
+    "modified_time": 42,
+    "name": "String",
+    "owner": "String",
+    "parent_id": 42,
+    "type": "String &lt;one of: LOG_SOURCE_GROUP, REPORT_GROUP, RULE_GROUP, EVENT_SAVED_SEARCH_GROUP, FLOW_SAVED_SEARCH_GROUP, OFFENSE_SAVED_SEARCH_GROUP, QRM_SAVED_SEARCH_GROUP, MODEL_SAVED_SEARCH_GROUP, QUESTION_SAVED_SEARCH_GROUP, SIMULATION_SAVED_SEARCH_GROUP, TOPOLOGY_SAVED_SEARCH_GROUP, ASSET_SAVED_SEARCH_GROUP, VULNERABILITY_SAVED_SEARCH_GROUP&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--ariel-event_saved_search_groups-group_id-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_ariel_intro.html" title="Use the references for REST API 19.0 ariel endpoints.">ariel endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

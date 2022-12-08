@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Use the references for REST API 19.0 qvm endpoints.">
+
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>qvm endpoints</title>
+</head>
+<body id="c_rest_api_version190_qvm_intro"><main role="main"><article role="article" aria-labelledby="c_rest_api_version190_qvm_intro__title__1">
+<h1 class="topictitle1" id="c_rest_api_version190_qvm_intro__title__1">qvm endpoints</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/c_rest_api_version190_qvm_intro.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2Fc_rest_api_version190_qvm_intro.dita">Edit online</a></span></div>
+
+
+<div class="body conbody"><p class="shortdesc">Use the references for REST API 19.0 qvm endpoints.</p>
+<p></p>
+</div>
+
+<aside role="complementary" aria-labelledby="c_rest_api_version190_qvm_intro__title__1"><nav role="navigation">
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="19.0--qvm-assets-GET.html">GET /qvm/assets</a></strong><br>
+List the assets with discovered vulnerabilities present in the asset model.  The response will contain all available RESTful resources</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-filters-GET.html">GET /qvm/filters</a></strong><br>
+Get a list of the allowable filters that can be used or applied against the: </li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-network-GET.html">GET /qvm/network</a></strong><br>
+List the networks present in the asset model with vulnerabilities present.  The response will contain all available RESTful resources</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-openservices-GET.html">GET /qvm/openservices</a></strong><br>
+List the openservices present in the asset model with vulnerabilities present.  The response will contain all available RESTful resources</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_search_groups-GET.html">GET /qvm/saved_search_groups</a></strong><br>
+Retrieves a list of vulnerability saved search groups.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_search_groups-group_id-DELETE.html">DELETE /qvm/saved_search_groups/{group_id}</a></strong><br>
+Deletes a vulnerability saved search group.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_search_groups-group_id-GET.html">GET /qvm/saved_search_groups/{group_id}</a></strong><br>
+Retrieves a vulnerability saved search group.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_search_groups-group_id-POST.html">POST /qvm/saved_search_groups/{group_id}</a></strong><br>
+Updates the owner of an vulnerability saved search group.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_searches-GET.html">GET /qvm/saved_searches</a></strong><br>
+Retrieves a list of  vulnerability instance saved searches.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_searches-saved_search_id-DELETE.html">DELETE /qvm/saved_searches/{saved_search_id}</a></strong><br>
+Deletes a vulnerability saved search.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_searches-saved_search_id-GET.html">GET /qvm/saved_searches/{saved_search_id}</a></strong><br>
+Retrieves a vulnerability instance saved search.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_searches-saved_search_id-POST.html">POST /qvm/saved_searches/{saved_search_id}</a></strong><br>
+Updates the vulnerability saved search owner only.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_searches-saved_search_id-vuln_instances-GET.html">GET /qvm/saved_searches/{saved_search_id}/vuln_instances</a></strong><br>
+Creates the Vulnerability Instances search. This search will return a maximum of 100,000 results.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_searches-vuln_instances-task_id-results-assets-GET.html">GET /qvm/saved_searches/vuln_instances/{task_id}/results/assets</a></strong><br>
+Lists the Vulnerability Instances assets that are returned from the vulnerability instance saved search.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_searches-vuln_instances-task_id-results-vuln_instances-GET.html">GET /qvm/saved_searches/vuln_instances/{task_id}/results/vuln_instances</a></strong><br>
+Lists the Vulnerability Instances returned from a vulnerability instance saved search.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_searches-vuln_instances-task_id-results-vulnerabilities-GET.html">GET /qvm/saved_searches/vuln_instances/{task_id}/results/vulnerabilities</a></strong><br>
+List the Vulnerability Instances vulnerabilities returned from the saved search.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_searches-vuln_instances-task_id-status-GET.html">GET /qvm/saved_searches/vuln_instances/{task_id}/status</a></strong><br>
+Retrieves the current status of a vulnerability instance search that was initiated.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-saved_searches-vuln_instances-task_id-status-POST.html">POST /qvm/saved_searches/vuln_instances/{task_id}/status</a></strong><br>
+Updates the status of a vulnerability instance saved search.</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-tickets-assign-POST.html">POST /qvm/tickets/assign</a></strong><br>
+Update the remediation ticket for the assigned vulnerability</li>
+<li class="ulchildlink"><strong><a href="19.0--qvm-vulns-GET.html">GET /qvm/vulns</a></strong><br>
+List the Vulnerabilities present in the asset model.  The response will contain all available RESTful resources</li>
+</ul>
+</nav></aside></article></main></body></html>

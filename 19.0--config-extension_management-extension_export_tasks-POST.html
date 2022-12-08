@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Exports an extension.">
+<meta name="keywords" content="/config/extension_management/extension_export_tasks, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>POST /config/extension_management/extension_export_tasks</title>
+</head>
+<body id="api-19.0--config-extension_management-extension_export_tasks-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--config-extension_management-extension_export_tasks-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--config-extension_management-extension_export_tasks-POST__title__1">POST /config/extension_management/extension_export_tasks</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-extension_management-extension_export_tasks-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-extension_management-extension_export_tasks-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Exports an extension.</p>
+
+<div class="section refsyn">
+<p>Exports an extension.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/extension_management/extension_export_tasks resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/extension_management/extension_export_tasks resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/extension_management/extension_export_tasks request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/extension_management/extension_export_tasks request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/extension_management/extension_export_tasks request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/extension_management/extension_export_tasks request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__15" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__16" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__17" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__18" class="thbot">Description</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__19" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__15 "><p>configData</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__16 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__17 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__18 "><p>Required - the configuration of the export.</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__19 "><p>{
+    "export_contents": [
+        {
+            "content_item_ids": [
+                "String"
+            ],
+            "content_type": "String &lt;one of: LOG_SOURCE_TYPES, LOG_SOURCES, CUSTOM_PROPERTIES, REGEX_EXPRESSIONS, LEEF_EXPRESSIONS, CEF_EXPRESSIONS, JSON_EXPRESSIONS, GENERIC_LIST_EXPRESSIONS, NAME_VALUE_PAIR_EXPRESSIONS, XML_EXPRESSIONS, AQL_EXPRESSIONS, CALCULATED_EXPRESSIONS, AQL_PROPERTIES, CALCULATED_PROPERTIES, LOG_SOURCE_EXTENSIONS, QID_RECORDS, CUSTOM_RULES, REFERENCE_DATA, FGROUPS, SAVED_EVENT_FLOW_SEARCHES, REPORTS, INSTALLED_APPLICATIONS, CUSTOM_ACTIONS, CUSTOM_FUNCTIONS, TAGGED_FIELDS&gt;",
+            "filters": [
+                {
+                    "column": "String",
+                    "filter_name": "String &lt;one of: CUSTOM, NONDELETED, NONCUSTOM&gt;",
+                    "operator": "String &lt;one of: LIKE, ILIKE, EQUAL, NOT_EQUAL, GREATER, LOWER, IN, NOT_IN, REGEX&gt;",
+                    "values": [
+                        "String"
+                    ]
+                }
+            ],
+            "related_content": [
+                {
+                    "content_type": "String &lt;one of: LOG_SOURCES, CUSTOM_PROPERTIES, REGEX_EXPRESSIONS, LEEF_EXPRESSIONS, CEF_EXPRESSIONS, JSON_EXPRESSIONS, GENERIC_LIST_EXPRESSIONS, NAME_VALUE_PAIR_EXPRESSIONS, XML_EXPRESSIONS, AQL_EXPRESSIONS, CALCULATED_EXPRESSIONS, AQL_PROPERTIES, CALCULATED_PROPERTIES, DSM_EVENT_MAPPINGS, LOG_SOURCE_EXTENSIONS, QID_RECORDS, REFERENCE_DATA_KEYS_AND_ELEMENTS, FGROUP_LINKS, CUSTOM_ACTION_PARAMETERS&gt;",
+                    "filters": [
+                        {
+                            "column": "String",
+                            "filter_name": "String &lt;one of: CUSTOM, NONDELETED, NONCUSTOM&gt;",
+                            "operator": "String &lt;one of: LIKE, ILIKE, EQUAL, NOT_EQUAL, GREATER, LOWER, IN, NOT_IN, REGEX&gt;",
+                            "values": [
+                                "String"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "manifest": {
+        "author": "String",
+        "description": "String",
+        "id": "String",
+        "min_qradar_version": "String",
+        "name": "String",
+        "support_contact": "String",
+        "version": "String"
+    }
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/extension_management/extension_export_tasks response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/extension_management/extension_export_tasks response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__25" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__26" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-POST__entry__27" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__25 "><p>201</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__26 "><p></p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__27 "><p>The requested export task has been started.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__26 "><p>1021</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__27 "><p>The export configuration is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__26 "><p>1022</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__27 "><p>The related_content is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__26 "><p>1023</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__27 "><p>The content_item_ids is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__26 "><p>1024</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__27 "><p>The manifest is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__26 "><p>1025</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__27 "><p>The parameter is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__26 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-POST__entry__27 "><p>An error has occurred while trying to export the extension.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-extension_management-extension_export_tasks-POST__title__6"><h2 class="sectiontitle" id="api-19.0--config-extension_management-extension_export_tasks-POST__title__6">Response Description</h2>
+
+<div class="p">A JSON string depicting the accepted task for exporting an extension:
+  <ul>
+   <li><strong>task_id</strong> - Number - id of the task status.</li>
+
+   <li><strong>message</strong> - String - description of the accepted task.</li>
+
+      <li><strong>status_location</strong> - String - the url of the task status.</li>
+
+  </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-extension_management-extension_export_tasks-POST__title__7"><h2 class="sectiontitle" id="api-19.0--config-extension_management-extension_export_tasks-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+ "task_id": 25,
+ "message": "Installing an extension"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-extension_management-extension_export_tasks-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

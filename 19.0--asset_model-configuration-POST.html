@@ -1,0 +1,706 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Update asset configuration fields.">
+<meta name="keywords" content="/asset_model/configuration, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_asset_model_intro.html">
+<title>POST /asset_model/configuration</title>
+</head>
+<body id="api-19.0--asset_model-configuration-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--asset_model-configuration-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--asset_model-configuration-POST__title__1">POST /asset_model/configuration</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--asset_model-configuration-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--asset_model-configuration-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Update asset configuration fields. </p>
+
+<div class="section refsyn">
+<div class="note warning"><span class="warningtitle">Warning:</span> Tuning these configuration settings can be dangerous; modifying the wrong
+variable or executing the wrong query can lead to erratic system behavior and/or destabilization,
+errors in the log and ultimately data loss. PLEASE BE CAREFUL when reconfiguring these values and
+make sure you are confident with what you are doing BEFORE making changes.</div>
+
+<p>Sets asset configuration settings to the values provided if they are within the valid range for
+each configuration setting.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /asset_model/configuration resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /asset_model/configuration resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--asset_model-configuration-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /asset_model/configuration request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /asset_model/configuration request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--asset_model-configuration-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--asset_model-configuration-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--asset_model-configuration-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--asset_model-configuration-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--asset_model-configuration-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--asset_model-configuration-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /asset_model/configuration request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /asset_model/configuration request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--asset_model-configuration-POST__entry__15" class="thbot">Parameter</th>
+
+<th id="api-19.0--asset_model-configuration-POST__entry__16" class="thbot">Data Type</th>
+
+<th id="api-19.0--asset_model-configuration-POST__entry__17" class="thbot">MIME Type</th>
+
+<th id="api-19.0--asset_model-configuration-POST__entry__18" class="thbot">Description</th>
+
+<th id="api-19.0--asset_model-configuration-POST__entry__19" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__15 "><p>AssetConfiguration</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__16 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__17 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__18 "><p>null</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__19 "><p>{
+    "asset_identity_coalescing": 42,
+    "cleanup_policy": "String &lt;one of: COMPONENT, ENTIRE_ASSET&gt;",
+    "client_application_profiling_enabled": true,
+    "coalesce_ownership_changes": true,
+    "dns_lookups_for_host_identity_enabled": true,
+    "identity_profiling_enabled": true,
+    "ip_reconciliation_blacklist_enabled": true,
+    "maximum_asset_cleanup_batch_size": 42,
+    "maximum_grey_list_port_per_asset": 42,
+    "maximum_ip_address_per_asset": 42,
+    "maximum_mac_address_per_asset": 42,
+    "netbios_lookups_for_host_identity_enabled": true,
+    "open_port_profiling_enabled": true,
+    "profiler_audit_event_maximum": 42,
+    "realtime_dns_enabled": true,
+    "retain_assets_with_vulnerabilties": true,
+    "system_retention": {
+        "client_application": 42,
+        "hostname": 42,
+        "interfaces": 42,
+        "ip": 42,
+        "netbios": 42,
+        "port": 42,
+        "product": 42,
+        "property": 42,
+        "users": 42
+    },
+    "unified_name_preference": "String &lt;one of: NETBIOS, DNS&gt;",
+    "user_retention": {
+        "hostname": 42,
+        "interfaces": 42,
+        "ip": 42,
+        "product": 42,
+        "property": 42
+    }
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /asset_model/configuration response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /asset_model/configuration response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--asset_model-configuration-POST__entry__25" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--asset_model-configuration-POST__entry__26" class="thbot">Unique Code</th>
+
+<th id="api-19.0--asset_model-configuration-POST__entry__27" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>200</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p></p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>Asset configuration was updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2007</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to profiler_audit_event_maximum field. The value should be positive integer and less than 1000000000000.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2008</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to maximum_ip_address_per_asset field. The value should be positive integer and less than 1000000000000.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2009</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to maximum_mac_address_per_asset field. The value should be positive integer and less than 1000000000000.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2010</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to maximum_grey_list_port_per_asset field. The value should be positive integer and less than 1000000000000.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2011</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to asset_identity_coalescing field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2012</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.system.interfaces field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2013</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.system.hostname field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2014</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.system.ip field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2015</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.system.property field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2016</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.system.product field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2017</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.system.port field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2018</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.system.netbios field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2019</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.system.client_application field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2020</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.system.users field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2021</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.user.interfaces field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2022</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.user.hostname field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2023</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.user.ip field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2024</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.user.property field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2025</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to retention.user.product field. The value should be positive integer and less than 1000000000000 or null to retain data forever.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2026</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An invalid value is attempting to assign to maximum_asset_cleanup_batch_size. The value should be positive integer and less than 1000000000000.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2001</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An error occurred while attempting to assign a value to a variable.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2002</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An error occurred while attempting to assign a value. The value was found to be outside the allowable range.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2003</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An error occurred while interacting with the database.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2004</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An error occurred while attempting to assign a value to a variable. The expected data type did not match the received type.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2005</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An error occurred while attempting to retrieve a configuration setting. Invalid setting provided.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--asset_model-configuration-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__26 "><p>2006</p>
+</td>
+
+<td headers="api-19.0--asset_model-configuration-POST__entry__27 "><p>An error occurred while attempting to assign a value to a variable. The provided value of null cannot be assigned to this configuration option.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--asset_model-configuration-POST__title__6"><h2 class="sectiontitle" id="api-19.0--asset_model-configuration-POST__title__6">Response Description</h2>
+
+<div class="p">An updated AssetConfigDTO object.  An AssetConfigDTO object contains the following fields:
+ <ul>
+  <li><strong>realtime_dns_enabled</strong> - Boolean - Enables/disables Real-Time DNS Lookups for Asset Profiles.</li>
+
+  <li><strong>profiler_audit_event_maximum</strong> - Long - Specifies the number of audit events per minute that are allowed to be generated by the asset profiler. Increasing the threshold increases audit throughput, but negatively impacts the system events per minute limit. </li>
+
+  <li><strong>maximum_ip_address_per_asset</strong> - Long - Specifies the number of IPs allowed in a single asset profile before the asset profiler treats the asset as a 'vortex asset'.</li>
+
+  <li><strong>maximum_mac_address_per_asset</strong> - Long - Specifies the number of MACs and empty interfaces allowed in a single asset profile before the asset profiler treats an asset as a 'vortex asset'.</li>
+
+  <li><strong>unified_name_preference</strong> - Enum - When determining the unified name, whether the NetBIOS Name or DNS Name is preferred. There are 2 possible values for this configuration variable: If NetBIOS is selected, NetBIOS is preferred over DNS . The order is [ Given Name, NetBIOS Name, DNS Name, IP Address ]. If DNS is selected, DNS is preferred over NetBIOS . The order is [ Given Name, DNS Name, NetBIOS Name, IP Address ].</li>
+
+  <li><strong>ip_reconciliation_blacklist_enabled</strong> - Boolean - Specifies whether the asset profiler should leverage the 'reconciliation blacklists'. When true, this setting compares incoming updates to the blacklists and excludes those that match. A 'blacklist' is a Reference Set that is populated by a suite of CRE rules which track asset data over time for identity information found to be associated with 3 or more other pieces of specific asset properties in a 2 hour (or less) time window. </li>
+
+  <li><strong>maximum_grey_list_port_per_asset</strong> - Long - Specifies the maximum number of 'grey list' ports that a single asset can have.  When an asset has hit the limit, no more new grey list ports are created for that asset, although new white list ports will still be created. Generally, a grey list port is a port that appears to be an open port but does not fall within the range of well-known service ports, also known as the 'white list'.</li>
+
+  <li><strong>dns_lookups_for_host_identity_enabled</strong> - Boolean - Enables/disables DNS Lookups for host identity.</li>
+
+  <li><strong>netbios_lookups_for_host_identity_enabled</strong> - Boolean - Enables/disables NetBIOS lookups for host identity.</li>
+
+  <li><strong>identity_profiling_enabled</strong> - Boolean - Enables/disables identity profiling in the host profiler. Identity profiling is the act of gleaning identity from flows, where said flows are suspected of containing DNS or DHCP identity information.</li>
+
+  <li><strong>client_application_profiling_enabled</strong> - Boolean - Enables/disables client application profiling in the host profiler. This setting should be turned off, in the case the client applications in the asset model are becoming too heavy.</li>
+
+  <li><strong>open_port_profiling_enabled</strong> - Boolean - Enables/disables profiling open ports for a particular asset IP in the host profiler. This variable specifies whether the host profiler should perform the traditional job of profiling open ports for a particular IP.</li>
+
+  <li><strong>asset_identity_coalescing</strong> - Long - Specifies the duration, in milliseconds, of an asset update coalescing window. This setting duplicate updates to asset identity received within the selected time interval will be merged. </li>
+
+  <li><strong>coalesce_ownership_changes</strong> - Boolean - Enables/disables asset update coalescing when asset ownership is modified. Disable if there are custom rules that utilize asset data to ensure that duplicate updates reporting identity data transitioning from one asset to another are processed.</li>
+
+  <li><strong>cleanup_policy</strong> - Enum - This setting retains all expired asset data until everything belonging to that asset has exceeded its threshold. To clean up asset data only when all of that asset's components have expired, set to "ENTIRE_ASSET". To clean up asset data individually as each component expires, set to "COMPONENT".</li>
+
+  <li><strong>maximum_asset_cleanup_batch_size</strong> - Long - Specifies the size (in assets) of a logical transaction in which a batch of assets are 'cleaned'. This value is configurable as a safeguard against transactions that might otherwise exceed the maximum time allowed by DB connection pool. Generally, if the asset cleanup agent is not suffering connection pool problems, you do not need to change this config value.</li>
+
+  <li><strong>retain_assets_with_vulnerabilties</strong> - Boolean - Allows/disallows the cleanup agent to permanently delete expired assets that still have vulnerabilities.</li>
+
+  <li><strong>system_retention</strong> - Object - Specifies the retention period, in milliseconds, for an
+asset discovered by identity (events), the host profiler (flows) or a scanner.<ul>
+<li><strong>interfaces</strong> - Long - Specifies the retention period, in milliseconds,for asset interfaces
+(MAC Addresses). This will be truncated from milliseconds into the number of days. To retain data
+forever, set to null. </li>
+
+<li><strong>hostname</strong> - Long - Specifies the retention period, in milliseconds, for asset DNS and
+NetBIOS hostnames . This will be truncated from milliseconds into the number of days. To retain data
+forever, set to null.</li>
+
+<li><strong>property</strong> - Long - Specifies the retention period, in milliseconds, for: Unified Name,
+Detection Confidence (legacy), Wireless AP, Wireless SSID, Switch ID, Switch Port ID, Extended, Old
+Cvss Risk (legacy), VLAN, Asset Type. This will be truncated from milliseconds into the number of
+days. To retain data forever, set to null.</li>
+
+<li><strong>product</strong> - Long - Represents the retention period, in milliseconds, for scanned asset
+products, including operating systems, windows applications and 3rd party products bound to open
+ports. This will be truncated from milliseconds into the number of days. To retain data forever, set
+to null.</li>
+
+<li><strong>ip</strong> - Long - Specifies the retention period, in milliseconds, for asset IP Addresses (IPv4
+and IPv6). This will be truncated from milliseconds into the number of days. To retain data forever,
+set to null.</li>
+
+<li><strong>port</strong> - Long - Specifies the retention period, in milliseconds, for asset ports. This will
+be truncated from milliseconds into the number of days. To retain data forever, set to null.</li>
+
+<li><strong>netbios</strong> - Long - Specifies the retention period, in milliseconds, for NetBIOS groups
+associated with the asset. This will be truncated from milliseconds into the number of days. To
+retain data forever, set to null.</li>
+
+<li><strong>client_application</strong> - Long - Specifies the retention period, in milliseconds, of asset
+client applications. This will be truncated from milliseconds into the number of days. To retain
+data forever, set to null.</li>
+
+<li><strong>users</strong> - Long - Specifies the retention period, in milliseconds, for asset users. This
+will be truncated from milliseconds into the number of days. To retain data forever, set to
+null.</li>
+
+</ul>
+</li>
+
+  <li><strong>user_retention</strong> - Object - Specifies the retention period, in milliseconds, for an asset
+added manually by users.<ul>
+<li><strong>interfaces</strong> - Long - Specifies the retention period, in milliseconds,for asset interfaces
+(MAC Addresses). This will be truncated from milliseconds into the number of days. To retain data
+forever, set to null. </li>
+
+<li><strong>hostname</strong> - Long - Specifies the retention period, in milliseconds, for asset DNS and
+NetBIOS hostnames . This will be truncated from milliseconds into the number of days. To retain data
+forever, set to null.</li>
+
+<li><strong>property</strong> - Long - Specifies the retention period, in milliseconds, for: Unified Name,
+Detection Confidence (legacy), Wireless AP, Wireless SSID, Switch ID, Switch Port ID, Extended, Old
+Cvss Risk (legacy), VLAN, Asset Type. This will be truncated from milliseconds into the number of
+days. To retain data forever, set to null.</li>
+
+<li><strong>product</strong> - Long - Represents the retention period, in milliseconds, for scanned asset
+products, including operating systems, windows applications and 3rd party products bound to open
+ports. This will be truncated from milliseconds into the number of days. To retain data forever, set
+to null.</li>
+
+<li><strong>ip</strong> - Long - Specifies the retention period, in milliseconds, for asset IP Addresses (IPv4
+and IPv6). This will be truncated from milliseconds into the number of days. To retain data forever,
+set to null.</li>
+
+</ul>
+</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--asset_model-configuration-POST__title__7"><h2 class="sectiontitle" id="api-19.0--asset_model-configuration-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "asset_identity_coalescing": 42,
+    "cleanup_policy": "String &lt;one of: COMPONENT, ENTIRE_ASSET&gt;",
+    "client_application_profiling_enabled": true,
+    "coalesce_ownership_changes": true,
+    "dns_lookups_for_host_identity_enabled": true,
+    "identity_profiling_enabled": true,
+    "ip_reconciliation_blacklist_enabled": true,
+    "maximum_asset_cleanup_batch_size": 42,
+    "maximum_grey_list_port_per_asset": 42,
+    "maximum_ip_address_per_asset": 42,
+    "maximum_mac_address_per_asset": 42,
+    "netbios_lookups_for_host_identity_enabled": true,
+    "open_port_profiling_enabled": true,
+    "profiler_audit_event_maximum": 42,
+    "realtime_dns_enabled": true,
+    "retain_assets_with_vulnerabilties": true,
+    "system_retention": {
+        "client_application": 42,
+        "hostname": 42,
+        "interfaces": 42,
+        "ip": 42,
+        "netbios": 42,
+        "port": 42,
+        "product": 42,
+        "property": 42,
+        "users": 42
+    },
+    "unified_name_preference": "String &lt;one of: NETBIOS, DNS&gt;",
+    "user_retention": {
+        "hostname": 42,
+        "interfaces": 42,
+        "ip": 42,
+        "product": 42,
+        "property": 42
+    }
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--asset_model-configuration-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_asset_model_intro.html" title="Use the references for REST API 19.0 asset_model endpoints.">asset_model endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

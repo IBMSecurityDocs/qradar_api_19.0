@@ -1,0 +1,638 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a new application instance.">
+<meta name="keywords" content="/gui_app_framework/applications, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_gui_app_framework_intro.html">
+<title>POST /gui_app_framework/applications</title>
+</head>
+<body id="api-19.0--gui_app_framework-applications-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--gui_app_framework-applications-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--gui_app_framework-applications-POST__title__1">POST /gui_app_framework/applications</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--gui_app_framework-applications-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--gui_app_framework-applications-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a new application instance.</p>
+
+<div class="section refsyn">
+<p>Initiates the creation of a new application instance within the Application framework.</p>
+
+ <p>
+ The returned identifier should be used in subsequent API calls for that application instance.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /gui_app_framework/applications resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /gui_app_framework/applications resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--gui_app_framework-applications-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /gui_app_framework/applications request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /gui_app_framework/applications request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--gui_app_framework-applications-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--gui_app_framework-applications-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--gui_app_framework-applications-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--gui_app_framework-applications-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--gui_app_framework-applications-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--gui_app_framework-applications-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__3 "><p>application_definition_id</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__8 "><p>The application definition ID to associate with the application instance.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__3 "><p>memory</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__8 "><p>The amount of memory (MB) to allocate to the application instance.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__3 "><p>security_profile_id</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__8 "><p>The security profile ID to associate with the application instance</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__3 "><p>force_multitenancy_safe</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__6 "><p>Boolean</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__8 "><p>If provided, this will change the multitenancy flag on the instance definition.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /gui_app_framework/applications response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /gui_app_framework/applications response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--gui_app_framework-applications-POST__entry__39" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--gui_app_framework-applications-POST__entry__40" class="thbot">Unique Code</th>
+
+<th id="api-19.0--gui_app_framework-applications-POST__entry__41" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>201</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p></p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>The creation of the application instance was successful.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>404</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>33900</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>The application definition ID does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>409</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>33000</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>The current state of the application does not allow the requested action.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>409</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>33700</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>The application framework is currently disabled.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>409</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>33701</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>The supplied application definition ID only allows a single application instance.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>409</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>33705</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>The requested action is not allowed for the application instance host type.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>422</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>33302</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>The application requested more memory than is currently available.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>422</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>33403</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>The application image supplied is not supported.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>422</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>33650</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>The supplied security profile does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>422</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>33652</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>There is already an instance with the supplied security profile with the same app definition.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>422</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>33653</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>To be able to set the security profile of an app to be something other than null, or an admin profile, the app must be flagged as multi-tenancy safe and must support multiple instances</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>422</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>33704</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>The application is not supported on this QRadar release.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>422</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>33706</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>The requested memory is less than the minimum memory specified by the application definition.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__39 "><p>500</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__40 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--gui_app_framework-applications-POST__entry__41 "><p>The request could not be completed.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--gui_app_framework-applications-POST__title__5"><h2 class="sectiontitle" id="api-19.0--gui_app_framework-applications-POST__title__5">Response Description</h2>
+
+<p>Application details, see GET /applications/{application_id}.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--gui_app_framework-applications-POST__title__6"><h2 class="sectiontitle" id="api-19.0--gui_app_framework-applications-POST__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "application_definition_id": 42,
+    "application_state": {
+        "application_id": "String",
+        "error_messages": "String",
+        "error_messages_json": [
+            {
+                "code": "String",
+                "message": "String",
+                "source": "String"
+            }
+        ],
+        "memory": 42,
+        "status": "String &lt;one of: CREATING, UPGRADING, STARTING, RUNNING, STOPPING, STOPPED, DELETING, ERROR, UNKNOWN&gt;"
+    },
+    "auth_client_user_id": 42,
+    "image": "String",
+    "installed_by": "String",
+    "installed_on": 42,
+    "managed_host_id": 42,
+    "manifest": {
+        "areas": [
+            {
+                "description": "String",
+                "id": "String",
+                "named_service": "String",
+                "required_capabilities": [
+                    "String"
+                ],
+                "text": "String",
+                "url": "String"
+            }
+        ],
+        "authentication": {
+            "oauth2": {
+                "authorization_flow": "String",
+                "requested_capabilities": [
+                    "String"
+                ]
+            }
+        },
+        "configuration_pages": [
+            {
+                "description": "String",
+                "icon": "String",
+                "location": "String",
+                "named_service": "String",
+                "required_capabilities": [
+                    "String"
+                ],
+                "text": "String",
+                "url": "String"
+            }
+        ],
+        "console_ip": "String",
+        "custom_columns": [
+            {
+                "label": "String",
+                "named_service": "String",
+                "page_id": "String",
+                "required_capabilities": [
+                    "String"
+                ],
+                "rest_endpoint": "String"
+            }
+        ],
+        "dashboard_items": [
+            {
+                "description": "String",
+                "required_capabilities": [
+                    "String"
+                ],
+                "rest_method": "String",
+                "text": "String"
+            }
+        ],
+        "dependencies": {
+            "pip_directory": "String",
+            "rpms_directory": "String"
+        },
+        "description": "String",
+        "environment_variables": [
+            {
+                "name": "String",
+                "value": "String"
+            }
+        ],
+        "fragments": [
+            {
+                "app_name": "String",
+                "location": "String",
+                "named_service": "String",
+                "page_id": "String",
+                "required_capabilities": [
+                    "String"
+                ],
+                "rest_endpoint": "String"
+            }
+        ],
+        "gui_actions": [
+            {
+                "description": "String",
+                "groups": [
+                    "String"
+                ],
+                "icon": "String",
+                "id": "String",
+                "javascript": "String",
+                "named_service": "String",
+                "required_capabilities": [
+                    "String"
+                ],
+                "rest_method": "String",
+                "text": "String"
+            }
+        ],
+        "image": "String",
+        "load_flask": "String",
+        "log_level": "String",
+        "metadata_providers": [
+            {
+                "metadata_type": "String",
+                "rest_method": "String"
+            }
+        ],
+        "multitenancy_safe": "String",
+        "name": "String",
+        "page_scripts": [
+            {
+                "app_name": "String",
+                "named_service": "String",
+                "page_id": "String",
+                "scripts": [
+                    "String"
+                ]
+            }
+        ],
+        "resource_bundles": [
+            {
+                "bundle": "String",
+                "locale": "String"
+            }
+        ],
+        "resources": {
+            "memory": 42
+        },
+        "rest_methods": [
+            {
+                "argument_names": [
+                    "String"
+                ],
+                "method": "String &lt;one of: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH&gt;",
+                "name": "String",
+                "named_service": "String",
+                "required_capabilities": [
+                    "String"
+                ],
+                "url": "String"
+            }
+        ],
+        "services": [
+            {
+                "autorestart": "String",
+                "autostart": "String",
+                "command": "String",
+                "directory": "String",
+                "endpoints": [
+                    {
+                        "error_mime_type": "String",
+                        "http_method": "String",
+                        "name": "String",
+                        "parameters": [
+                            {
+                                "definition": "String",
+                                "location": "String",
+                                "name": "String"
+                            }
+                        ],
+                        "path": "String",
+                        "request_mime_type": "String",
+                        "response": {
+                            "mime_type": "String"
+                        }
+                    }
+                ],
+                "environment": "String",
+                "exitcodes": "String",
+                "name": "String",
+                "numprocs": 42,
+                "port": 42,
+                "priority": 42,
+                "process_name": "String",
+                "redirect_stderr": "String",
+                "serverurl": "String",
+                "startretries": 42,
+                "startsecs": 42,
+                "stderr_capture_maxbytes": "String",
+                "stderr_events_enabled": "String",
+                "stderr_logfile": "String",
+                "stderr_logfile_backups": 42,
+                "stderr_logfile_maxbytes": "String",
+                "stdout_capture_maxbytes": "String",
+                "stdout_events_enabled": "String",
+                "stdout_logfile": "String",
+                "stdout_logfile_backups": 42,
+                "stdout_logfile_maxbyte": "String",
+                "stopsignal": "String",
+                "stopwaitsecs": 42,
+                "umask": "String",
+                "user": "String",
+                "uuid": "String",
+                "version": "String"
+            }
+        ],
+        "single_instance_only": "String",
+        "uninstall_hooks": [
+            {
+                "description": "String",
+                "documentation_url": "String",
+                "last_instance_only": "String",
+                "rest_method": "String"
+            }
+        ],
+        "uuid": "String",
+        "version": "String"
+    },
+    "security_profile_id": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--gui_app_framework-applications-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_gui_app_framework_intro.html" title="Use the references for REST API 19.0 gui_app_framework endpoints.">gui_app_framework endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

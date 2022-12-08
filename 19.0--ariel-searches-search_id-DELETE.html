@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Deletes an Ariel search.">
+<meta name="keywords" content="/ariel/searches/{search_id}, DELETE, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_ariel_intro.html">
+<title>DELETE /ariel/searches/{search_id}</title>
+</head>
+<body id="api-19.0--ariel-searches-search_id-DELETE"><main role="main"><article role="article" aria-labelledby="api-19.0--ariel-searches-search_id-DELETE__title__1">
+<h1 class="topictitle1" id="api-19.0--ariel-searches-search_id-DELETE__title__1">DELETE /ariel/searches/{search_id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--ariel-searches-search_id-DELETE.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--ariel-searches-search_id-DELETE.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Deletes an Ariel search.</p>
+
+<div class="section refsyn">
+<p>Deletes an Ariel search.  This discards any results that were collected and stops the search if it is in progress. This search is deleted regardless of whether the results were saved.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /ariel/searches/{search_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. DELETE /ariel/searches/{search_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-searches-search_id-DELETE__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /ariel/searches/{search_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. DELETE /ariel/searches/{search_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-searches-search_id-DELETE__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--ariel-searches-search_id-DELETE__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--ariel-searches-search_id-DELETE__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--ariel-searches-search_id-DELETE__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--ariel-searches-search_id-DELETE__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--ariel-searches-search_id-DELETE__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__3 "><p>search_id</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__8 "><p>Required - The search ID of the search to delete.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /ariel/searches/{search_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. DELETE /ariel/searches/{search_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-searches-search_id-DELETE__entry__15" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--ariel-searches-search_id-DELETE__entry__16" class="thbot">Unique Code</th>
+
+<th id="api-19.0--ariel-searches-search_id-DELETE__entry__17" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__15 "><p>202</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__16 "><p></p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__17 "><p>The delete request has been accepted.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__15 "><p>404</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__16 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__17 "><p>The search does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__15 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__16 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__17 "><p>A request parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__15 "><p>500</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__16 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__17 "><p>An error occurred during the attempt to delete the search.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__15 "><p>503</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__16 "><p>1010</p>
+</td>
+
+<td headers="api-19.0--ariel-searches-search_id-DELETE__entry__17 "><p>The ariel server might be temporarily unavailable or offline. Please try again later.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--ariel-searches-search_id-DELETE__title__5"><h2 class="sectiontitle" id="api-19.0--ariel-searches-search_id-DELETE__title__5">Response Description</h2>
+
+<p>Information about the deleted search.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--ariel-searches-search_id-DELETE__title__6"><h2 class="sectiontitle" id="api-19.0--ariel-searches-search_id-DELETE__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+  "cursor_id": "s16",
+  "compressed_data_file_count": 0,
+  "compressed_data_total_size": 0,
+  "data_file_count": 5470,
+  "data_total_size": 67183115,
+  "index_file_count": 0,
+  "index_total_size": 0,
+  "processed_record_count": 1256462,
+  "error_messages": [
+    {
+      "code": "String",
+      "contexts": [
+        "String"
+      ],
+      "message": "String",
+      "severity": "String &lt;one of: INFO, WARN, ERROR&gt;"
+    }
+  ],
+  "desired_retention_time_msec": 86400000,
+  "progress": 46,
+  "progress_details": [
+    0,
+    0,
+    0,
+    0,
+    66957,
+    652657,
+    76594,
+    89809,
+    86032,
+    107729
+  ],
+  "query_execution_time": 1480,
+  "query_string": "SELECT sourceip, starttime, qid, sourceport  from events into s16 where sourceip in (select destinationip from events) parameters snapshotsize=2, PROGRESSDETAILSRESOLUTION=10",
+  "record_count": 1240923,
+  "save_results": false,
+  "status": "String &lt;one of: WAIT, EXECUTE, SORTING, COMPLETED, CANCELED, ERROR&gt;",
+  "snapshot": {
+    "events": [
+      {
+        "sourceip": "10.100.65.20",
+        "starttime": 1467049610018,
+        "qid": 10034,
+        "sourceport": 13675
+      },
+      {
+        "sourceip": "10.100.100.121",
+        "starttime": 1467049610019,
+        "qid": 20034,
+        "sourceport": 80
+      }
+    ]
+  },
+  "subsearch_ids": [
+     "sub_id_1"
+   ],
+  "search_id": "s16"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--ariel-searches-search_id-DELETE__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_ariel_intro.html" title="Use the references for REST API 19.0 ariel endpoints.">ariel endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

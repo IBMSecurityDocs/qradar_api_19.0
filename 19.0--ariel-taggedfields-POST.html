@@ -1,0 +1,384 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a new tagged field. To use this endpoint, you must have System Administrator or Security Admin permissions.">
+<meta name="keywords" content="/ariel/taggedfields, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_ariel_intro.html">
+<title>POST /ariel/taggedfields</title>
+</head>
+<body id="api-19.0--ariel-taggedfields-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--ariel-taggedfields-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--ariel-taggedfields-POST__title__1">POST /ariel/taggedfields</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--ariel-taggedfields-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--ariel-taggedfields-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a new tagged field. To use this endpoint, you must have System Administrator or Security Admin permissions.</p>
+
+<div class="section refsyn">
+<p>Creates a tagged field. 
+
+ To use this endpoint, you must have System Administrator or Security Admin permissions.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/taggedfields resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /ariel/taggedfields resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-taggedfields-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/taggedfields request body details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /ariel/taggedfields request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-taggedfields-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--ariel-taggedfields-POST__entry__4" class="thbot">Data Type</th>
+
+<th id="api-19.0--ariel-taggedfields-POST__entry__5" class="thbot">MIME Type</th>
+
+<th id="api-19.0--ariel-taggedfields-POST__entry__6" class="thbot">Description</th>
+
+<th id="api-19.0--ariel-taggedfields-POST__entry__7" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__3 "><p>body</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__4 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__5 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__6 "><div class="p">The structure of the tagged field. The following fields can be set when creating a new tagged field:
+ <ul>
+ <li><strong>name</strong> - String - The name of the tagged field.</li>
+
+ <li><strong>type</strong> - String - The type of the tagged field. Possible values are: NULL, STRUCT, Byte, Short, Integer, Long, UnsignedByte, UnsignedShort, UnsignedInt, UnsignedLong, BigInteger, Double, Float, Port, Host, HostV4V6, HostV6, MACAddress, String, ByteArray, UnsignedIntHex, Boolean, Binary</li>
+
+ <li><strong>private_enterprise_number</strong> - Integer - The Private Enterprise Number (e.g. IANA) for this tagged field.</li>
+
+ <li><strong>element_id</strong> - Integer - The ID of the information element that this tagged field will represent. The element_id field combined with the private_enterprise_number field defines a particular portion of data within a QFlow record. The IANA standard information elements (with a private enterprise number greater than 0) are documented here: https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-elements.</li>
+
+ <li><strong>category_id</strong> - Integer - The ID of the logical group that this tagged field belongs to in the UI.</li>
+
+ <li><strong>is_array</strong> - Boolean - Specifies whether the tagged field is a list.</li>
+
+ <li><strong>description</strong> - String - (Optional) Description for the tagged field.</li>
+
+ </ul>
+</div>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__7 "><p>{
+    "category_id": 42,
+    "creation_date": 42,
+    "description": "String",
+    "element_id": 42,
+    "is_array": true,
+    "modified_date": 42,
+    "name": "String",
+    "private_enterprise_number": 42,
+    "tag": 42,
+    "type": "String",
+    "uuid": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/taggedfields response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /ariel/taggedfields response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--ariel-taggedfields-POST__entry__13" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--ariel-taggedfields-POST__entry__14" class="thbot">Unique Code</th>
+
+<th id="api-19.0--ariel-taggedfields-POST__entry__15" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>201</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p></p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>The tagged field was created.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>4000</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>A tagged field already exists with this private_enterprise_number and element_id.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>4001</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>A tagged field already exists with this name.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>4002</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>You must specify the private_enterprise_number parameter.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>4003</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>The specified private_enterprise_number cannot be negative.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>4004</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>You must specify the element_id parameter.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>4005</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>You must specify the category_id parameter.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>4006</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>The specified category ID is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>4007</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>You must specify the name parameter.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>4008</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>The specified name must be between 1 and 255 (inclusive) characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>4009</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>You must specify the type parameter.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>4010</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>The specified type is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>4011</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>You must specify the is_array parameter.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--ariel-taggedfields-POST__entry__13 "><p>500</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__14 "><p>1023</p>
+</td>
+
+<td headers="api-19.0--ariel-taggedfields-POST__entry__15 "><p>An error occurred while creating the new tagged field.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--ariel-taggedfields-POST__title__5"><h2 class="sectiontitle" id="api-19.0--ariel-taggedfields-POST__title__5">Response Description</h2>
+
+<div class="p">201 response with the new tagged field structure. Location header set to the URL of the new tagged field ID.
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the tagged field.</li>
+
+ <li><strong>tag</strong> - Integer - Unique number for this tagged field. This is a system-generated number produced from the private_enterprise_number and the element_id fields.</li>
+
+ <li><strong>name</strong> - String - The name of the tagged field.</li>
+
+ <li><strong>category_id</strong> - Integer - The ID of the logical group that this tagged field belongs to in the UI.</li>
+
+ <li><strong>is_array</strong> - Boolean - Specifies whether the tagged field is a list.</li>
+
+ <li><strong>description</strong> - String - (Optional) Description for the tagged field.</li>
+
+ <li><strong>type</strong> - String - The type of the tagged field. Possible values are: NULL, STRUCT, Byte, Short, Integer, Long, UnsignedByte, UnsignedShort, UnsignedInt, UnsignedLong, BigInteger, Double, Float, Port, Host, HostV4V6, HostV6, MACAddress, String, ByteArray, UnsignedIntHex, Boolean, Binary</li>
+
+ <li><strong>uuid</strong> - String - The ID for this tagged field, represented as a UUID.</li>
+
+ <li><strong>modified_date</strong> - Long - The time that the tagged field was last modified, specified in milliseconds since epoch.</li>
+
+ <li><strong>creation_date</strong> - Long - The time that the tagged field was created, specified in milliseconds since epoch.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--ariel-taggedfields-POST__title__6"><h2 class="sectiontitle" id="api-19.0--ariel-taggedfields-POST__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "category_id": 42,
+    "creation_date": 42,
+    "description": "String",
+    "id": 42,
+    "is_array": true,
+    "modified_date": 42,
+    "name": "String",
+    "tag": 42,
+    "type": "String",
+    "uuid": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--ariel-taggedfields-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_ariel_intro.html" title="Use the references for REST API 19.0 ariel endpoints.">ariel endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a list of the Ariel Copy Profiles.">
+<meta name="keywords" content="/disaster_recovery/ariel_copy_profiles, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_disaster_recovery_intro.html">
+<title>GET /disaster_recovery/ariel_copy_profiles</title>
+</head>
+<body id="api-19.0--disaster_recovery-ariel_copy_profiles-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--disaster_recovery-ariel_copy_profiles-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__title__1">GET /disaster_recovery/ariel_copy_profiles</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--disaster_recovery-ariel_copy_profiles-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--disaster_recovery-ariel_copy_profiles-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a list of the Ariel Copy Profiles.</p>
+
+<div class="section refsyn">
+<p>Retrieves a list of the Ariel Copy Profiles.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /disaster_recovery/ariel_copy_profiles resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /disaster_recovery/ariel_copy_profiles resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /disaster_recovery/ariel_copy_profiles request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /disaster_recovery/ariel_copy_profiles request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__3 "><p>filter</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__8 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /disaster_recovery/ariel_copy_profiles response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /disaster_recovery/ariel_copy_profiles response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__21" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__22" class="thbot">Unique Code</th>
+
+<th id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__23" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__21 "><p>200</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__22 "><p></p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__23 "><p>The list of Ariel Copy Profiles was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__21 "><p>500</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__22 "><p>1000</p>
+</td>
+
+<td headers="api-19.0--disaster_recovery-ariel_copy_profiles-GET__entry__23 "><p>An error occurred during the attempt to retrieve the list of Ariel Copy profiles.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--disaster_recovery-ariel_copy_profiles-GET__title__5"><h2 class="sectiontitle" id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__title__5">Response Description</h2>
+
+<div class="p">A list of Ariel Copy profile objects containing the following fields:
+ <ul>
+     <li><strong>id</strong> - Long - The ID of the Ariel Copy Profile.</li>
+
+     <li><strong>host_id</strong> - Long - The ID of the Ariel Copy host. The host_id references the /config/deployment/hosts endpoint.</li>
+
+     <li><strong>destination_port</strong> - Long - The port of the managed host over which the Ariel data is sent.</li>
+
+     <li><strong>destination_host_ip</strong> - String - The IP address of the managed host where the Ariel data is sent.</li>
+
+     <li><strong>exclude_event_retention_bucket_ids</strong> - Array[Long] - The ID of the event retention bucket where events are not copied from. The exclude_event_retention_bucket_id references the /config/event_retention_buckets endpoint.</li>
+
+     <li><strong>exclude_flow_retention_bucket_ids</strong> - Array[Long] - The ID of the flow retention bucket where flow data is not copied from. The exclude_flow_retention_bucket_id references the /config/flow_retention_buckets endpoint.</li>
+
+     <li><strong>bandwidth_limit</strong> - Long - The amount to limit the bandwidth in bytes per second for copying data.</li>
+
+     <li><strong>enabled</strong> - Boolean - Whether Ariel Copy is enabled on the host. The enabled field is set to false by default</li>
+
+     <li><strong>frequency</strong> - Long - The frequency, in milliseconds, that Ariel Copy will run.</li>
+
+     <li><strong>start_date</strong> - Long - The date to start copying Ariel data from.</li>
+
+     <li><strong>end_date</strong> - Long - The date to copy Ariel data up until.</li>
+
+     <li><strong>last_successful_transfer_ariel_type</strong> - Enum - The type of Ariel data transferred during most recent successful transfer. Can be one of: EVENTS_PAYLOAD, EVENTS_RECORD, EVENTS_MD, FLOWS_PAYLOAD, FLOWS_RECORD, FLOWS_MD </li>
+
+     <li><strong>last_successful_ariel_content_transferred</strong> - Long - The date of the Ariel content transferred during most recent successful transfer </li>
+
+     <li><strong>last_successful_transfer_date</strong> - Long - The date the most recent successful transfer occurred </li>
+
+     <li><strong>last_error_ariel_type</strong> - String - The type of Ariel data attempted transferred during most recent error, Can be one of: EVENTS_PAYLOAD, EVENTS_RECORD, EVENTS_MD, FLOWS_PAYLOAD, FLOWS_RECORD, FLOWS_MD </li>
+
+     <li><strong>last_error_ariel_content_transferred</strong> - Long - The type of Ariel data attempted to be transferred during last unsuccessful transfer </li>
+
+     <li><strong>last_error_date</strong> - Long - The date the most recent error occurred </li>
+
+     <li><strong>last_error_max_threshold_surpassed_date</strong> - Long - The most recent date Ariel copy was forced to abort due to error threshold being surpassed </li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--disaster_recovery-ariel_copy_profiles-GET__title__6"><h2 class="sectiontitle" id="api-19.0--disaster_recovery-ariel_copy_profiles-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "bandwidth_limit": 42,
+        "destination_host_ip": "String",
+        "destination_port": 42,
+        "enabled": true,
+        "end_date": 42,
+        "exclude_event_retention_bucket_ids": [
+            42
+        ],
+        "exclude_flow_retention_bucket_ids": [
+            42
+        ],
+        "frequency": 42,
+        "host_id": 42,
+        "id": 42,
+        "last_error_ariel_content_transferred": 42,
+        "last_error_ariel_type": "String &lt;one of: EVENTS_PAYLOAD, EVENTS_RECORD, EVENTS_MD, FLOWS_PAYLOAD, FLOWS_RECORD, FLOWS_MD&gt;",
+        "last_error_date": 42,
+        "last_error_max_threshold_surpassed_date": 42,
+        "last_successful_ariel_content_transferred": 42,
+        "last_successful_transfer_ariel_type": "String &lt;one of: EVENTS_PAYLOAD, EVENTS_RECORD, EVENTS_MD, FLOWS_PAYLOAD, FLOWS_RECORD, FLOWS_MD&gt;",
+        "last_successful_transfer_date": 42,
+        "start_date": 42
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--disaster_recovery-ariel_copy_profiles-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_disaster_recovery_intro.html" title="Use the references for REST API 19.0 disaster_recovery endpoints.">disaster_recovery endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

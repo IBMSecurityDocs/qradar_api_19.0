@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a new custom DSM event mapping.">
+<meta name="keywords" content="/data_classification/dsm_event_mappings, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_data_classification_intro.html">
+<title>POST /data_classification/dsm_event_mappings</title>
+</head>
+<body id="api-19.0--data_classification-dsm_event_mappings-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--data_classification-dsm_event_mappings-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--data_classification-dsm_event_mappings-POST__title__1">POST /data_classification/dsm_event_mappings</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--data_classification-dsm_event_mappings-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--data_classification-dsm_event_mappings-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a new custom DSM event mapping.</p>
+
+<div class="section refsyn">
+<p>Creates a new custom DSM event mapping.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /data_classification/dsm_event_mappings resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /data_classification/dsm_event_mappings resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /data_classification/dsm_event_mappings request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /data_classification/dsm_event_mappings request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /data_classification/dsm_event_mappings request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /data_classification/dsm_event_mappings request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__15" class="thbot">Parameter</th>
+
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__16" class="thbot">Data Type</th>
+
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__17" class="thbot">MIME Type</th>
+
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__18" class="thbot">Description</th>
+
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__19" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__15 "><p>data</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__16 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__17 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__18 "><div class="p">Required - A DSM event mapping that contains the following fields:
+ <ul>
+  <li><strong>log_source_type_id</strong> - Required - Number - The ID of the Log Source Type this DSM event mapping resource is associated with.</li>
+
+  <li><strong>log_source_event_id</strong> - Required - String - The primary identifying value parsed from an event to be used to look up the corresponding QID record.</li>
+
+  <li><strong>log_source_event_category</strong> - Required - String - The secondary identifying value parsed from an event to be used to look up the corresponding QID record.</li>
+
+  <li><strong>qid_record_id</strong> - Required - Number - The ID of the QID record to which this DSM event mapping provides a mapping.</li>
+
+ </ul>
+</div>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__19 "><p>{
+    "log_source_event_category": "String",
+    "log_source_event_id": "String",
+    "log_source_type_id": 42,
+    "qid_record_id": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /data_classification/dsm_event_mappings response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /data_classification/dsm_event_mappings response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__25" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__26" class="thbot">Unique Code</th>
+
+<th id="api-19.0--data_classification-dsm_event_mappings-POST__entry__27" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__25 "><p>201</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__26 "><p></p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__27 "><p>The new custom DSM event mapping was created.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__25 "><p>409</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__26 "><p>1008</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__27 "><p>There is an existing custom DSM event mapping with same the log_source_type_id, log_source_event_id and log_source_event_category combination. Cannot create duplicate DSM event mapping.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__25 "><p>422</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__26 "><p>1005</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__27 "><p>Invalid parameter value provided for the new DSM event mapping.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__25 "><p>500</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__26 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--data_classification-dsm_event_mappings-POST__entry__27 "><p>An error occurred during the attempt to create a new custom DSM event mapping.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--data_classification-dsm_event_mappings-POST__title__6"><h2 class="sectiontitle" id="api-19.0--data_classification-dsm_event_mappings-POST__title__6">Response Description</h2>
+
+<div class="p">The newly created DSM event mapping that contains the following fields:
+ <ul>
+  <li><strong>id</strong> - Number - The ID of the DSM event mapping.</li>
+
+  <li><strong>log_source_type_id</strong> - Number - The ID of the Log Source Type this DSM event mapping resource is associated with.</li>
+
+  <li><strong>log_source_event_id</strong> - String - The primary identifying value parsed from an event to be used to look up the corresponding QID record.</li>
+
+  <li><strong>log_source_event_category</strong> - String - The secondary identifying value parsed from an event to be used to look up the corresponding QID record.</li>
+
+  <li><strong>custom_event</strong> - Boolean - Flag to identify if the DSM event mapping is system provided (custom_event=false) or user-provided (custom_event=true).</li>
+
+  <li><strong>qid_record_id</strong> - Number - The ID of the QID record to which this DSM event mapping provides a mapping.</li>
+
+  <li><strong>uuid</strong> - String - The uuid of the DSM event mapping.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--data_classification-dsm_event_mappings-POST__title__7"><h2 class="sectiontitle" id="api-19.0--data_classification-dsm_event_mappings-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "custom_event": true,
+    "id": 42,
+    "log_source_event_category": "String",
+    "log_source_event_id": "String",
+    "log_source_type_id": 42,
+    "qid_record_id": 42,
+    "uuid": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--data_classification-dsm_event_mappings-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_data_classification_intro.html" title="Use the references for REST API 19.0 data_classification endpoints.">data_classification endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a new Certificate Signing Request (CSR) file. A private key is generated and used to create the CSR file. The private key is kept secure on the Console. Use the GET call to download the CSR file. You must have System Administrator or Security Administrator permissions to use this endpoint.">
+<meta name="keywords" content="/staged_config/certificates/certificate_signing_request, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_staged_config_intro.html">
+<title>POST /staged_config/certificates/certificate_signing_request</title>
+</head>
+<body id="api-19.0--staged_config-certificates-certificate_signing_request-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--staged_config-certificates-certificate_signing_request-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--staged_config-certificates-certificate_signing_request-POST__title__1">POST /staged_config/certificates/certificate_signing_request</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--staged_config-certificates-certificate_signing_request-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--staged_config-certificates-certificate_signing_request-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a new Certificate Signing Request (CSR) file. 
+ A private key is generated and used to create the CSR file. The private key is kept secure on the Console. Use the GET call to download the CSR file.
+ You must have System Administrator or Security Administrator permissions to use this endpoint.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/certificates/certificate_signing_request resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /staged_config/certificates/certificate_signing_request resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__1 "><p>text/plain
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/certificates/certificate_signing_request request body details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /staged_config/certificates/certificate_signing_request request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__4" class="thbot">Data Type</th>
+
+<th id="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__5" class="thbot">MIME Type</th>
+
+<th id="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__6" class="thbot">Description</th>
+
+<th id="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__7" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__3 "><p>CSRModel</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__4 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__5 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__6 "><div class="p">The new certificate resource object. This JSON object contains the following parameters:
+            <ul><li><strong>key_size</strong> - Private key length, in bits. The default is 2048.</li>
+
+            <li><strong>description</strong> - Description of the Certificate Signing Request (CSR).</li>
+
+            <li><strong>purpose</strong> - (Required) Indicates the intended use of the certificate that is generated from this CSR. 
+			<p>To use the certificate as a server&nbsp;certificate, type "SERVER". </p>
+
+			<p>To use it as a client certificate, type "CLIENT". </p>
+
+			<p>To use it as both a server and client certificate, type "SERVER_CLIENT".</p>
+
+			<p>To use it for encrypting data only, type "SIGNING_ENCRYPTION".</p>
+</li>
+
+            <li><strong>country_name</strong> - C- Two-letter code for the country where the organization is located.</li>
+
+            <li><strong>state_province</strong> - ST- The state or region where the organization is located.</li>
+
+            <li><strong>locality</strong> - L- The city where the organization is located.</li>
+
+            <li><strong>organization_name</strong> - O- The legal name of the organization.</li>
+
+            <li><strong>organizational_unit</strong> - OU- The division of the organization that is handling the certificate.</li>
+
+            <li><strong>common_name</strong> -(Required) CN- The fully qualified domain name of the resource that the certificate will protect.</li>
+
+            <li><strong>street_address</strong> - STREET- Street address of the requester.</li>
+
+            <li><strong>domain_component</strong> - DC- The domain component.</li>
+
+            <li><strong>user_id</strong> - UID- The user ID of the requester.</li>
+
+            <li><strong>dns</strong> - Subject Alternative Name - DNS extension list.</li>
+
+            <li><strong>ip_addresses</strong> - Subject Alternative Name - IP Addresses extension list.</li>
+
+            <li><strong>emails</strong> - Subject Alternative Name - Email addresses extension list.</li>
+
+            <li><strong>uri_list</strong> - Subject Alternative Name - URIs extension list.</li>
+</ul>
+</div>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__7 "><p>{
+    "common_name": "String",
+    "country_name": "String",
+    "description": "String",
+    "dns": [
+        "String"
+    ],
+    "domain_component": "String",
+    "emails": [
+        "String"
+    ],
+    "id": 42,
+    "ip_addresses": [
+        "String"
+    ],
+    "key_size": 42,
+    "locality": "String",
+    "organization_name": "String",
+    "organizational_unit": "String",
+    "purpose": "String",
+    "state_province": "String",
+    "street_address": "String",
+    "uri_list": [
+        "String"
+    ],
+    "user_id": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/certificates/certificate_signing_request response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /staged_config/certificates/certificate_signing_request response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14" class="thbot">Unique Code</th>
+
+<th id="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>201</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p></p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>The Certificate Signing Request (CSR) was created successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1032</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1033</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1034</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1035</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1036</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1037</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1038</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1039</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1040</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1041</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1042</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>500</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__13 "><p>500</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__14 "><p>1030</p>
+</td>
+
+<td headers="api-19.0--staged_config-certificates-certificate_signing_request-POST__entry__15 "><p>null</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--staged_config-certificates-certificate_signing_request-POST__title__5"><h2 class="sectiontitle" id="api-19.0--staged_config-certificates-certificate_signing_request-POST__title__5">Response Description</h2>
+
+<div class="p">The location header of the newly created resource.
+            <ul>
+                <li><strong>id</strong> - Uniquely identifies the Certificate Signing Request (CSR).</li>
+
+            </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--staged_config-certificates-certificate_signing_request-POST__title__6"><h2 class="sectiontitle" id="api-19.0--staged_config-certificates-certificate_signing_request-POST__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+42
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--staged_config-certificates-certificate_signing_request-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_staged_config_intro.html" title="Use the references for REST API 19.0 staged_config endpoints.">staged_config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

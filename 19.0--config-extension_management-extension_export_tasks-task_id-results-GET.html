@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves the tasks status results based on the task_id.">
+<meta name="keywords" content="/config/extension_management/extension_export_tasks/{task_id}/results, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>GET /config/extension_management/extension_export_tasks/{task_id}/results</title>
+</head>
+<body id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__title__1">GET /config/extension_management/extension_export_tasks/{task_id}/results</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-extension_management-extension_export_tasks-task_id-results-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-extension_management-extension_export_tasks-task_id-results-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves the tasks status results based on the task_id.</p>
+
+<div class="section refsyn">
+<p>Retrieves the tasks status results based on the task_id.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/extension_management/extension_export_tasks/{task_id}/results resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /config/extension_management/extension_export_tasks/{task_id}/results resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/extension_management/extension_export_tasks/{task_id}/results request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /config/extension_management/extension_export_tasks/{task_id}/results request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__3 "><p>task_id</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__8 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/extension_management/extension_export_tasks/{task_id}/results response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /config/extension_management/extension_export_tasks/{task_id}/results response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__21" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__22" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__23" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__21 "><p>200</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__22 "><p></p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__23 "><p>The requested results of the task status have been retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__21 "><p>404</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__22 "><p>22604</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__23 "><p>The task status for status_id cannot be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__21 "><p>404</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__22 "><p>22614</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__23 "><p>The task results are not available.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__21 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__22 "><p>22606</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__23 "><p>A supplied numeric parameter was not positive.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__21 "><p>500</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__22 "><p>22602</p>
+</td>
+
+<td headers="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__entry__23 "><p>An error has occurred while trying to retrieve the results of a task status.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__title__5"><h2 class="sectiontitle" id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__title__5">Response Description</h2>
+
+<div class="p">A JSON object representing the result of an export task. It contains the following fields:
+ <ul>
+  <li><strong>id</strong> - Number - The ID of the extension.</li>
+
+      <li><strong>task_type</strong> - String - The type of task that was issued against the Extension.</li>
+
+      <li><strong>exportResult</strong> - Array - An array of JSON objects representing the contents of the extension and what action is associated with each content item for the task that was executed. Each content item contains the following fields:
+       <ul>
+        <li><strong>progress</strong> - Number - The number of exported items.</li>
+
+        <li><strong>fileName</strong> - String - The name of the exported extension.</li>
+
+        <li><strong>exportDetails</strong> - JSON Array - The name of the type of the content item.<ul>
+<li><strong>contentType</strong> - String - The name of the exported content type.</li>
+
+<li><strong>contentNames</strong> - String Array - The name of the exported content type items.</li>
+
+</ul>
+</li>
+
+       </ul>
+
+      </li>
+
+  </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__title__6"><h2 class="sectiontitle" id="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+  "id": 56,
+  "task_type": "EXPORT",
+  "exportResult": [
+    "progress":120,
+    "fileName":"..../fileName.zip",
+    "exportDetails":[
+     {
+       "contentType": "sensordevicetype",
+       "name": ["3com","windows"]
+     }
+  ]
+  ]
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-extension_management-extension_export_tasks-task_id-results-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

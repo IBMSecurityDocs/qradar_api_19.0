@@ -1,0 +1,512 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Update a deployed user.">
+<meta name="keywords" content="/config/access/users/{id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>POST /config/access/users/{id}</title>
+</head>
+<body id="api-19.0--config-access-users-id-POST"><main role="main"><article role="article" aria-labelledby="api-19.0--config-access-users-id-POST__title__1">
+<h1 class="topictitle1" id="api-19.0--config-access-users-id-POST__title__1">POST /config/access/users/{id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-access-users-id-POST.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-access-users-id-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Update a deployed user.</p>
+
+<div class="section refsyn">
+<p>Update a deployed user. The deployed configuration is the active configuration.
+ 
+ This endpoint is used to update user preferences. Changes to user preferences are not staged and take effect immediately. To modify all other settings see the POST /api/staged_config/users/{user_id} endpoint.
+ 
+ This endpoint is available to be called by every user or authorized service. Users or authorized services with the ADMINMANAGER can update any deployed user. Users or authorized service with the ADMIN or SAASADMIN capability can update any deployed user with a user role that does not contain the ADMIN capability. If called by anyone else, only the deployed user for the calling user can be updated. ADMIN capability is required to update allow_system_authentication_fallback field. No user can update the allow_system_authentication_fallback for their own user.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/access/users/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/access/users/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-access-users-id-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/access/users/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/access/users/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-access-users-id-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-access-users-id-POST__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--config-access-users-id-POST__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--config-access-users-id-POST__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-access-users-id-POST__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-access-users-id-POST__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__3 "><p>id</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__8 "><p>The ID of the deployed user to update.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/access/users/{id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/access/users/{id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-access-users-id-POST__entry__21" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-access-users-id-POST__entry__22" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-access-users-id-POST__entry__23" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-access-users-id-POST__entry__24" class="thbot">Description</th>
+
+<th id="api-19.0--config-access-users-id-POST__entry__25" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__21 "><p>body</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__22 "><p>Object</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__23 "><p>application/json</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__24 "><div class="p">The updated deployed user. Only email, locale_id, enable_popup_notifications, allow_system_authentication_fallback, inactivity_timeout, old_password and password fields on the deployed user are modifiable. All other fields are ignored.
+ <ul>
+ <li><strong>email</strong> - String - The email address of the user.</li>
+
+ <li><strong>locale_id</strong> - String - The locale of the user. If this locale is set, this locale is always used for requests as the user. If this locale is not set, the locale provided in each HTTP request is used for requests as the user. If this locale is not set and no locale is in the request, QRadar falls back to the en_US locale for requests as the user. The list of valid locales are accessible through the /system/information/locales API.</li>
+
+ <li><strong>enable_popup_notifications</strong> - Boolean - Indicates if popup system notifications are enabled for this user.</li>
+
+ <li><strong>old_password</strong> - String - The current password for the user. Required when a user is changing the password for their own user. Must not be set when changing the password of a user that is not the caller's own user.</li>
+
+ <li><strong>password</strong> - String - The new password for the user. If set, it must pass the password policy. Can only be set if QRadar is configured using system authentication or the user has the ADMIN capability.</li>
+
+ <li><strong>allow_system_authentication_fallback</strong> - Boolean - Allow system authentication fallback for this user when external authentication is configured. Has no effect if system authentication is configured.</li>
+
+ <li><strong>local_only_account</strong> - Boolean - Forces local authentication for this user when external authentication is configured. Has no effect if system authentication is configured.</li>
+
+ <li><strong>inactivity_timeout</strong> - Long - The inactivity timeout (in milliseconds), truncated to minutes. Set to 0 if a user should not be logged out after being inactive.</li>
+
+ </ul>
+</div>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__25 "><p>{
+    "allow_system_authentication_fallback": true,
+    "description": "String",
+    "email": "String",
+    "enable_popup_notifications": true,
+    "id": 42,
+    "inactivity_timeout": 42,
+    "local_only_account": true,
+    "locale_id": "String",
+    "old_password": "String",
+    "password": "String",
+    "password_creation_time": 42,
+    "security_profile_id": 42,
+    "tenant_id": 42,
+    "user_role_id": 42,
+    "username": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/access/users/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/access/users/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-access-users-id-POST__entry__31" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-access-users-id-POST__entry__32" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-access-users-id-POST__entry__33" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>200</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p></p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>The deployed user was updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311002</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>ADMINMANAGER capability required to update a deployed user with a user role that contains the ADMIN capability.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311012</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>Users are forbidden to update their own inactivity_timeout or allow_system_authentication_fallback.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311011</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>ADMIN capability required to update allow_system_authentication_fallback field.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311015</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>MNGELOCALONLY capability required to update local_only_account field.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311016</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>Authorized services can only set local_only_account to false.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>403</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311014</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>ADMIN capability required to update inactivity_timeout field.	 *</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>404</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311001</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>The deployed user does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>409</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311013</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>Cannot set allow_system_authentication_fallback to true when system authentication fallback is globally disabled.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311003</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>email field cannot contain more than 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311004</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>email field must contain exactly one @ symbol, with at least one character before and after the @ symbol, and no whitespace characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311005</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>Provided locale_id must contain a valid locale.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311006</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>old_password must be set when changing the caller's password.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311007</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>old_password must not be set when changing a user password that is not the caller's user.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311008</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>old_password does not match the user's password.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311009</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>password field cannot be set when allow_system_authentication_fallback and local_only_account are false and system authentication is not configured.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-access-users-id-POST__entry__31 "><p>422</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__32 "><p>38311010</p>
+</td>
+
+<td headers="api-19.0--config-access-users-id-POST__entry__33 "><p>password does not match the password policy.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-access-users-id-POST__title__6"><h2 class="sectiontitle" id="api-19.0--config-access-users-id-POST__title__6">Response Description</h2>
+
+<div class="p">The updated deployed user structure.
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the user. The ID of the staged user and the ID of the same deployed user are the same. This field is read only.</li>
+
+ <li><strong>username</strong> - String - The username of the user. This field is read only.</li>
+
+ <li><strong>email</strong> - String - The email of the user.</li>
+
+ <li><strong>description</strong> - String - The description of the user. This field is only modifiable in the staged configuration.</li>
+
+ <li><strong>user_role_id</strong> - Long - The user_role_id of the user. This field is only modifiable in the staged configuration. Access staged user roles using /api/staged_config/user_roles API, and deployed user roles under /api/confg/user_roles API.</li>
+
+ <li><strong>security_profile_id</strong> - Long - The security_profile_id of the user. This field is only modifiable in the staged configuration. Access staged security profiles using /api/staged_config/security_profiles API, and deployed user roles under /api/config/security_profiles API.</li>
+
+ <li><strong>locale_id</strong> - String - The locale_id of the user. Access locales using /system/information/locales API.</li>
+
+ <li><strong>enable_popup_notifications</strong> - Boolean - Indicates if popup system notifications are enabled for this user.</li>
+
+ <li><strong>old_password</strong> - String - This field will always be null when returned in a response. Required to be set to the current password when a user is changing their own system password. This field is not required to be set when the user currently does not have a system password and they are setting it for the first time.</li>
+
+ <li><strong>password</strong> - String - This field will always be null when returned in a response. Set to the new password when a user is changing their own system password.</li>
+
+ <li><strong>password_creation_time</strong> - Long - The time in milliseconds since epoch when the current password was created. Combined with the password_expiry_interval from the /system/authorization/password_policies API to calculate when the password expires.</li>
+
+ <li><strong>tenant_id</strong> - Long - The tenant_id of the current user. This field is only modifiable in the staged configuration. Access tenants using /config/access/tenant_management/tenants API.</li>
+
+ <li><strong>allow_system_authentication_fallback</strong> - Boolean - Allow system authentication fallback for this user when external authentication is configured. Has no effect if system authentication is configured.</li>
+
+ <li><strong>local_only_account</strong> - Boolean - Forces local authentication for this user when external authentication is configured. Has no effect if system authentication is configured.</li>
+
+ <li><strong>inactivity_timeout</strong> - Long - The inactivity timeout (in milliseconds), truncated to minutes. Set to 0 if a user should not be logged out after being inactive.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-access-users-id-POST__title__7"><h2 class="sectiontitle" id="api-19.0--config-access-users-id-POST__title__7">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "allow_system_authentication_fallback": true,
+    "description": "String",
+    "email": "String",
+    "enable_popup_notifications": true,
+    "id": 42,
+    "inactivity_timeout": 42,
+    "local_only_account": true,
+    "locale_id": "String",
+    "notification_flag": "String &lt;one of: LDAP_SYNC_USER_NOT_FOUND, LDAP_SYNC_REPO_NOT_FOUND, LDAP_SYNC_SP_NOT_FOUND&gt;",
+    "old_password": "String",
+    "password": "String",
+    "password_creation_time": 42,
+    "security_profile_id": 42,
+    "tenant_id": 42,
+    "user_role_id": 42,
+    "username": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-access-users-id-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

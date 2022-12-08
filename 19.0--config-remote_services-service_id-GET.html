@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a deployed remote service by ID.">
+<meta name="keywords" content="/config/remote_services/{service_id}, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>GET /config/remote_services/{service_id}</title>
+</head>
+<body id="api-19.0--config-remote_services-service_id-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--config-remote_services-service_id-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--config-remote_services-service_id-GET__title__1">GET /config/remote_services/{service_id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-remote_services-service_id-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-remote_services-service_id-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a deployed remote service by ID.</p>
+
+<div class="section refsyn">
+<p>Retrieves a deployed remote service by ID.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/remote_services/{service_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /config/remote_services/{service_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-remote_services-service_id-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/remote_services/{service_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /config/remote_services/{service_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-remote_services-service_id-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-remote_services-service_id-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--config-remote_services-service_id-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--config-remote_services-service_id-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-remote_services-service_id-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-remote_services-service_id-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__3 "><p>service_id</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__8 "><p>ID that is used for retrieving a deployed remote service.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/remote_services/{service_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /config/remote_services/{service_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-remote_services-service_id-GET__entry__21" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-remote_services-service_id-GET__entry__22" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-remote_services-service_id-GET__entry__23" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__21 "><p>200</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__22 "><p></p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__23 "><p>The deployed remote service was successfully retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__21 "><p>404</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__22 "><p>1002</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__23 "><p>No deployed remote service was found with the provided ID.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__21 "><p>500</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__22 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--config-remote_services-service_id-GET__entry__23 "><p>An error occurred during the retrieval of the remote service.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-remote_services-service_id-GET__title__5"><h2 class="sectiontitle" id="api-19.0--config-remote_services-service_id-GET__title__5">Response Description</h2>
+
+<div class="p">The associated deployed remote service object.
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the remote service.</li>
+
+ <li><strong>name</strong> - String - The name of the remote service.</li>
+
+ <li><strong>description</strong> - String - The description of the remote service.</li>
+
+ <li><strong>group</strong> - String - The group the remote service belongs to.</li>
+
+ <li><strong>cidrs</strong> - Array of &lt;String&gt; - A list of all the CIDR ranges that belong to the remote service.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-remote_services-service_id-GET__title__6"><h2 class="sectiontitle" id="api-19.0--config-remote_services-service_id-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "cidrs": [
+        "String"
+    ],
+    "description": "String",
+    "group": "String",
+    "id": 42,
+    "name": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-remote_services-service_id-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

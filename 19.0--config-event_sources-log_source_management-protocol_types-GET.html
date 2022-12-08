@@ -1,0 +1,381 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves the list of protocol types. Requires the System Administrator, Security Admin, or Manage Log Sources permission.">
+<meta name="keywords" content="/config/event_sources/log_source_management/protocol_types, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version190_config_intro.html">
+<title>GET /config/event_sources/log_source_management/protocol_types</title>
+</head>
+<body id="api-19.0--config-event_sources-log_source_management-protocol_types-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--config-event_sources-log_source_management-protocol_types-GET__title__1">
+<h1 class="topictitle1" id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__title__1">GET /config/event_sources/log_source_management/protocol_types</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--config-event_sources-log_source_management-protocol_types-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--config-event_sources-log_source_management-protocol_types-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves the list of protocol types. Requires the System Administrator, Security Admin, or Manage Log Sources permission.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/log_source_management/protocol_types resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /config/event_sources/log_source_management/protocol_types resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/log_source_management/protocol_types request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /config/event_sources/log_source_management/protocol_types request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__3 "><p>Range</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__4 "><p>header</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__8 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__3 "><p>filter</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__8 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/log_source_management/protocol_types response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /config/event_sources/log_source_management/protocol_types response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__27" class="thbot">HTTP Response Code</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__28" class="thbot">Unique Code</th>
+
+<th id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__29" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__27 "><p>200</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__28 "><p></p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__29 "><p>The protocol types were retrieved successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__27 "><p>500</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__28 "><p>1020</p>
+</td>
+
+<td headers="api-19.0--config-event_sources-log_source_management-protocol_types-GET__entry__29 "><p>An error occurred during the attempt to retrieve the protocols.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-event_sources-log_source_management-protocol_types-GET__title__5"><h2 class="sectiontitle" id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__title__5">Response Description</h2>
+
+<div class="p">The list of all protocol types. A protocol type contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the protocol type.</li>
+
+ <li><strong>name</strong> - String - The unique name of the protocol type.</li>
+
+ <li><strong>version</strong> - String - The version of the protocol type component.</li>
+
+ <li><strong>latest_version</strong> - String - The latest available version of the protocol type component.</li>
+
+ <li><strong>gateway_supported</strong> - Boolean -  If this protocol type can be configured for a gateway log source, the condition is set to 'true'; otherwise, the condition is set to 'false'. A gateway log source is a stand-alone protocol configuration. The log source receives no events itself, and serves as a host for a protocol configuration that retrieves event data to feed other log sources. It acts as a "gateway" for events from multiple systems to enter the event pipeline. Not all protocol types can be used as a gateway if they don't support collecting event data from multiple sources.</li>
+
+ <li><strong>inbound</strong> - Boolean - Indicates whether this is an inbound protocol.</li>
+
+ <li><strong>parameters</strong> - Array - The parameters of this protocol type.</li>
+
+ <li><strong>parameter_groups</strong> - Array - The parameter groups of this protocol type.</li>
+
+ <li><strong>testing_capabilities</strong> - Object - The testing capabilities of this protocol type. These describe the capabilities of the Log Source Testing API for Log Sources using this Protocol Type.</li>
+
+ </ul>
+
+ 
+ A parameter contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the parameter.</li>
+
+ <li><strong>name</strong> - String - The name of the parameter.</li>
+
+ <li><strong>type</strong> - Enumeration - The type of the parameter. Possible values are: STRING, TEXT, INTEGER, REAL, BOOLEAN, DATE, TIME, DATETIME, INTERVAL, HOST, PASSWORD, REGEX</li>
+
+ <li><strong>group_id</strong> - Number - The ID of the protocol parameter group that this parameter belongs to. The group_id is optional.</li>
+
+ <li><strong>required</strong> - Boolean - If the parameter is mandatory, the condition is set to 'true'; otherwise, the condition is set to 'false'.</li>
+
+ <li><strong>min_length</strong> - Integer - The minimum length of the parameter value for the following parameter types: STRING, TEXT, HOST, PASSWORD, REGEX. The min_length is optional.</li>
+
+ <li><strong>max_length</strong> - Integer - The maximum length of the parameter value for the following parameter types: STRING, TEXT, HOST, PASSWORD, REGEX. The max_length is optional.</li>
+
+ <li><strong>min_value</strong> - String - The minimum of the parameter value for the following parameter types: INTEGER, REAL, DATE, TIME, DATETIME, INTERVAL. The min_value is optional.</li>
+
+ <li><strong>max_value</strong> - String - The maximum of the parameter value for the following parameter types: INTEGER, REAL, DATE, TIME, DATETIME, INTERVAL. The max_value is optional.</li>
+
+ <li><strong>default_value</strong> - String - The optional default parameter value.</li>
+
+ <li><strong>pattern</strong> - String - An optional Java regex pattern restriction on the parameter value for the following parameter types: STRING, TEXT, HOST, PASSWORD.</li>
+
+ <li><strong>pattern_error_message</strong> - String -  An optional message to display when the 'pattern' restriction fails.</li>
+
+ <li><strong>allowed_values</strong> - Array - An optional restrictive list of allowed parameter values that is used to implement an enumeration parameter.</li>
+
+ <li><strong>rules</strong> - Array - Parameter rules manage different parameter conditions (for example, Option A is only available when Option B is set to 'true', Option C is required whenever Option A is set to 'false', and so on.)</li>
+
+ </ul>
+
+ 
+ A parameter allowed value contains the following fields:
+ <ul>
+ <li><strong>name</strong> - String - The name of the allowed value.</li>
+
+ <li><strong>value</strong> - String - The allowed value.</li>
+
+ </ul>
+
+ 
+ A parameter rule contains the following fields:
+ <ul>
+ <li><strong>parameter_id</strong> - String - The ID of the parameter affected by the rule.</li>
+
+ <li><strong>trigger_parameter_id</strong> - Long - The ID of the trigger parameter.</li>
+
+ <li><strong>trigger_pattern</strong> - String - The pattern that triggers the rule. For example, if the value of trigger_parameter_id matches the regular expression of this field, the rule triggers.</li>
+
+ <li><strong>affected_property</strong> - String - The affected property. Possible values are:<ul><li>AVAILABLE: Indicates that the parameter's availability will be affected by this rule</li>
+<li>REQUIRED: Indicates that the required state of the parameter will be affected by this rule</li>
+<li>DEFAULT: Indicates that the default value of the parameter will be affected by this rule.</li>
+</ul>
+</li>
+
+ <li><strong>affected_property_value</strong> - String - The value to be applied to the affected parameter when the rule is triggered. The following list explains how this field is interpreted based on the affected property::<ul><li>AVAILABLE: This will be a boolean value indicating whether the affected parameter should be available. Since all fields are always available by default, setting this to 'true' does not make much sense.</li>
+<li>REQUIRED: This will be a boolean value indicating whether the affected parameter should be required.</li>
+<li>DEFAULT: This will be the default value to be used by the affected parameter.</li>
+</ul>
+</li>
+
+ </ul>
+
+ 
+ A parameter group contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the protocol parameter group.</li>
+
+ <li><strong>name</strong> - String - The name of the protocol parameter group</li>
+
+ <li><strong>required</strong> - Boolean -  If at least one parameter in this group must be set, the condition is set to 'true'; otherwise, the condition is set to 'false'.</li>
+
+ </ul>
+
+
+ Testing capabilities contain the following fields:
+ <ul>
+ <li><strong>testable</strong> - Boolean - Indicates whether the protocol type is testable.</li>
+
+ <li><strong>can_collect_events</strong> - Boolean - Indicates whether the protocol type can collect test events.</li>
+
+ <li><strong>can_accept_sample_events</strong> - Boolean - Indicates whether the protocol type can accept sample events (only applicable to inbound protocol types).</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-19.0--config-event_sources-log_source_management-protocol_types-GET__title__6"><h2 class="sectiontitle" id="api-19.0--config-event_sources-log_source_management-protocol_types-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "gateway_supported": true,
+        "id": 42,
+        "inbound": true,
+        "latest_version": "String",
+        "name": "String",
+        "parameter_groups": [
+            {
+                "id": 42,
+                "name": "String",
+                "required": true
+            }
+        ],
+        "parameters": [
+            {
+                "allowed_values": [
+                    {
+                        "name": "String",
+                        "value": "String"
+                    }
+                ],
+                "default_value": "String",
+                "description": "String",
+                "group_id": 42,
+                "id": 42,
+                "label": "String",
+                "max_length": 42,
+                "max_value": "String",
+                "min_length": 42,
+                "min_value": "String",
+                "name": "String",
+                "pattern": "String",
+                "pattern_description": "String",
+                "required": true,
+                "rules": [
+                    {
+                        "affected_property": "String",
+                        "affected_property_value": "String",
+                        "parameter_id": 42,
+                        "trigger_parameter_id": 42,
+                        "trigger_pattern": "String"
+                    }
+                ],
+                "type": "String"
+            }
+        ],
+        "testing_capabilities": {
+            "can_accept_sample_events": true,
+            "can_collect_events": true,
+            "testable": true
+        },
+        "version": "String"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-19.0--config-event_sources-log_source_management-protocol_types-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version190_config_intro.html" title="Use the references for REST API 19.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

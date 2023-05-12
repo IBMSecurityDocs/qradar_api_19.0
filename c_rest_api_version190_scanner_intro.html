@@ -2,7 +2,7 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
 
-<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2023">
 
 
 
@@ -32,7 +32,7 @@
 <title>scanner endpoints</title>
 </head>
 <body id="c_rest_api_version190_scanner_intro"><main role="main"><article role="article" aria-labelledby="c_rest_api_version190_scanner_intro__title__1">
-<h1 class="topictitle1" id="c_rest_api_version190_scanner_intro__title__1">scanner endpoints</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/c_rest_api_version190_scanner_intro.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2Fc_rest_api_version190_scanner_intro.dita">Edit online</a></span></div>
+<h1 class="topictitle1" id="c_rest_api_version190_scanner_intro__title__1">scanner endpoints</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/c_rest_api_version190_scanner_intro.dita" href="https://oxygen.cnvdal.apps.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2Fc_rest_api_version190_scanner_intro.dita">Edit online</a></span></div>
 
 
 <div class="body conbody"><p class="shortdesc">Use the references for REST API 19.0 scanner endpoints.</p>
@@ -41,27 +41,27 @@
 
 <aside role="complementary" aria-labelledby="c_rest_api_version190_scanner_intro__title__1"><nav role="navigation">
 <ul class="ullinks">
-<li class="ulchildlink"><strong><a href="19.0--scanner-profiles-GET.html">GET /scanner/profiles</a></strong><br>
+<li class="ulchildlink"><strong><a href="19.0--scanner-profiles-GET.html">GET /scanner/profiles DEPRECATED</a></strong><br>
 Retrieves all of the currently created scan profiles. No parameters are required and the following information   should be retrieved for each scan profile     - scanProfileId   - scanProfileName   - description   - scanType   - scannerName</li>
-<li class="ulchildlink"><strong><a href="19.0--scanner-profiles-create-POST.html">POST /scanner/profiles/create</a></strong><br>
+<li class="ulchildlink"><strong><a href="19.0--scanner-profiles-create-POST.html">POST /scanner/profiles/create DEPRECATED</a></strong><br>
 Initiates a request to create a new scanProfile. The request takes one parameter - createScanRequest, which is just a POJO.   To create the scan, you will need to build up a JSON object that contains the Scan Profile name and ips to scan e.g.  {'name':'New Scan Profile', 'ips':['10.100.85.135']}   Note: Only IP addresses and ranges are accepted. CIDR ranges are not supported.</li>
-<li class="ulchildlink"><strong><a href="19.0--scanner-profiles-start-POST.html">POST /scanner/profiles/start</a></strong><br>
+<li class="ulchildlink"><strong><a href="19.0--scanner-profiles-start-POST.html">POST /scanner/profiles/start DEPRECATED</a></strong><br>
 Initiates a request to start an already created scanProfile. The request takes one parameter - scanProfileId.    To get a list of scanProfileIds, simply get a list of the current scan profiles by initiating a 'profiles' request on the  scanner endpoint. The scanProfileId will be validated and an appropriate message returned.</li>
-<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-GET.html">GET /scanner/scanprofiles</a></strong><br>
+<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-GET.html">GET /scanner/scanprofiles DEPRECATED</a></strong><br>
 Retrieves all of the currently created scan profiles. No parameters are required and the following information   should be retrieved for each scan profile     - scanProfileId   - name   - description   - scanType   - scannerName   - schedule   - status   - progress   - endTime   - duration</li>
-<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-DELETE.html">DELETE /scanner/scanprofiles/{profileid}</a></strong><br>
+<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-DELETE.html">DELETE /scanner/scanprofiles/{profileid} DEPRECATED</a></strong><br>
 Initiates a request to delete a  scanProfile. The request takes one parameter - the Scan Profile ID.</li>
-<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-GET.html">GET /scanner/scanprofiles/{profileid}</a></strong><br>
+<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-GET.html">GET /scanner/scanprofiles/{profileid} DEPRECATED</a></strong><br>
 Retrieves a scan profile for a given Scan Profile ID. The only parameter required is the Scan Profile ID. The following  information about a scan profile will be returned       - scanProfileId   - name   - description   - scanType   - scannerName   - schedule   - status   - progress   - endTime   - duration</li>
-<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-POST.html">POST /scanner/scanprofiles/{profileid}</a></strong><br>
+<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-POST.html">POST /scanner/scanprofiles/{profileid} DEPRECATED</a></strong><br>
 Update a scan profile. The Scan Profile ID is required.   The following information on a scan profile can be updated      - name   - description   - ips       eg  {'name':'Updated Scan Profile', 'ips':['10.100.85.135']}</li>
-<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-runs-GET.html">GET /scanner/scanprofiles/{profileid}/runs</a></strong><br>
+<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-runs-GET.html">GET /scanner/scanprofiles/{profileid}/runs DEPRECATED</a></strong><br>
 </li>
-<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-runs-run_id-GET.html">GET /scanner/scanprofiles/{profileid}/runs/{run_id}</a></strong><br>
+<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-runs-run_id-GET.html">GET /scanner/scanprofiles/{profileid}/runs/{run_id} DEPRECATED</a></strong><br>
 </li>
-<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-runs-run_id-results-GET.html">GET /scanner/scanprofiles/{profileid}/runs/{run_id}/results</a></strong><br>
+<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-runs-run_id-results-GET.html">GET /scanner/scanprofiles/{profileid}/runs/{run_id}/results DEPRECATED</a></strong><br>
 </li>
-<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-start-POST.html">POST /scanner/scanprofiles/{profileid}/start</a></strong><br>
+<li class="ulchildlink"><strong><a href="19.0--scanner-scanprofiles-profileid-start-POST.html">POST /scanner/scanprofiles/{profileid}/start DEPRECATED</a></strong><br>
 Initiates a request to start an already created scanProfile. The request takes one parameter - scanProfileId, and one optional parameter - ips.    To get a list of scanProfileIds, simply get a list of the current scan profiles by initiating a 'profiles' request on the  scanner endpoint. The scanProfileId will be validated and an appropriate message returned.</li>
 </ul>
 </nav></aside></article></main></body></html>

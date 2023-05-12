@@ -2,7 +2,7 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
 
-<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2023">
 
 
 
@@ -33,7 +33,7 @@
 <title>GET /services/geolocations</title>
 </head>
 <body id="api-19.0--services-geolocations-GET"><main role="main"><article role="article" aria-labelledby="api-19.0--services-geolocations-GET__title__1">
-<h1 class="topictitle1" id="api-19.0--services-geolocations-GET__title__1">GET /services/geolocations</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--services-geolocations-GET.dita" href="https://oxygen-dcs-openshift-cnv.apps.dal-cnv-prod.core.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--services-geolocations-GET.dita">Edit online</a></span></div>
+<h1 class="topictitle1" id="api-19.0--services-geolocations-GET__title__1">GET /services/geolocations</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/19.0--services-geolocations-GET.dita" href="https://oxygen.cnvdal.apps.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F19.0%2F19.0--services-geolocations-GET.dita">Edit online</a></span></div>
 
 
 
@@ -283,23 +283,28 @@
 
  </li>
 
- <li><strong>represented_country</strong> - Country - Object containing details about the country which is represented by users of the IP address. For instance, the country represented by an overseas military base.
- 		<ul>
- 		<li><strong>name</strong> - String - The name of the country.</li>
+ <li><strong>represented_country</strong> - Country - Object containing details about the country which is
+represented by users of the IP address. For instance, the country represented by an overseas
+military base. <ul>
+<li><strong>name</strong> - String - The name of the country.</li>
 
- 		<li><strong>geo_id</strong> - Integer - A unique identifier for the country as specified by GeoNames.</li>
+<li><strong>geo_id</strong> - Integer - A unique identifier for the country as specified by GeoNames.</li>
 
- 		<li><strong>iso_code</strong> - String - A two-character ISO 3166-1 country code for the country associated with the IP address.</li>
+<li><strong>iso_code</strong> - String - A two-character ISO 3166-1 country code for the country associated
+with the IP address.</li>
 
- 		<li><strong>confidence</strong> - Integer - A value from 0-100 that represents MaxMind's confidence that the country is correct.</li>
+<li><strong>confidence</strong> - Integer - A value from 0-100 that represents MaxMind's confidence that the
+country is correct.</li>
 
- 		<li><strong>type</strong> - String - The type of represented country. Currently limited to <strong>military</strong> but may include other types in the future.</li>
+<li><strong>type</strong> - String - The type of represented country. Currently limited to <strong>military</strong> but
+may include other types in the future.</li>
 
- 		</ul>
-         <div class="note"><span class="notetitle">Note:</span> In <span class="ph">QRadar®</span>
-            versions earlier than 7.5.0 UP4, the <span class="ph uicontrol">name</span> field returns as "military." <span class="ph">QRadar</span> version 7.5.0 UP4
-            and later contain a fix that corrects this erroneous behavior. </div>
- </li>
+</ul>
+<div class="note"><span class="notetitle">Note:</span> In <span class="ph">QRadar®</span>
+versions earlier than 7.5.0 UP4, the <span class="ph uicontrol">name</span> field returns as "military." <span class="ph">QRadar</span> version 7.5.0 UP4
+and later contain a fix that corrects this erroneous behavior. </div>
+
+</li>
 
  <li><strong>location</strong> - Location - Object containing details about the city that is associated with the IP address.
  		<ul>
